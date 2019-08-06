@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="83s-YA-rKe">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="aiW-RG-Krq">
+            <objects>
+                <viewController id="83s-YA-rKe" customClass="LoginViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fw6-gs-jfl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xgj-eL-ZAC">
+                                <rect key="frame" x="55" y="50" width="304" height="401"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sp-Le-RLd">
+                                <rect key="frame" x="120" y="615" width="174" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <color key="tintColor" name="Principal"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" name="Principal"/>
+                                </state>
+                                <connections>
+                                    <action selector="AccessButton:" destination="83s-YA-rKe" eventType="touchUpInside" id="fRk-YY-OF9"/>
+                                    <segue destination="hBx-GJ-RGI" kind="presentation" id="aEJ-YT-TEb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Principal"/>
+                        <constraints>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="8Sp-Le-RLd" secondAttribute="trailing" constant="120" id="FSS-4G-vzd"/>
+                            <constraint firstItem="Xgj-eL-ZAC" firstAttribute="top" secondItem="Fw6-gs-jfl" secondAttribute="top" constant="50" id="Mt2-4p-fcq"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="bottom" secondItem="8Sp-Le-RLd" secondAttribute="bottom" constant="200" id="ecU-3j-3DD"/>
+                            <constraint firstItem="Xgj-eL-ZAC" firstAttribute="leading" secondItem="Fw6-gs-jfl" secondAttribute="leading" constant="55" id="iul-bS-RQl"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="Xgj-eL-ZAC" secondAttribute="trailing" constant="55" id="mO2-i0-D8h"/>
+                            <constraint firstItem="8Sp-Le-RLd" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="120" id="u8g-k8-NXF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gsy-lj-0KN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIt-iL-cSq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="60"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="HEq-Bd-FZj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="hBx-GJ-RGI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fx5-Q5-QIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="1201" height="401"/>
+        <namedColor name="Principal">
+            <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
