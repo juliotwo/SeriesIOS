@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    
     fileprivate(set) lazy var emptyStateView: UIView = {
         guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
             else {
@@ -28,28 +29,41 @@ class SearchViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = viewController
     }
-    
+    private var viewModel = SearchViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
+        viewModel.getdata()
 
     }
 }
+extension SearchViewController :  SearchViewModelDelegate{
+    func reloadData() {
+        
+        tableView.reloadData()
 
+    }
+}
 extension SearchViewController: UITableViewDelegate {
     
 }
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = 5
+        let count = viewModel.numberOfitems
         tableView.backgroundView = count == 0 ? emptyStateView : nil
         tableView.separatorStyle = count == 0 ? .none : .singleLine
         return count
     }
     
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView .dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellSearchViewModel else{
+            return UITableViewCell()
+        }
+        cell.viewModel = viewModel.item(at: indexPath)
+        return cell
     }
-    
     
 }

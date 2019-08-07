@@ -9,8 +9,40 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "Series/Application/Main/Search/SearchViewController.swift"
+            timestampString = "586899926.344381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Series/Application/Main/Search/SearchViewModel.swift"
+            timestampString = "586899926.34453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getdata()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586845835.496969"
+            timestampString = "586899926.344613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -22,26 +54,26 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "static Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Series"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliovargasbautista/Series/Series/Services/SeriesServices.swift"
-                  timestampString = "586845835.510386"
+                  timestampString = "586899926.405671"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "891">
+                  offsetFromSymbolStart = "1099">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in static Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Series"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juliovargasbautista/Series/Series/Services/SeriesServices.swift"
-                  timestampString = "586845835.516268"
+                  timestampString = "586899926.4101911"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -58,27 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586845835.497048"
+            timestampString = "586899926.345095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "getSeriesRequest(byId:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586845835.497108"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "getSeriesRequest(byId:completion:)"
             landmarkType = "7">
          </BreakpointContent>

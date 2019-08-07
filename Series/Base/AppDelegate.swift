@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             name = "Search"
         }
         let viewController = UIStoryboard(name: name, bundle: Bundle.main).instantiateInitialViewController()
-        
+
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
