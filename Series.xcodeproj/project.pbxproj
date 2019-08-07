@@ -23,6 +23,8 @@
 		F36A5AE722FA1D9C0027F196 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE622FA1D9C0027F196 /* Serie.swift */; };
 		F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */; };
 		F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEA22FA219A0027F196 /* SeriesServices.swift */; };
+		F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */; };
+		F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		F36A5AE622FA1D9C0027F196 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRequest.swift; sourceTree = "<group>"; };
 		F36A5AEA22FA219A0027F196 /* SeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesServices.swift; sourceTree = "<group>"; };
+		F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSearchViewModel.swift; sourceTree = "<group>"; };
 		F4EA6DD68338AF2F0BB6606D /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,8 @@
 				80E2E15422EFF80200CC3858 /* Search.storyboard */,
 				80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */,
 				80BAC93022F0F177005D8F0D /* EmptyState.xib */,
+				F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */,
+				F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -330,12 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */,
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
 				F36A5AE722FA1D9C0027F196 /* Serie.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				80DCF54D22F3BA6400B8C299 /* LoginViewModel.swift in Sources */,
+				F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */,
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 			);
