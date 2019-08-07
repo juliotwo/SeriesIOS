@@ -10,11 +10,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586820976.426622"
+            timestampString = "586845835.496969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getSeriesRequest(byId:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Series"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliovargasbautista/Series/Series/Services/SeriesServices.swift"
+                  timestampString = "586846897.452696"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "891">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Series.SeriesServices.getSeriesRequest(byId: Swift.String, completion: (Swift.Optional&lt;Series.ListaSeriesRequest&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Series"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliovargasbautista/Series/Series/Services/SeriesServices.swift"
+                  timestampString = "586846897.456748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "143">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Series/Services/SeriesServices.swift"
+            timestampString = "586845835.497048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getSeriesRequest(byId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Series/Services/SeriesServices.swift"
+            timestampString = "586845835.497108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "getSeriesRequest(byId:completion:)"
             landmarkType = "7">
          </BreakpointContent>

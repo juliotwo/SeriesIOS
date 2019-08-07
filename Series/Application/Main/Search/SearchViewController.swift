@@ -18,7 +18,17 @@ class SearchViewController: UIViewController {
         }
         return view
     }()
+    
+    @IBAction func cerrarSesion(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "session")
+        UserDefaults.standard.set(nil, forKey: "token")
 
+        let name = "Login"
+        let viewController = UIStoryboard(name: name, bundle: Bundle.main).instantiateInitialViewController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = viewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

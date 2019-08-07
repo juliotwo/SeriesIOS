@@ -11,42 +11,9 @@ import Alamofire
 
 class SeriesServices: NSObject {
     func getSeriesRequest(byId name: String, completion: @escaping (ListaSeriesRequest?) -> Void) {
-        
-        let body = [
-            "apikey" : "PPDZ39EGKOEHNR3R",
-            "userkey" : "JOEZYXMFGR0RDBXA",
-            "username" : "tavromero2yu"
-        ]
-        var request = URLRequest(url: URL(string: "https://api.thetvdb.com/login")!)
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        
-        let tarea = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            if error != nil {
-                print(error!)
-            } else {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
-                    if let parseJson = json {
-                        let accessToken = parseJson["token"] as? String
-                        
-                        let defaults = UserDefaults.standard
-                        print(accessToken)
-                        defaults.set(accessToken, forKey: "token")
-                    }
-                    
-                    
-                }catch {
-                    print("El procedimiento del JSON tuvo un error")
-                }
-            }
-            
-        }
-        tarea.resume()
+                
         let token = UserDefaults.standard.string(forKey: "token")
-        let urlString = "https://api.thetvdb.com/search/series?name=Game"
+        let urlString = "https://api.thetvdb.com/search/series?name="+name
         let headers: HTTPHeaders = [
            
             "Content-Type": "application/json"
