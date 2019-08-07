@@ -10,13 +10,13 @@ import UIKit
 import Alamofire
 
 class SeriesServices: NSObject {
-    func getSeriesRequest(byId name: String, completion: @escaping (ListaSeriesRequest?) -> Void) {
+   static func getSeriesRequest(byId name: String, completion: @escaping (ListaSeriesRequest?) -> Void) {
                 
-        let token = UserDefaults.standard.string(forKey: "token")
+    guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/search/series?name="+name
         let headers: HTTPHeaders = [
-           
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token 
         ]
         Alamofire.request(urlString, headers:headers).response { response in
             guard let data = response.data else { return }

@@ -38,23 +38,23 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="154" id="IyT-ag-bLn">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="154"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="205" id="IyT-ag-bLn" customClass="CellSearchViewModel" customModule="Series" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IyT-ag-bLn" id="hE7-QX-Cye">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="153.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="204.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYS-CM-3vn">
-                                                    <rect key="frame" x="21" y="11" width="307" height="20"/>
+                                                    <rect key="frame" x="21" y="11" width="307" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Mediomelon" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-4M-LeU">
-                                                    <rect key="frame" x="21.5" y="40" width="300" height="94"/>
+                                                    <rect key="frame" x="21.5" y="65" width="300" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="94" id="dG0-xN-app"/>
+                                                        <constraint firstAttribute="height" constant="120" id="dG0-xN-app"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -68,6 +68,10 @@
                                                 <constraint firstItem="LYS-CM-3vn" firstAttribute="top" secondItem="hE7-QX-Cye" secondAttribute="topMargin" id="wSF-N4-DNH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="banner" destination="5eb-4M-LeU" id="vSL-iW-1Oc"/>
+                                            <outlet property="serieName" destination="LYS-CM-3vn" id="ob9-la-1P7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
