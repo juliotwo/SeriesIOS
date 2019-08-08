@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK2-0s-46h">
                                 <rect key="frame" x="313" y="17" width="46" height="25"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="search:" destination="7s4-f8-beO" eventType="touchUpInside" id="gyN-8Y-hv4"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7WW-kc-nUM">
                                 <rect key="frame" x="16" y="65" width="343" height="518"/>
@@ -126,6 +129,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7WW-kc-nUM" id="hYA-q4-Aa2"/>
+                        <outlet property="textValue" destination="UPe-wM-aVg" id="jAX-lJ-yqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3s-NI-bSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
