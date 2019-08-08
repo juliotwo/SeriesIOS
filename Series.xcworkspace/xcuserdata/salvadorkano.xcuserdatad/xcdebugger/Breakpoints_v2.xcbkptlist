@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586978103.5381989"
+            timestampString = "586985761.336964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -44,12 +44,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586978103.538651"
+            timestampString = "586985761.3370529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "getSearchSeries(value:handler:)"
+            landmarkName = "getSearchSeries(byId:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -60,12 +60,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Series/Services/SeriesServices.swift"
-            timestampString = "586978103.538932"
+            timestampString = "586985761.337124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "getSearchSeries(value:handler:)"
+            landmarkName = "getSearchSeries(byId:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
