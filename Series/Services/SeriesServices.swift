@@ -33,7 +33,7 @@ class SeriesServices: NSObject {
         }
     }
     
-    public static func getSearchSeries(value: String, handler: SeriesHandler?) {
+    public static func getSearchSeries(byId value: String, completion: @escaping (ListaSeriesRequest?, Error?, Bool?) -> Void){
 
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/search/series?name=\(value.replacingOccurrences(of:" ", with: "%20"))"
@@ -46,13 +46,13 @@ class SeriesServices: NSObject {
             do {
                 let decoder = JSONDecoder()
                 let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
-                handler?(true, nil)
-//                completion(serieRequest)
+               
+               completion(serieRequest, response.error, true)
                 print(serieRequest)
             } catch let error {
                 print(error)
-                handler?(false, nil)
-//                completion(nil)
+               
+                completion(nil, error, false)
             }
         }
     }

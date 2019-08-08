@@ -113,10 +113,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" springLoaded="YES" style="plain" id="Lfr-Rl-gJE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4VO-cb-N9q">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" springLoaded="YES" style="done" id="Lfr-Rl-gJE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="4VO-cb-N9q">
+                                <rect key="frame" x="276" y="0.0" width="83" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <state key="normal" title="Cerrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -124,17 +125,26 @@
                                     <action selector="cerrarSesion:" destination="7s4-f8-beO" eventType="touchUpInside" id="JEP-Kb-6Qj"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonCerrar" destination="Lfr-Rl-gJE" id="RIJ-vB-Idx"/>
                         <outlet property="tableView" destination="7WW-kc-nUM" id="hYA-q4-Aa2"/>
                         <outlet property="textValue" destination="UPe-wM-aVg" id="jAX-lJ-yqb"/>
+                        <segue destination="ppb-o7-arG" kind="modal" identifier="GoToLogin" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Yuq-CA-4L6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3s-NI-bSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="125.4872563718141"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="kLF-Eb-vk3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="ppb-o7-arG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULH-2a-k4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Yv-od-IhQ">
