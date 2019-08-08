@@ -25,7 +25,11 @@ class CellSearchViewModel: UITableViewCell {
     func setUpView() {
         serieName.text = viewModel.seriesName
         banner.image = UIImage()
-        
+        if viewModel.banner == "" {
+            banner.image = UIImage(named: "EmptyState")
+        }else {
+            banner.load(url: URL(string: "https://www.thetvdb.com/banners/\(viewModel.banner)")!)
+        }
         
 
     }
