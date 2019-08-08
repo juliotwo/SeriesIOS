@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias LoginHandler = ( (_ success: Bool, _ error: Error?) -> Void)
+//typealias LoginHandler = ( (_ success: Bool, _ error: Error?) -> Void)
 
 class LoginViewModel {
     static func AccessToken(handler: LoginHandler?) {
@@ -27,6 +27,7 @@ class LoginViewModel {
             
             if error != nil {
                 print(error!)
+                handler?(false, nil)
             } else {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
@@ -37,6 +38,7 @@ class LoginViewModel {
                         
                         defaults.set(accessToken, forKey: "token")
                         print(accessToken!)
+                        handler?(true, nil)
                     }
                     
                     

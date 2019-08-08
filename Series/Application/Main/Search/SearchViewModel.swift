@@ -40,13 +40,14 @@ class SearchViewModel {
     }
     @objc public func getdataByName(name:String){
         
-        SeriesServices.getSeriesRequest(byId: name) { (lista) in
+        SeriesServices.getSearchSeries(byId: name) { (lista, error, succes) in
             guard let lista = lista else {
                 return
             }
             self.items = lista.data
             self.delegate?.reloadData()
         }
+
         
     }
     func item(at indexPath: IndexPath) -> SearchSerieViewModel {
