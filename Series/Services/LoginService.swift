@@ -9,11 +9,13 @@
 import UIKit
 import Alamofire
 
-public class LoginService: NSObject {
+typealias LoginHandler = ( (_ success: Bool, _ error: Error?) -> Void)
+
+class LoginService {
     
     
     
-   public static func obtenerToken(){
+    public static func obtenerToken(viewContoller: UIViewController, handler: LoginHandler?){
         
     let body = [
         "apikey" : "PPDZ39EGKOEHNR3R",
@@ -29,6 +31,7 @@ public class LoginService: NSObject {
         
         if error != nil {
             print(error!)
+            handler?(false, nil)
         } else {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
@@ -40,6 +43,7 @@ public class LoginService: NSObject {
                     defaults.set(accessToken, forKey: "token")
                     defaults.set(true, forKey: "session")
                     print(accessToken!)
+                    handler?(true, nil)
                 }
                 
                 
