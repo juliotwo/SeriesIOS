@@ -73,5 +73,15 @@ extension SearchViewController: UITableViewDataSource {
         cell.viewModel = viewModel.item(at: indexPath)
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print( indexPath.row)
+       
+        self.performSegue(withIdentifier: "GoToDetails", sender: self)
+
+    }
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "GoToDetails"{
+//            let details = segue.destination as
+//        }
+//    }
 }

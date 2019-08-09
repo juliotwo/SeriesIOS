@@ -132,6 +132,7 @@
                         <outlet property="tableView" destination="7WW-kc-nUM" id="hYA-q4-Aa2"/>
                         <outlet property="textValue" destination="UPe-wM-aVg" id="jAX-lJ-yqb"/>
                         <segue destination="ppb-o7-arG" kind="modal" identifier="GoToLogin" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Yuq-CA-4L6"/>
+                        <segue destination="he4-dB-qbI" kind="show" identifier="GoToDetails" id="6h5-aD-fZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3s-NI-bSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,7 +145,15 @@
                 <viewControllerPlaceholder storyboardName="Login" id="ppb-o7-arG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULH-2a-k4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="83"/>
+            <point key="canvasLocation" x="2041" y="-22"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="8Cd-5c-4xV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Details" id="he4-dB-qbI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCe-Lk-UKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="226"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Yv-od-IhQ">
