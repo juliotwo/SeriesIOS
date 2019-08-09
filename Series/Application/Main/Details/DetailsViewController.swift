@@ -19,7 +19,10 @@ class DetailsViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        emptyStateView.frame.size.width = vistaDinamica.frame.size.width
+        emptyStateView.frame.size.height = vistaDinamica.frame.size.height
        vistaDinamica.autoresizesSubviews = true
+       
        vistaDinamica.addSubview(emptyStateView)
       
     
