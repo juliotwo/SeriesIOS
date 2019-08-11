@@ -150,7 +150,9 @@
         <!--Details-->
         <scene sceneID="8Cd-5c-4xV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Details" id="he4-dB-qbI" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Details" id="he4-dB-qbI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Boa-O6-Rc1"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCe-Lk-UKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2048" y="226"/>

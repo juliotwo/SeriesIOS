@@ -56,5 +56,29 @@ class SeriesServices: NSObject {
             }
         }
     }
+    public static func getDetailsSerie(byId value: Int, completion: @escaping (SerieDetail?, Error?, Bool?) -> Void){
+        let val = String(value)
+        print(val)
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+        let urlString = "https://api.thetvdb.com/series/\(val)"
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        ]
+        Alamofire.request(urlString, headers:headers).response { response in
+            guard let data = response.data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let serieDetail = try decoder.decode(SerieDetail.self, from: data)
+                
+                completion(serieDetail, response.error, true)
+                print(serieDetail)
+            } catch let error {
+                print(error)
+                
+                completion(nil, error, false)
+            }
+        }
+    }
 
 }
