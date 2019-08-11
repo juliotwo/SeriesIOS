@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var textValue: UITextField!
     @IBOutlet weak var buttonCerrar: UIBarButtonItem!
     
+    private var id: Int?
+    
     fileprivate(set) lazy var emptyStateView: UIView = {
         guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
             else {
@@ -75,13 +77,20 @@ extension SearchViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print( indexPath.row)
-       
+        print("hola")
+        self.id = viewModel.item(at: indexPath).id
+        print(self.id ?? 8)
+        
         self.performSegue(withIdentifier: "GoToDetails", sender: self)
-
+        
+      
+       
+        
     }
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "GoToDetails"{
-//            let details = segue.destination as
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToDetails" {
+            print(segue.destination)
+           
+        }
+    }
 }
