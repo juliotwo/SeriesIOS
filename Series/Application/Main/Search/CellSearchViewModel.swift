@@ -31,6 +31,7 @@ class CellSearchViewModel: UITableViewCell {
             banner.load(url: URL(string: "https://www.thetvdb.com/banners/\(viewModel.banner)")!)
         }
         
+        
 
     }
     

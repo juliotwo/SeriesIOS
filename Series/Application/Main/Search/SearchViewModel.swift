@@ -14,7 +14,7 @@ protocol SearchViewModelDelegate {
 class SearchViewModel {
     private var items: [SerieRequest] = []
     
- 
+
     
     var numberOfitems: Int {
         return items.count
@@ -50,6 +50,8 @@ class SearchViewModel {
 
         
     }
+    
+
     func item(at indexPath: IndexPath) -> SearchSerieViewModel {
         return SearchSerieViewModel(serie: items[indexPath.row])
     }
@@ -63,6 +65,9 @@ class SearchSerieViewModel {
     }
     var banner: String{
         return serie.banner
+    }
+    var id: Int{
+        return serie.id
     }
     init(serie:SerieRequest) {
         self.serie = serie
