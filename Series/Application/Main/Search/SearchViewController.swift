@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var buttonCerrar: UIBarButtonItem!
     
     private var id: Int?
+    private var seriesName: String?
     
     fileprivate(set) lazy var emptyStateView: UIView = {
         guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
@@ -36,6 +37,11 @@ class SearchViewController: UIViewController {
     var viewModel = SearchViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "TextLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
         buttonCerrar.isEnabled = true
         viewModel.delegate = self
         viewModel.getdata()
@@ -79,6 +85,7 @@ extension SearchViewController: UITableViewDataSource {
         print( indexPath.row)
         print("hola")
         self.id = viewModel.item(at: indexPath).id
+        self.seriesName = viewModel.item(at: indexPath).seriesName
         print(self.id ?? 8)
         
         self.performSegue(withIdentifier: "GoToDetails", sender: self)
@@ -88,9 +95,12 @@ extension SearchViewController: UITableViewDataSource {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToDetails" {
-            print(segue.destination)
-           
+        guard let pass = segue.destination as? DetailsViewController else { return }
+            pass.id = self.id
+            pass.seriesName = self.seriesName
+//        if segue.identifier == "GoToDetails" {
+//            print(segue.destination)
+        
         }
     }
-}
+
