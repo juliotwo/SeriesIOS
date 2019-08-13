@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var vistaDinamica: UIView!
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
+    @IBOutlet weak var serieTitle: UILabel!
     
     fileprivate(set) lazy var SinopsisView: UIView = {
         guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? UIView  else {
@@ -35,18 +36,28 @@ class DetailsViewController: UIViewController {
     }()
     
     public var id:Int?
+    public var seriesName:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "TextLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
         // Image needs to be added to project.
-        let buttonIcon = UIImage(named: "imageLogo")
+//        let buttonIcon = UIImage(named: "imageLogo")
         
-        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
-        leftBarButton.image = buttonIcon
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-        self.navigationItem.title = "Hola"
+//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
+//        leftBarButton.image = buttonIcon
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+//        self.navigationItem.title = "Hola"
         reloadView(names: SinopsisView)
-        print(id ?? 5)
+        print(id ?? 6)
+        print(seriesName ?? "Titulo")
+        serieTitle.text = seriesName
+        let id = self.id
+        let defaults = UserDefaults.standard
+        defaults.set(id, forKey: "id")
         //vistaDinamica =  emptyStateView
         // Do any additional setup after loading the view.
     }

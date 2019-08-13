@@ -10,6 +10,7 @@
 		8061B77F22EFD9890059176F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8061B77E22EFD9890059176F /* Colors.xcassets */; };
 		8061B78722EFDCBB0059176F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8061B78622EFDCBB0059176F /* Login.storyboard */; };
 		8061B78922EFDE490059176F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8061B78822EFDE490059176F /* LoginViewController.swift */; };
+		8085DF2B230120460092DAA4 /* SinopsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085DF2A230120460092DAA4 /* SinopsisView.swift */; };
 		80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */; };
 		80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93022F0F177005D8F0D /* EmptyState.xib */; };
 		80BAC93322F0F677005D8F0D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93222F0F677005D8F0D /* Details.storyboard */; };
@@ -36,6 +37,7 @@
 		8061B77E22EFD9890059176F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8061B78622EFDCBB0059176F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8061B78822EFDE490059176F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8085DF2A230120460092DAA4 /* SinopsisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisView.swift; sourceTree = "<group>"; };
 		80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		80BAC93022F0F177005D8F0D /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		80BAC93222F0F677005D8F0D /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
 				F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */,
+				8085DF2A230120460092DAA4 /* SinopsisView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
+				8085DF2B230120460092DAA4 /* SinopsisView.swift in Sources */,
 				F3A8668F22FFCAC9005E4ED8 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
