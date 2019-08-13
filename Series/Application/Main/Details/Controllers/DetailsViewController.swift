@@ -21,6 +21,13 @@ class DetailsViewController: UIViewController {
     fileprivate(set) lazy var SinopsisView: SinopsisViewModel = {
         guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? SinopsisViewModel  else {
             return SinopsisViewModel()
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var seasonsView: UIView!
+    @IBOutlet weak var actorsView: UIView!
+    
+    fileprivate(set) lazy var SinopsisView: UIView = {
+        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? UIView  else {
+            return UIView()
         }
         return view
     }()
@@ -49,6 +56,16 @@ class DetailsViewController: UIViewController {
         let image = UIImage(named: "TextLogo")
         imageView.image = image
         navigationItem.titleView = imageView
+        // Image needs to be added to project.
+//        let buttonIcon = UIImage(named: "imageLogo")
+        
+//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
+//        leftBarButton.image = buttonIcon
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+//        self.navigationItem.title = "Hola"
+//        reloadView(names: SinopsisView)
+        print(id ?? 6)
+        print(seriesName ?? "Titulo")
         serieTitle.text = seriesName
         viewmodel.getDetailsSerie(id: self.id!) { (Serie, error, succes) in
             if succes!{
@@ -58,6 +75,16 @@ class DetailsViewController: UIViewController {
         
        
         
+        let id = self.id
+        let defaults = UserDefaults.standard
+        defaults.set(id, forKey: "id")
+        //vistaDinamica =  emptyStateView
+        // Do any additional setup after loading the view.
+        
+        
+        detailsView.alpha = 1
+        seasonsView.alpha = 0
+        actorsView.alpha = 0
     }
     
     @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)
@@ -66,36 +93,64 @@ class DetailsViewController: UIViewController {
     }
  
 
-    func reloadView( names:UIView) -> Void {
-       
-        names.frame.size.width = vistaDinamica.frame.size.width
-        names.frame.size.height = vistaDinamica.frame.size.height
-        vistaDinamica.autoresizesSubviews = true
-        
-        vistaDinamica.addSubview(names)
-        
-    }
+//    func reloadView( names:UIView) -> Void {
+//
+//        names.frame.size.width = vistaDinamica.frame.size.width
+//        names.frame.size.height = vistaDinamica.frame.size.height
+//        vistaDinamica.autoresizesSubviews = true
+//
+//        vistaDinamica.addSubview(names)
+//
+//    }
     
-    @IBAction func animateHeader(sender: UIButton) {
-        animationLayout.constant = sender.frame.origin.x
-        UIView.animate(withDuration: 0.5, animations: {
-            self.view.layoutIfNeeded()
-        }) { (completed) in
-            self.animationsButtons.forEach {
-                $0.setTitleColor( UIColor(named: "TextColor") , for: .normal)
-                sender.setTitleColor( UIColor.white , for: .normal)
-            }
+//    @IBAction func animateHeader(sender: UIButton) {
+//        animationLayout.constant = sender.frame.origin.x
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.view.layoutIfNeeded()
+//        }) { (completed) in
+//            self.animationsButtons.forEach {
+//                $0.setTitleColor( UIColor(named: "TextColor") , for: .normal)
+//                sender.setTitleColor( UIColor.white , for: .normal)
+//            }
+//        }
+//        print(sender.restorationIdentifier!)
+//        switch sender.restorationIdentifier {
+//        case "Detalles":
+//            reloadView(names: SinopsisView)
+//        case "Temporadas":
+//            reloadView(names: EpisodesView)
+//        case "Actores":
+//            reloadView(names: ActorsView)
+//        default:
+//            reloadView(names: SinopsisView)
+//        }
+//    }
+    @IBAction func switchView(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            print(detailsView.alpha)
+            print(seasonsView.alpha)
+            print(actorsView.alpha)
+            detailsView.alpha = 1
+            seasonsView.alpha = 0
+            actorsView.alpha = 0
         }
-        print(sender.restorationIdentifier!)
-        switch sender.restorationIdentifier {
-        case "Detalles":
-            reloadView(names: SinopsisView)
-        case "Temporadas":
-            reloadView(names: EpisodesView)
-        case "Actores":
-            reloadView(names: ActorsView)
-        default:
-            reloadView(names: SinopsisView)
+        if sender.selectedSegmentIndex == 1 {
+            print("hola")
+            print(detailsView.alpha)
+            print(seasonsView.alpha)
+            print(actorsView.alpha)
+            detailsView.alpha = 0
+            seasonsView.alpha = 1
+            actorsView.alpha = 0
+        }
+        if sender.selectedSegmentIndex == 2 {
+            print("tecera")
+            print(detailsView.alpha)
+            print(seasonsView.alpha)
+            print(actorsView.alpha)
+            detailsView.alpha = 0
+            seasonsView.alpha = 0
+            actorsView.alpha = 1
         }
     }
 
