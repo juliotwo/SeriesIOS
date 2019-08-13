@@ -39,29 +39,25 @@ class DetailsViewController: UIViewController {
     }()
     public var id:Int?
     public var seriesName:String?
+    let viewmodel = DetailsViewModel()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "TextLogo")
         imageView.image = image
         navigationItem.titleView = imageView
-        // Image needs to be added to project.
-//        let buttonIcon = UIImage(named: "imageLogo")
-        
-//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
-//        leftBarButton.image = buttonIcon
-//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-//        self.navigationItem.title = "Hola"
-        reloadView(names: SinopsisView)
-        print(id ?? 6)
-        print(seriesName ?? "Titulo")
         serieTitle.text = seriesName
-        let id = self.id
-        let defaults = UserDefaults.standard
-        defaults.set(id, forKey: "id")
-        //vistaDinamica =  emptyStateView
-        // Do any additional setup after loading the view.
+        viewmodel.getDetailsSerie(id: self.id!) { (Serie, error, succes) in
+            if succes!{
+                self.SinopsisView.serie = Serie}
+        }
+        reloadView(names: SinopsisView)
+        
+       
+        
     }
     
     @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)

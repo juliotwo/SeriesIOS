@@ -31,6 +31,8 @@
 		F36A5AF422FCF8210027F196 /* Sinopsis.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36A5AF322FCF8210027F196 /* Sinopsis.xib */; };
 		F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */; };
 		F3A8669823028563005E4ED8 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8669723028563005E4ED8 /* DetailsViewModel.swift */; };
+		F3A8669A23028CDA005E4ED8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8669923028CDA005E4ED8 /* CollectionViewController.swift */; };
+		F3A8669C23028E08005E4ED8 /* ACt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A8669B23028E08005E4ED8 /* ACt.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		F36A5AF322FCF8210027F196 /* Sinopsis.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sinopsis.xib; sourceTree = "<group>"; };
 		F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisViewModel.swift; sourceTree = "<group>"; };
 		F3A8669723028563005E4ED8 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		F3A8669923028CDA005E4ED8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F3A8669B23028E08005E4ED8 /* ACt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ACt.storyboard; sourceTree = "<group>"; };
 		F4EA6DD68338AF2F0BB6606D /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,7 @@
 		8061B78222EFDA480059176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F3A8669D23034528005E4ED8 /* DetailsContainer */,
 				8061B78522EFDAB40059176F /* Details */,
 				8061B78422EFDAA70059176F /* Search */,
 				8061B78322EFDA510059176F /* Login */,
@@ -232,6 +237,7 @@
 				F36A5AF322FCF8210027F196 /* Sinopsis.xib */,
 				80D4ED4122FDD362000FDAD1 /* Episodes.xib */,
 				80D4ED4322FDD65E000FDAD1 /* Actors.xib */,
+				F3A8669B23028E08005E4ED8 /* ACt.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
+				F3A8669923028CDA005E4ED8 /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +258,13 @@
 				F3A8669723028563005E4ED8 /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F3A8669D23034528005E4ED8 /* DetailsContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailsContainer;
 			sourceTree = "<group>";
 		};
 		FC22823F6161315CABB383EB /* Pods */ = {
@@ -323,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D8320E22D7B2DE0061646D /* LaunchScreen.storyboard in Resources */,
+				F3A8669C23028E08005E4ED8 /* ACt.storyboard in Resources */,
 				8061B77F22EFD9890059176F /* Colors.xcassets in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				80D4ED4222FDD362000FDAD1 /* Episodes.xib in Resources */,
@@ -393,6 +408,7 @@
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
 				F3A8669823028563005E4ED8 /* DetailsViewModel.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
+				F3A8669A23028CDA005E4ED8 /* CollectionViewController.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
