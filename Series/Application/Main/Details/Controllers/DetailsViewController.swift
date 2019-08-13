@@ -9,12 +9,18 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    @IBOutlet weak var tituloSerieLabel: UILabel!
+    
     @IBOutlet weak var vistaDinamica: UIView!
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
     @IBOutlet weak var serieTitle: UILabel!
     
+   
+
+    fileprivate(set) lazy var SinopsisView: SinopsisViewModel = {
+        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? SinopsisViewModel  else {
+            return SinopsisViewModel()
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var seasonsView: UIView!
     @IBOutlet weak var actorsView: UIView!
@@ -38,10 +44,12 @@ class DetailsViewController: UIViewController {
         }
         return view
     }()
-    
     public var id:Int?
     public var seriesName:String?
+    let viewmodel = DetailsViewModel()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
         imageView.contentMode = .scaleAspectFit
@@ -59,6 +67,14 @@ class DetailsViewController: UIViewController {
         print(id ?? 6)
         print(seriesName ?? "Titulo")
         serieTitle.text = seriesName
+        viewmodel.getDetailsSerie(id: self.id!) { (Serie, error, succes) in
+            if succes!{
+                self.SinopsisView.serie = Serie}
+        }
+        reloadView(names: SinopsisView)
+        
+       
+        
         let id = self.id
         let defaults = UserDefaults.standard
         defaults.set(id, forKey: "id")
