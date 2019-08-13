@@ -14,8 +14,10 @@ class DetailsViewController: UIViewController {
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
     
+    public var id:Int?
+    
     fileprivate(set) lazy var SinopsisView: UIView = {
-        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? UIView  else {
+        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? SinopsisViewModel  else {
             return UIView()
         }
         return view
@@ -34,17 +36,17 @@ class DetailsViewController: UIViewController {
         return view
     }()
     
-    public var id:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
         // Image needs to be added to project.
-        let buttonIcon = UIImage(named: "imageLogo")
-        
-        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
-        leftBarButton.image = buttonIcon
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-        self.navigationItem.title = "Hola"
+//        let buttonIcon = UIImage(named: "imageLogo")
+//        
+//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
+//        leftBarButton.image = buttonIcon
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+//        self.navigationItem.title = "Hola"
         reloadView(names: SinopsisView)
         print(id ?? 5)
         //vistaDinamica =  emptyStateView
