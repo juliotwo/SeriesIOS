@@ -10,7 +10,6 @@
 		8061B77F22EFD9890059176F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8061B77E22EFD9890059176F /* Colors.xcassets */; };
 		8061B78722EFDCBB0059176F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8061B78622EFDCBB0059176F /* Login.storyboard */; };
 		8061B78922EFDE490059176F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8061B78822EFDE490059176F /* LoginViewController.swift */; };
-		8085DF2B230120460092DAA4 /* SinopsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085DF2A230120460092DAA4 /* SinopsisView.swift */; };
 		80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */; };
 		80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93022F0F177005D8F0D /* EmptyState.xib */; };
 		80BAC93322F0F677005D8F0D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93222F0F677005D8F0D /* Details.storyboard */; };
@@ -30,15 +29,14 @@
 		F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */; };
 		F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AF122FCF4050027F196 /* DetailsViewController.swift */; };
 		F36A5AF422FCF8210027F196 /* Sinopsis.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36A5AF322FCF8210027F196 /* Sinopsis.xib */; };
-		F3A8668F22FFCAC9005E4ED8 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */; };
 		F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */; };
+		F3A8669823028563005E4ED8 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8669723028563005E4ED8 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8061B77E22EFD9890059176F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8061B78622EFDCBB0059176F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8061B78822EFDE490059176F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8085DF2A230120460092DAA4 /* SinopsisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisView.swift; sourceTree = "<group>"; };
 		80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		80BAC93022F0F177005D8F0D /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		80BAC93222F0F677005D8F0D /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
@@ -61,8 +59,8 @@
 		F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSearchViewModel.swift; sourceTree = "<group>"; };
 		F36A5AF122FCF4050027F196 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F36A5AF322FCF8210027F196 /* Sinopsis.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sinopsis.xib; sourceTree = "<group>"; };
-		F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisViewModel.swift; sourceTree = "<group>"; };
+		F3A8669723028563005E4ED8 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F4EA6DD68338AF2F0BB6606D /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,8 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
-				F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */,
-				8085DF2A230120460092DAA4 /* SinopsisView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,8 +247,8 @@
 		F3A86696230281BC005E4ED8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */,
 				F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */,
+				F3A8669723028563005E4ED8 /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -395,6 +391,7 @@
 			files = (
 				F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */,
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
+				F3A8669823028563005E4ED8 /* DetailsViewModel.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */,
@@ -405,8 +402,6 @@
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
-				8085DF2B230120460092DAA4 /* SinopsisView.swift in Sources */,
-				F3A8668F22FFCAC9005E4ED8 /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

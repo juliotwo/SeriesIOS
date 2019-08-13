@@ -2,7 +2,7 @@
 //  DetailsViewModel.swift
 //  Series
 //
-//  Created by julio vargas bautista on 8/10/19.
+//  Created by julio vargas bautista on 8/13/19.
 //  Copyright © 2019 SalvadorKano. All rights reserved.
 //
 
@@ -12,20 +12,20 @@ protocol DetailsViewModelModelDelegate {
     func reloadData()
 }
 class DetailsViewModel {
-  
+    
     
     private var item : SerieRequest?
     
     var delegate: SearchViewModelDelegate?
     
     init() {
-
-//        getdata()
-     
+        
+        //        getdata()
+        
         //        NotificationCenter.default.addObserver(self, selector: #selector(getdate), name: Notification.Name("AddedNewData"), object: nil)
     }
-
- 
+    
+    
     
     public func  getDetailsSerie(id:Int, completion: @escaping (DetailsSerieViewModel?, Error?, Bool?) -> Void){
         
@@ -34,10 +34,10 @@ class DetailsViewModel {
                 return
             }
             self.item = serie.data
-           completion(DetailsSerieViewModel(serie: self.item!),error,succes)
+            completion(DetailsSerieViewModel(serie: self.item!),error,succes)
         }
     }
-
+    
 }
 class DetailsSerieViewModel {
     private var serie: SerieRequest
@@ -55,7 +55,7 @@ class DetailsSerieViewModel {
         return serie.genre?.joined(separator: ",") ?? ""
     }
     var airsTime:String{
-    return serie.airsTime ?? ""
+        return serie.airsTime ?? ""
     }
     var overview:String{
         return serie.overview ?? ""
