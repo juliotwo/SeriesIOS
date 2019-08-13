@@ -9,16 +9,17 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    @IBOutlet weak var tituloSerieLabel: UILabel!
+    
     @IBOutlet weak var vistaDinamica: UIView!
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
     
-    public var id:Int?
-    
-    fileprivate(set) lazy var SinopsisView: UIView = {
+   
+
+    fileprivate(set) lazy var SinopsisView: SinopsisViewModel = {
         guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? SinopsisViewModel  else {
-            return UIView()
+            return SinopsisViewModel()
         }
         return view
     }()
@@ -35,22 +36,18 @@ class DetailsViewController: UIViewController {
         }
         return view
     }()
-    
-    
+    public var id:Int?
+    public var nombreSerie: String?
+    let viewModel = DetailsViewModel()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        // Image needs to be added to project.
-//        let buttonIcon = UIImage(named: "imageLogo")
-//        
-//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
-//        leftBarButton.image = buttonIcon
-//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-//        self.navigationItem.title = "Hola"
+        tituloSerieLabel.text = self.nombreSerie
+        viewModel.getDetailsSerie(id:self.id!) { (serie, error, succes) in
+            self.SinopsisView.serie = serie
+        }
         reloadView(names: SinopsisView)
-        print(id ?? 5)
-        //vistaDinamica =  emptyStateView
-        // Do any additional setup after loading the view.
+       
     }
     
     @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)

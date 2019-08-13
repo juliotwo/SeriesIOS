@@ -162,6 +162,7 @@
 		8061B78522EFDAB40059176F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				F3A86696230281BC005E4ED8 /* ViewModels */,
 				F3A8669222FFCC1E005E4ED8 /* Views */,
 				F3A8669322FFCC32005E4ED8 /* Controllers */,
 			);
@@ -239,10 +240,17 @@
 			isa = PBXGroup;
 			children = (
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F3A86696230281BC005E4ED8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
 				F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */,
 				F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */,
 			);
-			path = Controllers;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FC22823F6161315CABB383EB /* Pods */ = {

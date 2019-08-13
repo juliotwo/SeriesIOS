@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var buttonCerrar: UIBarButtonItem!
     
     private var id: Int?
-    
+    private var serieNombre:String?
     fileprivate(set) lazy var emptyStateView: UIView = {
         guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
             else {
@@ -79,7 +79,9 @@ extension SearchViewController: UITableViewDataSource {
         print( indexPath.row)
         print("hola")
         self.id = viewModel.item(at: indexPath).id
+        self.serieNombre = viewModel.item(at: indexPath).seriesName
         print(self.id ?? 8)
+        
         
         self.performSegue(withIdentifier: "GoToDetails", sender: self)
         
@@ -88,9 +90,8 @@ extension SearchViewController: UITableViewDataSource {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToDetails" {
-            print(segue.destination)
-           
-        }
+        guard let pass = segue.destination as? DetailsViewController else { return }
+        pass.id = self.id
+        pass.nombreSerie = self.serieNombre
     }
 }
