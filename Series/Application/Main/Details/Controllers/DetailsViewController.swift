@@ -14,6 +14,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var vistaDinamica: UIView!
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
+    @IBOutlet weak var serieTitle: UILabel!
     
    
 
@@ -37,17 +38,30 @@ class DetailsViewController: UIViewController {
         return view
     }()
     public var id:Int?
-    public var nombreSerie: String?
-    let viewModel = DetailsViewModel()
-   
+    public var seriesName:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        tituloSerieLabel.text = self.nombreSerie
-        viewModel.getDetailsSerie(id:self.id!) { (serie, error, succes) in
-            self.SinopsisView.serie = serie
-        }
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "TextLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        // Image needs to be added to project.
+//        let buttonIcon = UIImage(named: "imageLogo")
+        
+//        let leftBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItem.Style.done, target: self, action: #selector(DetailsViewController.myLeftSideBarButtonItemTapped(_:)))
+//        leftBarButton.image = buttonIcon
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+//        self.navigationItem.title = "Hola"
         reloadView(names: SinopsisView)
-       
+        print(id ?? 6)
+        print(seriesName ?? "Titulo")
+        serieTitle.text = seriesName
+        let id = self.id
+        let defaults = UserDefaults.standard
+        defaults.set(id, forKey: "id")
+        //vistaDinamica =  emptyStateView
+        // Do any additional setup after loading the view.
     }
     
     @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)

@@ -150,12 +150,6 @@
             </connections>
             <point key="canvasLocation" x="37.600000000000001" y="34.729064039408868"/>
         </view>
-        <window contentMode="scaleToFill" resizesToFullScreen="NO" id="rjQ-aM-DYg">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <viewLayoutGuide key="safeArea" id="J3t-KH-TA7"/>
-            <point key="canvasLocation" x="-853" y="48"/>
-        </window>
     </objects>
     <resources>
         <image name="EmptyState" width="308" height="245"/>

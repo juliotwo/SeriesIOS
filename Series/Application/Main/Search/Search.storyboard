@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Medio Melon-->
+        <!--Search View Controller-->
         <scene sceneID="Ovr-Fy-ZIE">
             <objects>
                 <viewController id="7s4-f8-beO" customClass="SearchViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7dQ-iu-LRC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Medio Melon" largeTitleDisplayMode="never" id="hTq-d0-Ag2">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="hTq-d0-Ag2">
                         <barButtonItem key="leftBarButtonItem" style="done" id="54f-Be-TZV">
                             <view key="customView" contentMode="scaleToFill" id="tC6-qC-8d2">
                                 <rect key="frame" x="16" y="0.0" width="83" height="44"/>
