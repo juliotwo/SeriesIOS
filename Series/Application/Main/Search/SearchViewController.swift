@@ -27,11 +27,12 @@ class SearchViewController: UIViewController {
     @IBAction func cerrarSesion(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "session")
         UserDefaults.standard.set(nil, forKey: "token")
-//        self.performSegue(withIdentifier: "GoToLogin", sender: self)
+        self.performSegue(withIdentifier: "GoToLogin", sender: self)
 
-      
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.initialViewController()
+//        let name = "Login"
+//        let viewController = UIStoryboard(name: name, bundle: Bundle.main).instantiateInitialViewController()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = viewController
     }
     var viewModel = SearchViewModel()
     override func viewDidLoad() {
@@ -87,8 +88,7 @@ extension SearchViewController: UITableViewDataSource {
         self.seriesName = viewModel.item(at: indexPath).seriesName
         print(self.id ?? 8)
         
-        
-        self.performSegue(withIdentifier: "DetailsContainer", sender: self)
+        self.performSegue(withIdentifier: "GoToDetails", sender: self)
         
       
        
