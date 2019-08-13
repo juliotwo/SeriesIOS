@@ -9,15 +9,18 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    @IBOutlet weak var tituloSerieLabel: UILabel!
+    
     @IBOutlet weak var vistaDinamica: UIView!
     @IBOutlet var animationsButtons: [UIButton]!
     @IBOutlet weak var animationLayout: NSLayoutConstraint!
     @IBOutlet weak var serieTitle: UILabel!
     
-    fileprivate(set) lazy var SinopsisView: UIView = {
-        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? UIView  else {
-            return UIView()
+   
+
+    fileprivate(set) lazy var SinopsisView: SinopsisViewModel = {
+        guard let view = Bundle.main.loadNibNamed("Sinopsis", owner: nil, options: [:])?.first as? SinopsisViewModel  else {
+            return SinopsisViewModel()
         }
         return view
     }()
@@ -34,7 +37,6 @@ class DetailsViewController: UIViewController {
         }
         return view
     }()
-    
     public var id:Int?
     public var seriesName:String?
     override func viewDidLoad() {

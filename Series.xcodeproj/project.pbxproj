@@ -31,6 +31,7 @@
 		F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AF122FCF4050027F196 /* DetailsViewController.swift */; };
 		F36A5AF422FCF8210027F196 /* Sinopsis.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36A5AF322FCF8210027F196 /* Sinopsis.xib */; };
 		F3A8668F22FFCAC9005E4ED8 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */; };
+		F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		F36A5AF122FCF4050027F196 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F36A5AF322FCF8210027F196 /* Sinopsis.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sinopsis.xib; sourceTree = "<group>"; };
 		F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisViewModel.swift; sourceTree = "<group>"; };
 		F4EA6DD68338AF2F0BB6606D /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 		8061B78522EFDAB40059176F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				F3A86696230281BC005E4ED8 /* ViewModels */,
 				F3A8669222FFCC1E005E4ED8 /* Views */,
 				F3A8669322FFCC32005E4ED8 /* Controllers */,
 			);
@@ -243,6 +246,15 @@
 				8085DF2A230120460092DAA4 /* SinopsisView.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F3A86696230281BC005E4ED8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F3A8668E22FFCAC9005E4ED8 /* DetailsViewModel.swift */,
+				F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FC22823F6161315CABB383EB /* Pods */ = {
@@ -385,6 +397,7 @@
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
+				F3A866952300879D005E4ED8 /* SinopsisViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				80DCF54D22F3BA6400B8C299 /* LoginViewModel.swift in Sources */,

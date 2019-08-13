@@ -88,6 +88,7 @@ extension SearchViewController: UITableViewDataSource {
         self.seriesName = viewModel.item(at: indexPath).seriesName
         print(self.id ?? 8)
         
+        
         self.performSegue(withIdentifier: "GoToDetails", sender: self)
         
       
