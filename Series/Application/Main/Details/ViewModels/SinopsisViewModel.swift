@@ -14,6 +14,7 @@ class SinopsisViewModel: UIViewController {
     @IBOutlet weak var HorarioLabel: UILabel!
     @IBOutlet weak var CalificacionLabel: UILabel!
     @IBOutlet weak var SinopsisLabel: UITextView!
+    @IBOutlet weak var posterImage: UIImageView!
     
     var serie: DetailsSerieViewModel!{
         didSet{
@@ -30,5 +31,11 @@ class SinopsisViewModel: UIViewController {
         HorarioLabel.text = serie.airsTime
         CalificacionLabel.text = String(serie.rarting)
         SinopsisLabel.text = serie.overview
+        posterImage.image = UIImage()
+        if serie.poster == "" {
+            posterImage.image = UIImage(named: "EmptyState")
+        }else {
+            posterImage.load(url: URL(string: serie.poster)!)
+        }
     }
 }
