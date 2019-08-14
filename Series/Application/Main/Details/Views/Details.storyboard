@@ -358,7 +358,15 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="X9j-d7-SQl"/>
                     </view>
+                    <connections>
+                        <outlet property="CalificacionLabel" destination="7c7-xE-iz1" id="zQU-LD-e4B"/>
+                        <outlet property="CategoriaLabel" destination="U4M-2x-lRd" id="F01-MI-20q"/>
+                        <outlet property="HorarioLabel" destination="7mQ-5v-aOm" id="7Wk-6c-Hfc"/>
+                        <outlet property="PrimeraEmision" destination="D4j-WM-opk" id="Kns-g9-Ayj"/>
+                        <outlet property="SinopsisLabel" destination="k0Y-gC-stE" id="bQj-1E-eeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scQ-WK-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,6 +380,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="369" height="635"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DNT-bI-TFZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylW-UT-NwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,6 +395,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="369" height="635"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WWB-v6-w3N"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adA-ji-hxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
