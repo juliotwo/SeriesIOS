@@ -34,19 +34,44 @@ class DetailsViewModel {
                 return
             }
             self.item = serie.data
-            completion(DetailsSerieViewModel(serie: self.item!),error,succes)
+            if (!(serie.data.imdbId!.isEmpty)){
+                print(serie.data.imdbId ?? "hola")
+                SeriesServices.getMoreDetailsSerie(byId: serie.data.imdbId!) { (serie, error, succes) in
+                    guard let serie = serie else {
+                        return
+                    }
+                    let data = serie
+                    self.item?.Poster = data.Poster
+                    self.item?.totalSeasons = data.totalSeasons
+                    completion(DetailsSerieViewModel(serie: self.item!),error,succes)
+                }
+            }
+            else{
+                completion(DetailsSerieViewModel(serie: self.item!),error,succes)
+            }
+            
         }
     }
+//    public func  getMoreDetailsSerie(imbId:String, completion: @escaping (String?,String?, Error?, Bool?) -> Void){
+//
+//        SeriesServices.getMoreDetailsSerie(byId: imbId) { (serie, error, succes) in
+//            guard let serie = serie else {
+//                return
+//            }
+//            let data = serie.data
+//            completion(data.Poster,data.airsTime,error,succes)
+//        }
+//    }
     
 }
 class DetailsSerieViewModel {
     private var serie: SerieRequest
     
     var seriesName: String{
-        return serie.seriesName
+        return serie.seriesName ?? ""
     }
     var banner: String{
-        return serie.banner
+        return serie.banner ?? ""
     }
     var firstAired: String{
         return serie.firstAired ?? ""
@@ -62,6 +87,12 @@ class DetailsSerieViewModel {
     }
     var rarting:Float{
         return serie.siteRating ?? 0
+    }
+    var poster: String{
+        return serie.Poster ?? ""
+    }
+    var sessions: String{
+        return serie.totalSeasons ?? ""
     }
     init(serie:SerieRequest) {
         self.serie = serie

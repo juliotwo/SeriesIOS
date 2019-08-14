@@ -294,7 +294,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwI-G5-wMB">
-                                        <rect key="frame" x="5" y="5" width="90.666666666666671" height="17"/>
+                                        <rect key="frame" x="5" y="5" width="63" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51.329999999999998" id="Qi7-Fr-S8r"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="Xxc-oe-yIT"/>
@@ -331,10 +331,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="asasasasasasassasasasas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4M-2x-lRd">
-                                        <rect key="frame" x="100.66666666666669" y="5" width="97.333333333333314" height="33.666666666666664"/>
+                                        <rect key="frame" x="73" y="5" width="125" height="33.666666666666664"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="fqS-Z4-c0A"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="97.5" id="imf-lg-pad"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="125" id="imf-lg-pad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -429,6 +429,7 @@
                         <outlet property="HorarioLabel" destination="7mQ-5v-aOm" id="URb-eu-p2q"/>
                         <outlet property="PrimeraEmision" destination="7c7-xE-iz1" id="YVy-bh-rfQ"/>
                         <outlet property="SinopsisLabel" destination="k0Y-gC-stE" id="AYa-Dr-ZoX"/>
+                        <outlet property="posterImage" destination="Pex-mP-rhX" id="F10-di-6AV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scQ-WK-s2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,7 +456,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="hgF-ln-N8e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="hgF-ln-N8e">
                                         <rect key="frame" x="0.0" y="28" width="337" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgF-ln-N8e" id="qCj-TG-VGg">

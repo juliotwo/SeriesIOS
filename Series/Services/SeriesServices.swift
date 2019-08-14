@@ -80,5 +80,32 @@ class SeriesServices: NSObject {
             }
         }
     }
+    public static func getMoreDetailsSerie(byId value: String, completion: @escaping (SerieRequest?, Error?, Bool?) -> Void){
+       print("value " + value)
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+        let urlString = "https://omdbapi.com/?i=\(value)&apikey=2f1f55d7&plot=full"
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        ]
+        Alamofire.request(urlString, headers:headers).response { response in
+            guard let data = response.data else { return }
+            
+            do {
+               
+                let decoder = JSONDecoder()
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                let serieDetail = try decoder.decode(SerieRequest.self, from: data)
+                
+                print(serieDetail)
+                completion(serieDetail, response.error, true)
+                print(serieDetail)
+            } catch let error {
+                print(error)
+                
+                completion(nil, error, false)
+            }
+        }
+    }
 
 }

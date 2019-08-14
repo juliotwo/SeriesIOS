@@ -61,13 +61,13 @@ class SearchSerieViewModel {
     private var serie: SerieRequest
     
     var seriesName: String{
-        return serie.seriesName
+        return serie.seriesName ?? ""
     }
     var banner: String{
-        return serie.banner
+        return serie.banner ?? ""
     }
     var id: Int{
-        return serie.id
+        return serie.id ?? 0
     }
     init(serie:SerieRequest) {
         self.serie = serie

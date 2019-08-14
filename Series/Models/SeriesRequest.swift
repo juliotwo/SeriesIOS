@@ -25,15 +25,17 @@ struct SerieDetail: Codable {
 }
 struct SerieRequest: Codable {
     
-    let id: Int
-    let banner: String
-    let seriesName: String
+    let id: Int?
+    let banner: String?
+    let seriesName: String?
     let firstAired: String?
     let genre: [String]?
     let imdbId: String?
     let airsTime: String?
     let siteRating: Float?
     let overview: String?
+    var Poster:String?
+    var totalSeasons: String?
     
     enum CodingKeys: String, CodingKey{
         case banner = "banner"
@@ -45,6 +47,8 @@ struct SerieRequest: Codable {
         case airsTime = "airsTime"
         case siteRating = "siteRating"
         case overview = "overview"
+        case Poster = "Poster"
+        case totalSeasons = "totalSeasons"
     }
 }
 //{
