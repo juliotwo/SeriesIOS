@@ -88,7 +88,7 @@ extension SearchViewController: UITableViewDataSource {
         print(self.id ?? 8)
         
         
-        self.performSegue(withIdentifier: "DetailsContainer", sender: self)
+        self.performSegue(withIdentifier: "GoToDetails", sender: self)
         
       
        
