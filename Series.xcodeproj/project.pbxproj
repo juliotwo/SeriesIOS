@@ -245,6 +245,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F3A86696230281BC005E4ED8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */,
+				F3A8669723028563005E4ED8 /* DetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FC22823F6161315CABB383EB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
