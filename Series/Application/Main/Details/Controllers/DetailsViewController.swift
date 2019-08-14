@@ -9,10 +9,10 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
-    @IBOutlet weak var vistaDinamica: UIView!
-    @IBOutlet var animationsButtons: [UIButton]!
-    @IBOutlet weak var animationLayout: NSLayoutConstraint!
+//
+//    @IBOutlet weak var vistaDinamica: UIView!
+//    @IBOutlet var animationsButtons: [UIButton]!
+//    @IBOutlet weak var animationLayout: NSLayoutConstraint!
     @IBOutlet weak var serieTitle: UILabel!
     
     @IBOutlet weak var detailsView: UIView!
@@ -42,7 +42,7 @@ class DetailsViewController: UIViewController {
     public var id:Int?
     public var seriesName:String?
     public let viewModel = DetailsViewModel()
-    
+    public var serie: DetailsSerieViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
@@ -53,11 +53,7 @@ class DetailsViewController: UIViewController {
 
         serieTitle.text = seriesName
         
-        viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
-            
-          
-        }
-        
+       
         
         detailsView.alpha = 1
         seasonsView.alpha = 0
@@ -130,5 +126,14 @@ class DetailsViewController: UIViewController {
             actorsView.alpha = 1
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let pass = segue.destination as? SinopsisViewModel else { return }
+        viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+            pass.serie = serie
+            self.serie = serie
+           
+        }
+        
+        
+    }
 }
