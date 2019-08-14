@@ -162,6 +162,7 @@
 		8061B78522EFDAB40059176F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				F346888B230388D400DC24EB /* ViewModels */,
 				F3A8669222FFCC1E005E4ED8 /* Views */,
 				F3A8669322FFCC32005E4ED8 /* Controllers */,
 			);
@@ -207,6 +208,13 @@
 			path = Series;
 			sourceTree = "<group>";
 		};
+		F346888B230388D400DC24EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F36A5AE222FA14B70027F196 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,15 +251,6 @@
 				8085DF2A230120460092DAA4 /* SinopsisView.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F3A86696230281BC005E4ED8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				F3A866942300879D005E4ED8 /* SinopsisViewModel.swift */,
-				F3A8669723028563005E4ED8 /* DetailsViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FC22823F6161315CABB383EB /* Pods */ = {
