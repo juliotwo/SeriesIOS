@@ -23,6 +23,15 @@ struct SerieDetail: Codable {
         case data = "data"
     }
 }
+
+struct ActorsDetails: Codable {
+    let data: [ActorsRequest]
+    
+    enum CodigKeyh: String, CodingKey{
+        case data = "data"
+    }
+}
+
 struct SerieRequest: Codable {
     
     let id: Int?
@@ -49,6 +58,16 @@ struct SerieRequest: Codable {
         case overview = "overview"
         case Poster = "Poster"
         case totalSeasons = "totalSeasons"
+    }
+}
+
+struct ActorsRequest: Codable {
+    var name: String?
+    var image: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case image = "image"
     }
 }
 //{

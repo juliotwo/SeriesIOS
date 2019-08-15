@@ -20,12 +20,7 @@ class DetailsViewModel {
     
     init() {
         
-        //        getdata()
-        
-        //        NotificationCenter.default.addObserver(self, selector: #selector(getdate), name: Notification.Name("AddedNewData"), object: nil)
     }
-    
-    
     
     public func  getDetailsSerie(id:Int, completion: @escaping (DetailsSerieViewModel?, Error?, Bool?) -> Void){
         
@@ -52,17 +47,6 @@ class DetailsViewModel {
             
         }
     }
-//    public func  getMoreDetailsSerie(imbId:String, completion: @escaping (String?,String?, Error?, Bool?) -> Void){
-//
-//        SeriesServices.getMoreDetailsSerie(byId: imbId) { (serie, error, succes) in
-//            guard let serie = serie else {
-//                return
-//            }
-//            let data = serie.data
-//            completion(data.Poster,data.airsTime,error,succes)
-//        }
-//    }
-    
 }
 class DetailsSerieViewModel {
     private var serie: SerieRequest

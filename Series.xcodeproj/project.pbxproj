@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800D89512304864E00E5910B /* ActorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D89502304864E00E5910B /* ActorsViewController.swift */; };
+		800D89532304AEAD00E5910B /* CellViewModelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D89522304AEAD00E5910B /* CellViewModelCollectionViewCell.swift */; };
 		8061B77F22EFD9890059176F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8061B77E22EFD9890059176F /* Colors.xcassets */; };
 		8061B78722EFDCBB0059176F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8061B78622EFDCBB0059176F /* Login.storyboard */; };
 		8061B78922EFDE490059176F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8061B78822EFDE490059176F /* LoginViewController.swift */; };
 		8085DF2B230120460092DAA4 /* SinopsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085DF2A230120460092DAA4 /* SinopsisView.swift */; };
 		8086CE7F2303AD7500114644 /* TemporadasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086CE7E2303AD7500114644 /* TemporadasViewController.swift */; };
+		8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086CE802303F06100114644 /* ActorsViewModel.swift */; };
 		80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */; };
 		80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93022F0F177005D8F0D /* EmptyState.xib */; };
 		80BAC93322F0F677005D8F0D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BAC93222F0F677005D8F0D /* Details.storyboard */; };
@@ -33,11 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800D89502304864E00E5910B /* ActorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsViewController.swift; sourceTree = "<group>"; };
+		800D89522304AEAD00E5910B /* CellViewModelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelCollectionViewCell.swift; sourceTree = "<group>"; };
 		8061B77E22EFD9890059176F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8061B78622EFDCBB0059176F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8061B78822EFDE490059176F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8085DF2A230120460092DAA4 /* SinopsisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopsisView.swift; sourceTree = "<group>"; };
 		8086CE7E2303AD7500114644 /* TemporadasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporadasViewController.swift; sourceTree = "<group>"; };
+		8086CE802303F06100114644 /* ActorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsViewModel.swift; sourceTree = "<group>"; };
 		80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		80BAC93022F0F177005D8F0D /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		80BAC93222F0F677005D8F0D /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
@@ -211,6 +217,8 @@
 			children = (
 				F346888C2303898E00DC24EB /* DetailsViewModel.swift */,
 				F346888D2303898E00DC24EB /* SinopsisViewModel.swift */,
+				8086CE802303F06100114644 /* ActorsViewModel.swift */,
+				800D89522304AEAD00E5910B /* CellViewModelCollectionViewCell.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
 				8085DF2A230120460092DAA4 /* SinopsisView.swift */,
 				8086CE7E2303AD7500114644 /* TemporadasViewController.swift */,
+				800D89502304864E00E5910B /* ActorsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */,
+				800D89512304864E00E5910B /* ActorsViewController.swift in Sources */,
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
 				8086CE7F2303AD7500114644 /* TemporadasViewController.swift in Sources */,
@@ -391,7 +401,9 @@
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				80DCF54D22F3BA6400B8C299 /* LoginViewModel.swift in Sources */,
+				8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */,
 				F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */,
+				800D89532304AEAD00E5910B /* CellViewModelCollectionViewCell.swift in Sources */,
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
