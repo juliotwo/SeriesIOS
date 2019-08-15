@@ -16,7 +16,6 @@ class ActorsViewModel{
     private var items: [ActorsRequest] = []
     
     var numberOfitems: Int {
-        print(items.count)
         return items.count
     }
     
@@ -31,26 +30,14 @@ class ActorsViewModel{
             guard let lista = lista else {
                 return
             }
-            
             self.items = lista.data
-//            print(self.items)
-           self.delegate?.reloadData()
+            self.delegate?.reloadData()
         }
     }
-//    public func  getActors(id:Int, completion: @escaping (DetailsActorViewModel?, Error?, Bool?) -> Void){
-//
-//        SeriesServices.getActors(byId: id) { (actors, error, succes) in
-//            guard let actors = actors else {
-//                return
-//            }
-//            print(actors)
-//        }
-//    }
+
     
     
     func item(at indexPath: IndexPath) -> DetailsActorViewModel {
-        print("AQui")
-        print(indexPath.item)
         return DetailsActorViewModel(actors: items[indexPath.item])
     }
 
@@ -68,6 +55,5 @@ class DetailsActorViewModel {
     }
     init(actors:ActorsRequest) {
         self.actors = actors
-        print(self.actors)
     }
 }

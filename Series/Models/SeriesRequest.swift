@@ -70,20 +70,3 @@ struct ActorsRequest: Codable {
         case image = "image"
     }
 }
-//{
-//    "data": {
-//        "id": 121361,
-//        "seriesName": "Game of Thrones",
-//        "aliases": [],
-//        "banner": "graphical/121361-g22.jpg",
-//        "seriesId": "",
-//        "status": "Ended",
-//        "firstAired": "2011-04-17",
-//        "network": "HBO",
-//        "networkId": "",
-//        "runtime": "55",
-//        "genre": [
-//        "Adventure",
-//        "Drama",
-//        "Fantasy"
-//        ],

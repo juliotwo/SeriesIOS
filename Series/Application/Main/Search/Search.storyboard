@@ -131,7 +131,7 @@
                         <outlet property="buttonCerrar" destination="Lfr-Rl-gJE" id="RIJ-vB-Idx"/>
                         <outlet property="tableView" destination="7WW-kc-nUM" id="hYA-q4-Aa2"/>
                         <outlet property="textValue" destination="UPe-wM-aVg" id="jAX-lJ-yqb"/>
-                        <segue destination="ppb-o7-arG" kind="modal" identifier="GoToLogin" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Yuq-CA-4L6"/>
+                        <segue destination="ppb-o7-arG" kind="presentation" identifier="GoToLogin" id="Yuq-CA-4L6"/>
                         <segue destination="he4-dB-qbI" kind="show" identifier="GoToDetails" id="6h5-aD-fZk"/>
                     </connections>
                 </viewController>

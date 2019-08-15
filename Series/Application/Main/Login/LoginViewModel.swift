@@ -37,7 +37,6 @@ class LoginViewModel {
                         let defaults = UserDefaults.standard
                         
                         defaults.set(accessToken, forKey: "token")
-                        print(accessToken!)
                         handler?(true, nil)
                     }
                     

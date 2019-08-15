@@ -24,8 +24,6 @@ class SeriesServices: NSObject {
                 let decoder = JSONDecoder()
                 let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
                 completion(serieRequest)
-                print(completion)
-                print(serieRequest)
             } catch let error {
                 print(error)
                 completion(nil)
@@ -48,7 +46,6 @@ class SeriesServices: NSObject {
                 let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
                
                completion(serieRequest, response.error, true)
-                print(serieRequest)
             } catch let error {
                 print(error)
                
@@ -58,7 +55,6 @@ class SeriesServices: NSObject {
     }
     public static func getDetailsSerie(byId value: Int, completion: @escaping (SerieDetail?, Error?, Bool?) -> Void){
         let val = String(value)
-        print(val)
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/series/\(val)"
         let headers: HTTPHeaders = [
@@ -72,16 +68,13 @@ class SeriesServices: NSObject {
                 let serieDetail = try decoder.decode(SerieDetail.self, from: data)
                 
                 completion(serieDetail, response.error, true)
-                print(serieDetail)
             } catch let error {
                 print(error)
-                
                 completion(nil, error, false)
             }
         }
     }
     public static func getMoreDetailsSerie(byId value: String, completion: @escaping (SerieRequest?, Error?, Bool?) -> Void){
-       print("value " + value)
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://omdbapi.com/?i=\(value)&apikey=2f1f55d7&plot=full"
         let headers: HTTPHeaders = [
@@ -94,14 +87,11 @@ class SeriesServices: NSObject {
             do {
                
                 let decoder = JSONDecoder()
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+//                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let serieDetail = try decoder.decode(SerieRequest.self, from: data)
-                
-//                print(serieDetail)
                 completion(serieDetail, response.error, true)
             } catch let error {
                 print(error)
-                
                 completion(nil, error, false)
             }
         }
@@ -109,7 +99,6 @@ class SeriesServices: NSObject {
     
     public static func getActors(byId value: Int, completion: @escaping (ActorsDetails?, Error?, Bool?) -> Void){
         let val = String(value)
-        print(val)
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/series/\(val)/actors"
         let headers: HTTPHeaders = [
@@ -119,14 +108,12 @@ class SeriesServices: NSObject {
         Alamofire.request(urlString, headers:headers).response { response in
             guard let data = response.data else { return }
             do {
-                 let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+//                 let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let decoder = JSONDecoder()
                 let actorsDetail = try decoder.decode(ActorsDetails.self, from: data)
                 completion(actorsDetail, response.error, true)
-                print(actorsDetail)
             } catch let error {
                 print(error)
-                
                 completion(nil, error, false)
             }
         }

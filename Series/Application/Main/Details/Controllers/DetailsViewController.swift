@@ -9,12 +9,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-//
-//    @IBOutlet weak var vistaDinamica: UIView!
-//    @IBOutlet var animationsButtons: [UIButton]!
-//    @IBOutlet weak var animationLayout: NSLayoutConstraint!
-    @IBOutlet weak var serieTitle: UILabel!
-    
+
+    @IBOutlet weak var serieTitle: UILabel!    
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var seasonsView: UIView!
     @IBOutlet weak var actorsView: UIView!
@@ -33,21 +29,14 @@ class DetailsViewController: UIViewController {
         let image = UIImage(named: "TextLogo")
         imageView.image = image
         navigationItem.titleView = imageView
-
         serieTitle.text = seriesName
-        
-       
-        
         detailsView.alpha = 1
         seasonsView.alpha = 0
         actorsView.alpha = 0
         
     }
     
-    @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)
-    {
-        print("myLeftSideBarButtonItemTapped")
-    }
+
  
     @IBAction func switchView(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -77,8 +66,6 @@ class DetailsViewController: UIViewController {
         }
         
         if let passActors = segue.destination as? ActorsViewController {
-            passActors.id = self.id
-            
             passActors.viewModel = ActorsViewModel(id: self.id!)
         }
     }

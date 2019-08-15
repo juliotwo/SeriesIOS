@@ -22,7 +22,6 @@ class CellViewModelCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setUpView(){
-        print(viewModel.name)
         name.text = viewModel.name
         image.image = UIImage()
         if viewModel.image == "" {

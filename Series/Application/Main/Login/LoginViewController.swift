@@ -27,9 +27,7 @@ class LoginViewController: UIViewController {
                 return
             }
             if success {
-                print("Antes del error")
                 self?.performSegue(withIdentifier: "goToSearch", sender: self)
-                print("Despues")
             }
         })
     }

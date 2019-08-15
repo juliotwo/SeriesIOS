@@ -30,7 +30,6 @@ class DetailsViewModel {
             }
             self.item = serie.data
             if (!(serie.data.imdbId!.isEmpty)){
-                print(serie.data.imdbId ?? "hola")
                 SeriesServices.getMoreDetailsSerie(byId: serie.data.imdbId!) { (serie, error, succes) in
                     guard let serie = serie else {
                         return
