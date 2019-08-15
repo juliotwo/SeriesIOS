@@ -97,9 +97,33 @@ class SeriesServices: NSObject {
                 let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let serieDetail = try decoder.decode(SerieRequest.self, from: data)
                 
-                print(serieDetail)
+//                print(serieDetail)
                 completion(serieDetail, response.error, true)
-                print(serieDetail)
+            } catch let error {
+                print(error)
+                
+                completion(nil, error, false)
+            }
+        }
+    }
+    
+    public static func getActors(byId value: Int, completion: @escaping (ActorsDetails?, Error?, Bool?) -> Void){
+        let val = String(value)
+        print(val)
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+        let urlString = "https://api.thetvdb.com/series/\(val)/actors"
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        ]
+        Alamofire.request(urlString, headers:headers).response { response in
+            guard let data = response.data else { return }
+            do {
+                 let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                let decoder = JSONDecoder()
+                let actorsDetail = try decoder.decode(ActorsDetails.self, from: data)
+                completion(actorsDetail, response.error, true)
+                print(actorsDetail)
             } catch let error {
                 print(error)
                 
