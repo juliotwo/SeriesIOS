@@ -21,9 +21,11 @@ class DetailsViewController: UIViewController {
     
     public var id:Int?
     public var seriesName:String?
-    public let viewModel = DetailsViewModel()
+    
+   
     public var serie: DetailsSerieViewModel?
     public var actors: ActorsViewModel?
+     public let viewModel = DetailsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
@@ -76,6 +78,8 @@ class DetailsViewController: UIViewController {
         
         if let passActors = segue.destination as? ActorsViewController {
             passActors.id = self.id
+            
+            passActors.viewModel = ActorsViewModel(id: self.id!)
         }
     }
 }

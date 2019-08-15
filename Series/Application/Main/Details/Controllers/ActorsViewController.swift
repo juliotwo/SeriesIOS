@@ -11,25 +11,30 @@ import UIKit
 class ActorsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     public var id:Int?
-    public var viewModel = ActorsViewModel()
+  
+    public var viewModel:ActorsViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(id ?? 4444444444)
         print("aqui llego")
-        viewModel.getData(id: id!)
+        viewModel?.delegate = self
+
+        
 //        viewModel.delegate = self
 //        viewModel.getActors(id: id!) { (actors, error, success) in
+        
         print("hola")
         }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         print("adios")
+        
     }
     
-//        viewModel.delegate = self
 //        viewModel.delegate = self
     }
     
@@ -49,31 +54,23 @@ class ActorsViewController: UIViewController {
 extension ActorsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let count = viewModel.numberOfitems
-         print(count)
+        let count = viewModel?.numberOfitems
+        
         print("asdasdasdaasdadasd")
-        return 20
+        return count ?? 2
+        
     }
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath)
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as? CellViewModelCollectionViewCell else{
+            return UICollectionViewCell()
+        }
+        print(indexPath.item)
         cell.backgroundColor = UIColor.blue
-//
-//        cell.backgroundColor = UIColor.cyan
-//
-//
-//
-//
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! CollectionViewCell
-//         get a reference to our storyboard cell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
-//
-//         Use the outlet in our custom class to get a reference to the UILabel in the cell
-//        cell.myLabel.text = self.items[indexPath.item]
-//                cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
-//
+        let cellView = viewModel?.item(at: indexPath)
+        cell.viewModel = cellView
+        
         return cell
     }
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,8 +85,13 @@ extension ActorsViewController: UICollectionViewDataSource {
 //}
 }
 
-extension ActorsViewController: UICollectionViewDelegate{
-    
+extension ActorsViewController: ActorsViewModelDelegate{
+    func reloadData() {
+        
+        collectionView.reloadData()
+        
+    }
+
 }
 
 //extension ActorsViewController: UICollectionViewLayout{

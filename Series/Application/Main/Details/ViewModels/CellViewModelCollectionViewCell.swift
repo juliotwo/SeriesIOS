@@ -17,7 +17,12 @@ class CellViewModelCollectionViewCell: UICollectionViewCell {
             setUpView()
         }
     }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
     func setUpView(){
+        print(viewModel.name)
         name.text = viewModel.name
         image.image = UIImage()
         if viewModel.image == "" {

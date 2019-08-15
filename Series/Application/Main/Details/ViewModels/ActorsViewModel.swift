@@ -22,7 +22,8 @@ class ActorsViewModel{
     
     var delegate: ActorsViewModelDelegate?
     
-    init() {
+    init(id: Int) {
+        getData(id: id)
     }
     
     @objc public func getData(id: Int){
@@ -30,8 +31,10 @@ class ActorsViewModel{
             guard let lista = lista else {
                 return
             }
+            
             self.items = lista.data
-            self.delegate?.reloadData()
+//            print(self.items)
+           self.delegate?.reloadData()
         }
     }
 //    public func  getActors(id:Int, completion: @escaping (DetailsActorViewModel?, Error?, Bool?) -> Void){
@@ -46,7 +49,9 @@ class ActorsViewModel{
     
     
     func item(at indexPath: IndexPath) -> DetailsActorViewModel {
-        return DetailsActorViewModel(actors: items[indexPath.row])
+        print("AQui")
+        print(indexPath.item)
+        return DetailsActorViewModel(actors: items[indexPath.item])
     }
 
 }
@@ -63,5 +68,6 @@ class DetailsActorViewModel {
     }
     init(actors:ActorsRequest) {
         self.actors = actors
+        print(self.actors)
     }
 }
