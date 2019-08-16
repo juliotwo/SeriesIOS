@@ -45,14 +45,18 @@ extension ActorsViewController: UICollectionViewDataSource {
 
 }
 public var screenWidth: CGFloat {
-    return UIScreen.main.bounds.width
+    return UIScreen.main.bounds.size.width
 }
 public var screenHeight: CGFloat {
-    return UIScreen.main.bounds.height
+    return UIScreen.main.bounds.size.height
 }
+
+
+    
 
 extension ActorsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        iPhoneScreenSizes()
         return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
     }
 }
@@ -66,3 +70,22 @@ extension ActorsViewController: ActorsViewModelDelegate{
 
 }
 
+func iPhoneScreenSizes(){
+    let bounds = UIScreen.main.bounds
+    let height = bounds.size.height
+    
+    switch height {
+    case 480.0:
+        print("iPhone 3,4")
+    case 568.0:
+        print("iPhone 5")
+    case 667.0:
+        print("iPhone 6")
+    case 736.0:
+        print("iPhone 6+")
+        
+    default:
+        print("not an iPhone")
+        
+    }
+}

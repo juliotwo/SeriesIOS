@@ -22,13 +22,36 @@ class DetailsViewController: UIViewController {
     public var serie: DetailsSerieViewModel?
     public var actors: ActorsViewModel?
      public let viewModel = DetailsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "TextLogo")
-        imageView.image = image
-        navigationItem.titleView = imageView
+      
+        let image = UIImage(named: "imageLogo")
+        
+        let image2 = image?.resize(maxWidthHeight: 50)
+        
+        let label1 = UILabel()
+        label1.text = "Medio"
+        label1.textColor = .white
+        label1.sizeToFit()
+        
+        let label2 = UILabel()
+        label2.text = "Melon"
+        label2.textColor = .white
+        label2.sizeToFit()
+        
+        let stackView = UIStackView(arrangedSubviews: [label1,label2])
+        stackView.axis = .horizontal
+        stackView.frame.size.width = label1.frame.width + label2.frame.width
+        stackView.frame.size.height = max(label1.frame.height, label2.frame.height)
+        navigationItem.titleView = stackView
+
+            self.navigationController?.navigationBar.backIndicatorImage = image2
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = image2
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+ 
+     // navigationItem.backBarButtonItem =  UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         serieTitle.text = seriesName
         detailsView.alpha = 1
         seasonsView.alpha = 0

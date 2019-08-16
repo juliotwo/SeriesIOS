@@ -27,11 +27,12 @@ class SearchViewController: UIViewController {
     @IBAction func cerrarSesion(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "session")
         UserDefaults.standard.set(nil, forKey: "token")
-        self.performSegue(withIdentifier: "GoToLogin", sender: self)
+       // self.performSegue(withIdentifier: "GoToLogin", sender: self)
 
 //        let name = "Login"
 //        let viewController = UIStoryboard(name: name, bundle: Bundle.main).instantiateInitialViewController()
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+   let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.initialViewController()
 //        appDelegate.window?.rootViewController = viewController
     }
     var viewModel = SearchViewModel()
@@ -42,6 +43,8 @@ class SearchViewController: UIViewController {
         let image = UIImage(named: "TextLogo")
         imageView.image = image
         navigationItem.titleView = imageView
+    navigationItem.backBarButtonItem =  UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         buttonCerrar.isEnabled = true
         viewModel.delegate = self
         viewModel.getdata()
@@ -91,5 +94,6 @@ extension SearchViewController: UITableViewDataSource {
             pass.id = self.id
             pass.seriesName = self.seriesName
         }
+    
     }
 

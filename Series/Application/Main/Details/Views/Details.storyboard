@@ -16,18 +16,18 @@
             <objects>
                 <viewController id="ppe-38-VLh" customClass="DetailsViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jxv-oP-Da3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO SERIE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-Bj-lp8">
-                                <rect key="frame" x="25" y="25" width="364" height="20"/>
+                                <rect key="frame" x="25" y="69" width="364" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pk6-B3-ODN">
-                                <rect key="frame" x="55" y="86.333333333333343" width="304" height="29"/>
+                                <rect key="frame" x="55" y="130.33333333333334" width="304" height="29"/>
                                 <segments>
                                     <segment title="Detalles"/>
                                     <segment title="Temporadas"/>
@@ -39,19 +39,19 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Pl-WW1">
-                                <rect key="frame" x="20" y="139.33333333333331" width="369" height="643.66666666666674"/>
+                                <rect key="frame" x="20" y="183.33333333333331" width="369" height="687.66666666666674"/>
                                 <connections>
                                     <segue destination="fFr-m5-z0h" kind="embed" id="g6c-vO-RML"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyO-Cq-3iW">
-                                <rect key="frame" x="20" y="139.33333333333331" width="369" height="643.66666666666674"/>
+                                <rect key="frame" x="20" y="183.33333333333331" width="369" height="687.66666666666674"/>
                                 <connections>
                                     <segue destination="GaQ-M6-K4V" kind="embed" id="sBj-VJ-F2V"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-q4-d5p">
-                                <rect key="frame" x="20" y="139.33333333333331" width="369" height="643.66666666666674"/>
+                                <rect key="frame" x="20" y="183.33333333333331" width="369" height="687.66666666666674"/>
                                 <connections>
                                     <segue destination="Rfq-JY-9sx" kind="embed" id="ZUC-gQ-vfv"/>
                                 </connections>
@@ -80,8 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pU5-hv-suR"/>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="E1w-9T-cFi">
-                        <barButtonItem key="backBarButtonItem" title="Search" id="kQY-ac-5rj"/>
+                    <navigationItem key="navigationItem" id="E1w-9T-cFi">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="aVl-rx-uvC">
                             <view key="customView" contentMode="scaleToFill" id="KTU-sr-Sur">
                                 <rect key="frame" x="311" y="0.0" width="83" height="44"/>
@@ -108,31 +107,12 @@
             </objects>
             <point key="canvasLocation" x="1096" y="767"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9yq-a0-pNc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uDA-5y-H8D" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="1OR-WY-LuN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Principal"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ppe-38-VLh" kind="relationship" relationship="rootViewController" id="zU9-9q-tZa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vzm-be-vxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="157" y="767"/>
-        </scene>
         <!--Sinopsis View Model-->
         <scene sceneID="55g-vx-59R">
             <objects>
                 <viewController id="fFr-m5-z0h" customClass="SinopsisViewModel" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3QA-mn-VHZ">
-                        <rect key="frame" x="0.0" y="0.0" width="369" height="643.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="687.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOu-ln-G6W">
@@ -240,7 +220,7 @@
                                 </constraints>
                             </view>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyState" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-mP-rhX">
-                                <rect key="frame" x="5" y="10" width="141" height="220"/>
+                                <rect key="frame" x="5" y="10" width="141" height="16"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="141" id="QCS-LO-gqd"/>
@@ -248,14 +228,14 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k0Y-gC-stE">
-                                <rect key="frame" x="20" y="266" width="329" height="338.66666666666674"/>
+                                <rect key="frame" x="20" y="62" width="329" height="586.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-a7-TFf">
-                                <rect key="frame" x="20" y="240" width="65" height="21"/>
+                                <rect key="frame" x="20" y="36" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -295,7 +275,7 @@
             <objects>
                 <viewController id="GaQ-M6-K4V" customClass="TemporadasViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQ1-rW-tGm">
-                        <rect key="frame" x="0.0" y="0.0" width="369" height="643.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="687.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temporadas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdM-4z-Bgw">
@@ -394,7 +374,7 @@
             <objects>
                 <viewController id="Rfq-JY-9sx" customClass="ActorsViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Lk-T0-Wfr">
-                        <rect key="frame" x="0.0" y="0.0" width="369" height="643.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="687.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-Jo-eDL">
@@ -468,6 +448,9 @@
     <resources>
         <image name="EmptyState" width="308" height="245"/>
         <image name="imageLogo" width="551" height="401"/>
+        <namedColor name="Principal">
+            <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Principal">
             <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
