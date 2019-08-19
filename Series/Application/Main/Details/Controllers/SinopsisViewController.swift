@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SinopsisViewModel: UIViewController {
+class SinopsisViewController: UIViewController {
     @IBOutlet weak var PrimeraEmision: UILabel!
     @IBOutlet weak var CategoriaLabel: UILabel!
     @IBOutlet weak var HorarioLabel: UILabel!
@@ -23,6 +23,7 @@ class SinopsisViewModel: UIViewController {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
     func setUpView() {

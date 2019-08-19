@@ -8,48 +8,64 @@
 
 import UIKit
 
-class TemporadasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class TemporadasViewController: UIViewController  {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
-    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
-    
-    // MARK: - UICollectionViewDataSource protocol
-    
-    // tell the collection view how many cells to make
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
+    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
+    var items:[String] = []
     
-    // make a cell for each cell index path
+    var temp: String!{
+        didSet{
+            setUpView()
+        }
+    }
+    func setUpView(){
+        let tempInt:Int = Int(temp!) ?? 0
+        for index in 1...tempInt {
+            items.append(String(index))
+        }
+       print(items)
+        collectionView.reloadData()
+    }
+
+
+
+}
+
+extension TemporadasViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let count = items.count
+        
+        return count
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath as IndexPath) as? CellTempViewModel else{
+            return UICollectionViewCell()
+        }
         
-        // get a reference to our storyboard cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
-        
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.items[indexPath.item]
-        //        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+       cell.LabelCell.text = items[indexPath.row]
         
         return cell
     }
     
-    // MARK: - UICollectionViewDelegate protocol
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
-        
-    }
-
 }
 
-class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var myLabel: UILabel!
-}
+
+//
+//extension TemporadasViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        //        iPhoneScreenSizes()
+//        return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
+//    }
+//}
+

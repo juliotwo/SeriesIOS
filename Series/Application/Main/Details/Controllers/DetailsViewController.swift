@@ -59,7 +59,10 @@ class DetailsViewController: UIViewController {
         
     }
     
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
  
     @IBAction func switchView(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -79,14 +82,23 @@ class DetailsViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let pass = segue.destination as? SinopsisViewModel
-        {
-            viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+        viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+            if let pass = segue.destination as? SinopsisViewController
+            {
                 pass.serie = serie
-                self.serie = serie
+            }
+            if let pass = segue.destination as? TemporadasViewController
+            {
+                pass.temp = serie?.sessions
             }
         }
+//        if let pass = segue.destination as? SinopsisViewModel
+//        {
+//            viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+//                pass.serie = serie
+//                self.serie = serie
+//            }
+//        }
         
         if let passActors = segue.destination as? ActorsViewController {
             passActors.viewModel = ActorsViewModel(id: self.id!)

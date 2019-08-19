@@ -7,7 +7,12 @@
 //
 
 import UIKit
-
+public var screenWidth: CGFloat {
+    return UIScreen.main.bounds.size.width
+}
+public var screenHeight: CGFloat {
+    return UIScreen.main.bounds.size.height
+}
 class ActorsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,6 +28,8 @@ class ActorsViewController: UIViewController {
         super.awakeFromNib()
     }
     }
+
+
 
 extension ActorsViewController: UICollectionViewDataSource {
     
@@ -44,19 +51,12 @@ extension ActorsViewController: UICollectionViewDataSource {
     }
 
 }
-public var screenWidth: CGFloat {
-    return UIScreen.main.bounds.size.width
-}
-public var screenHeight: CGFloat {
-    return UIScreen.main.bounds.size.height
-}
-
 
     
 
 extension ActorsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        iPhoneScreenSizes()
+//        iPhoneScreenSizes()
         return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
     }
 }

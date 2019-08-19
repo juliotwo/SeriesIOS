@@ -25,13 +25,14 @@
 		80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E2E15422EFF80200CC3858 /* Search.storyboard */; };
 		A123C1C4B0AA633D3EB28AD9 /* Pods_Series.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFCDD32745D3BD6CCE5E3C4 /* Pods_Series.framework */; };
 		F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888C2303898E00DC24EB /* DetailsViewModel.swift */; };
-		F346888F2303898E00DC24EB /* SinopsisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888D2303898E00DC24EB /* SinopsisViewModel.swift */; };
+		F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888D2303898E00DC24EB /* SinopsisViewController.swift */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
 		F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */; };
 		F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEA22FA219A0027F196 /* SeriesServices.swift */; };
 		F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */; };
 		F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */; };
 		F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AF122FCF4050027F196 /* DetailsViewController.swift */; };
+		F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +57,14 @@
 		81634D35A239AF1DF31E75C3 /* Pods-Series.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.release.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.release.xcconfig"; sourceTree = "<group>"; };
 		CFFCDD32745D3BD6CCE5E3C4 /* Pods_Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F346888C2303898E00DC24EB /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
-		F346888D2303898E00DC24EB /* SinopsisViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopsisViewModel.swift; sourceTree = "<group>"; };
+		F346888D2303898E00DC24EB /* SinopsisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopsisViewController.swift; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRequest.swift; sourceTree = "<group>"; };
 		F36A5AEA22FA219A0027F196 /* SeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesServices.swift; sourceTree = "<group>"; };
 		F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSearchViewModel.swift; sourceTree = "<group>"; };
 		F36A5AF122FCF4050027F196 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTempViewModel.swift; sourceTree = "<group>"; };
 		F4EA6DD68338AF2F0BB6606D /* Pods-Series.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series.debug.xcconfig"; path = "Target Support Files/Pods-Series/Pods-Series.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,9 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				F346888C2303898E00DC24EB /* DetailsViewModel.swift */,
-				F346888D2303898E00DC24EB /* SinopsisViewModel.swift */,
 				8086CE802303F06100114644 /* ActorsViewModel.swift */,
 				800D89522304AEAD00E5910B /* CellViewModelCollectionViewCell.swift */,
+				F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -249,6 +251,7 @@
 		F3A8669322FFCC32005E4ED8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F346888D2303898E00DC24EB /* SinopsisViewController.swift */,
 				F36A5AF122FCF4050027F196 /* DetailsViewController.swift */,
 				8086CE7E2303AD7500114644 /* TemporadasViewController.swift */,
 				800D89502304864E00E5910B /* ActorsViewController.swift */,
@@ -397,6 +400,7 @@
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
+				F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */,
 				80DCF54D22F3BA6400B8C299 /* LoginViewModel.swift in Sources */,
 				8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */,
 				F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */,
@@ -404,7 +408,7 @@
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
-				F346888F2303898E00DC24EB /* SinopsisViewModel.swift in Sources */,
+				F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */,
 				F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
