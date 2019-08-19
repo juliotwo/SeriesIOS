@@ -118,5 +118,27 @@ class SeriesServices: NSObject {
             }
         }
     }
+    public static func getListEpisodes(byId: Int,airedSeason: String, completion: @escaping (ListaEpisodesRequest?, Error?, Bool?) -> Void){
+        let id = String(byId)
+        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+        let urlString = "https://api.thetvdb.com/series/\(id)/episodes/query?airedSeason=\(airedSeason)"
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        ]
+        Alamofire.request(urlString, headers:headers).response { response in
+            guard let data = response.data else { return }
+            do {
+                
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                let decoder = JSONDecoder()
+                let listEpisodes = try decoder.decode(ListaEpisodesRequest.self, from: data)
+                completion(listEpisodes, response.error, true)
+            } catch let error {
+                print(error)
+                completion(nil, error, false)
+            }
+        }
+    }
 
 }

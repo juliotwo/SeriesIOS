@@ -23,7 +23,7 @@ class SinopsisViewController: UIViewController {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         // Initialization code
     }
     func setUpView() {

@@ -286,15 +286,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGE-mD-Che">
-                                <rect key="frame" x="8" y="49" width="337" height="528"/>
+                                <rect key="frame" x="8" y="49" width="345" height="620"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="hgF-ln-N8e">
-                                        <rect key="frame" x="0.0" y="28" width="337" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellEpisodes" rowHeight="160" id="hgF-ln-N8e" customClass="CellEpisodesViewModel" customModule="Series" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="345" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgF-ln-N8e" id="qCj-TG-VGg">
-                                            <rect key="frame" x="0.0" y="0.0" width="337" height="159.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="159.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-l3-9ae">
@@ -318,8 +318,17 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageEpisode" destination="NEf-l3-9ae" id="dNX-VU-EBJ"/>
+                                            <outlet property="overviewEpisode" destination="fwz-57-mHQ" id="nLB-EK-A2e"/>
+                                            <outlet property="titleEpisode" destination="ld8-io-7x8" id="zVg-ki-0H6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GaQ-M6-K4V" id="LJ6-QF-OUj"/>
+                                    <outlet property="delegate" destination="GaQ-M6-K4V" id="HY2-UH-EUv"/>
+                                </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-dE-ZbR">
                                 <rect key="frame" x="108" y="20" width="245" height="21"/>
@@ -366,11 +375,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Xik-dE-ZbR" id="OLg-mo-Ln9"/>
+                        <outlet property="tableView" destination="cGE-mD-Che" id="qey-Uf-FU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylW-UT-NwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309" y="855"/>
+            <point key="canvasLocation" x="2307.971014492754" y="854.46428571428567"/>
         </scene>
         <!--Actors View Controller-->
         <scene sceneID="baw-AZ-DTY">

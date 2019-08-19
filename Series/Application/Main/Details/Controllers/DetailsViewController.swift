@@ -21,8 +21,8 @@ class DetailsViewController: UIViewController {
    
     public var serie: DetailsSerieViewModel?
     public var actors: ActorsViewModel?
-     public let viewModel = DetailsViewModel()
-    
+    public let viewModel = DetailsViewModel()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -61,7 +61,6 @@ class DetailsViewController: UIViewController {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
  
     @IBAction func switchView(_ sender: UISegmentedControl) {
@@ -90,16 +89,10 @@ class DetailsViewController: UIViewController {
             if let pass = segue.destination as? TemporadasViewController
             {
                 pass.temp = serie?.sessions
+                pass.viewModel = EpisodesViewModel(id:self.id!)
+                pass.id = self.id!
             }
         }
-//        if let pass = segue.destination as? SinopsisViewModel
-//        {
-//            viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
-//                pass.serie = serie
-//                self.serie = serie
-//            }
-//        }
-        
         if let passActors = segue.destination as? ActorsViewController {
             passActors.viewModel = ActorsViewModel(id: self.id!)
         }
