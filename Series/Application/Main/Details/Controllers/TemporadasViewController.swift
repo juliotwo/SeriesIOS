@@ -12,7 +12,7 @@ class TemporadasViewController: UIViewController  {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var selectedSeason: Int = 1
     fileprivate(set) lazy var emptyStateView: UIView = {
         guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
             else {
@@ -73,18 +73,26 @@ extension TemporadasViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath as IndexPath) as? CellTempViewModel else{
             return UICollectionViewCell()
         }
-        
+        if indexPath.row + 1 == selectedSeason{
+        cell.backgroundColor = .orange
+        }
+        else{
+            cell.backgroundColor = .white
+        }
        cell.LabelCell.text = items[indexPath.row]
         
         return cell
     }
-    
+
     
 }
 extension TemporadasViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.getdata(id: self.id!, airedSeason: String(indexPath.row + 1))
+        self.selectedSeason = indexPath.row + 1
+        collectionView.reloadData()
     }
+    
 }
 extension TemporadasViewController:EpisodeshViewModelDelegate{
     func reloadData() {

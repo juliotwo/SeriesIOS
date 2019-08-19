@@ -17,7 +17,8 @@ class ActorsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-  
+    public var estimateWidth = 160.0
+    var cellMarginCell = 16.0
     public var viewModel:ActorsViewModel?
     
     override func viewDidLoad() {
@@ -54,12 +55,12 @@ extension ActorsViewController: UICollectionViewDataSource {
 
     
 
-extension ActorsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        iPhoneScreenSizes()
-        return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
-    }
-}
+//extension ActorsViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+////        iPhoneScreenSizes()
+//        return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
+//    }
+//}
 
 extension ActorsViewController: ActorsViewModelDelegate{
     func reloadData() {
@@ -69,23 +70,29 @@ extension ActorsViewController: ActorsViewModelDelegate{
     }
 
 }
-
-func iPhoneScreenSizes(){
-    let bounds = UIScreen.main.bounds
-    let height = bounds.size.height
-    
-    switch height {
-    case 480.0:
-        print("iPhone 3,4")
-    case 568.0:
-        print("iPhone 5")
-    case 667.0:
-        print("iPhone 6")
-    case 736.0:
-        print("iPhone 6+")
-        
-    default:
-        print("not an iPhone")
-        
+extension ActorsViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let widtf = self.view.frame.width * 0.45
+        return CGSize(width: widtf, height: 150 )
     }
 }
+
+//func iPhoneScreenSizes(){
+//    let bounds = UIScreen.main.bounds
+//    let height = bounds.size.height
+//
+//    switch height {
+//    case 480.0:
+//        print("iPhone 3,4")
+//    case 568.0:
+//        print("iPhone 5")
+//    case 667.0:
+//        print("iPhone 6")
+//    case 736.0:
+//        print("iPhone 6+")
+//
+//    default:
+//        print("not an iPhone")
+//
+//    }
+//}
