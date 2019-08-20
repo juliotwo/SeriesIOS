@@ -89,7 +89,10 @@ class DetailsViewController: UIViewController {
             if let pass = segue.destination as? TemporadasViewController
             {
                 pass.temp = serie?.sessions
-                pass.viewModel = EpisodesViewModel(id:self.id!)
+                
+                if(Int(pass.temp) != nil){
+                    pass.viewModel = EpisodesViewModel(id:self.id!)
+                }
                 pass.id = self.id!
             }
         }

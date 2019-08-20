@@ -45,11 +45,15 @@ class TemporadasViewController: UIViewController  {
     }
     func setUpView(){
         let tempInt:Int = Int(temp!) ?? 0
-        for index in 1...tempInt {
-            items.append(String(index))
+        if(tempInt != 0){
+            for index in 1...tempInt {
+                items.append(String(index))
+            }
+            print(items)
+            collectionView.reloadData()
+        
         }
-       print(items)
-        collectionView.reloadData()
+        
     }
     func setUpView2(){
     
@@ -106,8 +110,8 @@ extension TemporadasViewController: UITableViewDataSource {
         let count = viewModel?.numberOfitems
         
         
-        tableView.backgroundView = count == 0 ? emptyStateView : nil
-        tableView.separatorStyle = count == 0 ? .none : .singleLine
+        tableView.backgroundView = count == nil ? emptyStateView : nil
+        tableView.separatorStyle = count == nil ? .none : .singleLine
         return count ?? 0
     }
     
