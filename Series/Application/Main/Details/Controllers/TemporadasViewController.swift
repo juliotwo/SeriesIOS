@@ -31,10 +31,24 @@ class TemporadasViewController: UIViewController  {
         super.viewDidLoad()
         viewModel?.delegate = self
         // Do any additional setup after loading the view.
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        reloadData()
+        // Do your job, when done:
+        refreshControl.endRefreshing()
     }
     var items:[String] = []
     
