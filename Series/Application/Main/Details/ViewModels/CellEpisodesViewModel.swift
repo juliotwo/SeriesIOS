@@ -23,7 +23,8 @@ class CellEpisodesViewModel: UITableViewCell {
         }
     }
     func setUpView(){
-       titleEpisode.text = "Episodio" + String(viewModel.numberEpisode)
+//       titleEpisode.text = "Episodio" + String(viewModel.numberEpisode)
+        titleEpisode.text = viewModel.episodeName
         overviewEpisode.text = viewModel.oveview
         imageEpisode.image = UIImage()
         if viewModel.image == "" {

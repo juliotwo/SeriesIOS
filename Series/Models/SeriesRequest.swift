@@ -82,10 +82,12 @@ struct EpisodesRequest: Codable {
     var airedEpisodeNumber: Int?
     var overview: String?
     var filename: String?
+    var episodeName: String?
     
     enum CodingKeys: String, CodingKey {
         case airedEpisodeNumber = "airedEpisodeNumber"
         case overview = "overview"
         case filename = "filename"
+        case episodeName = "episodeName"
     }
 }

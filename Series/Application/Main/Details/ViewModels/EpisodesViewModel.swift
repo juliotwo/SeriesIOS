@@ -50,6 +50,9 @@ class EpisodeSerieViewModel {
     var oveview: String{
         return episode.overview ?? ""
     }
+    var episodeName: String {
+        return episode.episodeName ?? ""
+    }
     init(episode:EpisodesRequest) {
         self.episode = episode
     }
