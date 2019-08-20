@@ -52,10 +52,27 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func search(_ sender: Any) {
-        viewModel.getdataByName(name: textValue.text ?? "")
+       searchSerie()
         
     }
-    
+    func searchSerie()-> Void{
+        viewModel.getdataByName(name: textValue.text ?? "") { (lista, error, succes) in
+            guard let succes = succes else {return}
+            if !succes{
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    self.viewModel = SearchViewModel()
+                    self.reloadData()
+                }))
+                
+                
+                self.present(alert, animated: true)
+            }
+       
+            
+        }
+    }
 }
 extension SearchViewController :  SearchViewModelDelegate{
     func reloadData() {

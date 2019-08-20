@@ -46,11 +46,15 @@ class TemporadasViewController: UIViewController  {
     }
     
     @objc func refresh(_ refreshControl: UIRefreshControl) {
-        viewModel.getdata(id: self.id!, airedSeason: String(self.selectedSeason)){ (lista, error, succes) in
-            print("Succes in refrsh")
+        guard let id = self.id else {return}
+        viewModel.getdata(id: id, airedSeason: String(self.selectedSeason)){ (lista, error, succes) in
+            //print("Succes in refrsh")
+            //print(error)
+            refreshControl.endRefreshing()
+            self.collectionView.reloadData()
+
         }
-        collectionView.reloadData()
-        refreshControl.endRefreshing()
+        
     }
     var items:[String] = []
     

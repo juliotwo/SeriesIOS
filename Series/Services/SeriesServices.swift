@@ -42,6 +42,7 @@ class SeriesServices: NSObject {
         Alamofire.request(urlString, headers:headers).response { response in
             guard let data = response.data else { return }
             do {
+        //        let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let decoder = JSONDecoder()
                 let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
                
@@ -49,7 +50,7 @@ class SeriesServices: NSObject {
             } catch let error {
                 print(error)
                
-                completion(nil, error, false)
+                completion(nil, response.error, false)
             }
         }
     }
@@ -64,6 +65,7 @@ class SeriesServices: NSObject {
         Alamofire.request(urlString, headers:headers).response { response in
             guard let data = response.data else { return }
             do {
+                //let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let decoder = JSONDecoder()
                 let serieDetail = try decoder.decode(SerieDetail.self, from: data)
                 
@@ -130,7 +132,7 @@ class SeriesServices: NSObject {
             guard let data = response.data else { return }
             do {
                 
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+             //   let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let decoder = JSONDecoder()
                 let listEpisodes = try decoder.decode(ListaEpisodesRequest.self, from: data)
                 completion(listEpisodes, response.error, true)
