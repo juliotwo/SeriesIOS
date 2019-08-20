@@ -46,8 +46,10 @@ class TemporadasViewController: UIViewController  {
     }
     
     @objc func refresh(_ refreshControl: UIRefreshControl) {
-        reloadData()
-        // Do your job, when done:
+        viewModel.getdata(id: self.id!, airedSeason: String(self.selectedSeason)){ (lista, error, succes) in
+            print("Succes in refrsh")
+        }
+        collectionView.reloadData()
         refreshControl.endRefreshing()
     }
     var items:[String] = []
@@ -106,7 +108,9 @@ extension TemporadasViewController: UICollectionViewDataSource {
 }
 extension TemporadasViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.getdata(id: self.id!, airedSeason: String(indexPath.row + 1))
+        viewModel.getdata(id: self.id!, airedSeason: String(indexPath.row + 1)){ (lista, error, succes) in
+            print("Succes in view controller")
+        }
         self.selectedSeason = indexPath.row + 1
         collectionView.reloadData()
     }

@@ -20,9 +20,12 @@ class EpisodesViewModel{
     var delegate: EpisodeshViewModelDelegate?
     
     init(id:Int) {
-            getdata(id: id, airedSeason: "1")
+        getdata(id: id, airedSeason: "1") { (lista, error, succes) in
+            print("Succes")
+        }
     }
-    @objc public func getdata(id:Int, airedSeason: String){
+     public func getdata(id:Int, airedSeason: String, completion: @escaping (ListaEpisodesRequest?, Error?, Bool?) -> Void)
+    {
         
         SeriesServices.getListEpisodes(byId: id, airedSeason: airedSeason){ (lista,error,succes)  in
             guard let lista = lista else {
@@ -30,6 +33,7 @@ class EpisodesViewModel{
             }
             self.items = lista.data
             self.delegate?.reloadData()
+            completion(lista,error,succes)
         }
         
         

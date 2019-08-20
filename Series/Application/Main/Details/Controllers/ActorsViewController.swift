@@ -17,6 +17,14 @@ class ActorsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    fileprivate(set) lazy var emptyStateView: UIView = {
+        guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
+            else {
+                return UIView()
+        }
+        return view
+    }()
+    
     public var estimateWidth = 160.0
     var cellMarginCell = 16.0
     public var viewModel:ActorsViewModel?
@@ -36,8 +44,10 @@ extension ActorsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let count = viewModel?.numberOfitems
-        
-        return count ?? 2
+        collectionView.backgroundView = count == nil ? emptyStateView : nil
+        collectionView.backgroundView = count == 0 ? emptyStateView : nil
+
+        return count ?? 0
         
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
