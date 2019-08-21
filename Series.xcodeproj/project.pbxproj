@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				8061B78522EFDAB40059176F /* Details */,
-				8061B78422EFDAA70059176F /* Search */,
+				8061B78422EFDAA70059176F /* Home */,
 				8061B78322EFDA510059176F /* Login */,
 			);
 			path = Main;
@@ -171,17 +171,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		8061B78422EFDAA70059176F /* Search */ = {
+		8061B78422EFDAA70059176F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F35CBF09230E0D650047ED16 /* Search */,
 				F35CBF02230E012C0047ED16 /* SliderMenu */,
-				80E2E15422EFF80200CC3858 /* Search.storyboard */,
-				80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */,
-				80BAC93022F0F177005D8F0D /* EmptyState.xib */,
-				F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */,
-				F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */,
 			);
-			path = Search;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8061B78522EFDAB40059176F /* Details */ = {
@@ -256,6 +252,42 @@
 				F35CBEFF230E01240047ED16 /* MenuViewController.swift */,
 			);
 			path = SliderMenu;
+			sourceTree = "<group>";
+		};
+		F35CBF09230E0D650047ED16 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F35CBF0C230E0D8B0047ED16 /* ViewModel */,
+				F35CBF0B230E0D820047ED16 /* Controllers */,
+				F35CBF0A230E0D750047ED16 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F35CBF0A230E0D750047ED16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80BAC93022F0F177005D8F0D /* EmptyState.xib */,
+				80E2E15422EFF80200CC3858 /* Search.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F35CBF0B230E0D820047ED16 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80BAC92C22F0DE35005D8F0D /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F35CBF0C230E0D8B0047ED16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */,
+				F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F36A5AE222FA14B70027F196 /* Services */ = {
