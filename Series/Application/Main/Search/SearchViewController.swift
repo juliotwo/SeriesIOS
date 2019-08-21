@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textValue: UITextField!
     @IBOutlet weak var buttonCerrar: UIBarButtonItem!
@@ -38,14 +38,8 @@ class SearchViewController: UIViewController {
     var viewModel = SearchViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "TextLogo")
-        imageView.image = image
-        navigationItem.titleView = imageView
-    navigationItem.backBarButtonItem =  UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-        buttonCerrar.isEnabled = true
+        addSlideMenuButton()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         viewModel.delegate = self
         viewModel.getdata()
 
