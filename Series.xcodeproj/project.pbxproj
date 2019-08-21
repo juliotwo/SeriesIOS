@@ -31,6 +31,7 @@
 		F35CBF04230E01650047ED16 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF03230E01650047ED16 /* HomeVC.swift */; };
 		F35CBF06230E01780047ED16 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF05230E01780047ED16 /* PlayVC.swift */; };
 		F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF07230E0B0F0047ED16 /* Menu.storyboard */; };
+		F35CBF11230E0E820047ED16 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF10230E0E820047ED16 /* Play.storyboard */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
 		F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */; };
 		F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEA22FA219A0027F196 /* SeriesServices.swift */; };
@@ -73,6 +74,7 @@
 		F35CBF03230E01650047ED16 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F35CBF05230E01780047ED16 /* PlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
 		F35CBF07230E0B0F0047ED16 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		F35CBF10230E0E820047ED16 /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRequest.swift; sourceTree = "<group>"; };
 		F36A5AEA22FA219A0027F196 /* SeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesServices.swift; sourceTree = "<group>"; };
@@ -245,11 +247,9 @@
 		F35CBF02230E012C0047ED16 /* SliderMenu */ = {
 			isa = PBXGroup;
 			children = (
-				F35CBF07230E0B0F0047ED16 /* Menu.storyboard */,
-				F35CBEFE230E01240047ED16 /* BaseViewController.swift */,
-				F35CBF03230E01650047ED16 /* HomeVC.swift */,
-				F35CBF05230E01780047ED16 /* PlayVC.swift */,
-				F35CBEFF230E01240047ED16 /* MenuViewController.swift */,
+				F35CBF0F230E0E480047ED16 /* ViewModel */,
+				F35CBF0E230E0E3F0047ED16 /* Controller */,
+				F35CBF0D230E0E320047ED16 /* View */,
 			);
 			path = SliderMenu;
 			sourceTree = "<group>";
@@ -269,6 +269,7 @@
 			children = (
 				80BAC93022F0F177005D8F0D /* EmptyState.xib */,
 				80E2E15422EFF80200CC3858 /* Search.storyboard */,
+				F35CBF10230E0E820047ED16 /* Play.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +287,32 @@
 			children = (
 				F36A5AEC22FB3AC70027F196 /* SearchViewModel.swift */,
 				F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F35CBF0D230E0E320047ED16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F35CBF07230E0B0F0047ED16 /* Menu.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F35CBF0E230E0E3F0047ED16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F35CBEFE230E01240047ED16 /* BaseViewController.swift */,
+				F35CBF03230E01650047ED16 /* HomeVC.swift */,
+				F35CBF05230E01780047ED16 /* PlayVC.swift */,
+				F35CBEFF230E01240047ED16 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F35CBF0F230E0E480047ED16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -402,6 +429,7 @@
 				8061B77F22EFD9890059176F /* Colors.xcassets in Resources */,
 				F3BF6A99230CA636006D41C2 /* Actors.storyboard in Resources */,
 				F3BF6A97230CA51A006D41C2 /* Temporadas.storyboard in Resources */,
+				F35CBF11230E0E820047ED16 /* Play.storyboard in Resources */,
 				F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */,
