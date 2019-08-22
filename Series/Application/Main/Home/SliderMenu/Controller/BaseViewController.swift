@@ -27,13 +27,13 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         case 0:
             print("Home\n", terminator: "")
 
-            self.openViewControllerBasedOnIdentifier("Home")
+            self.openViewControllerBasedOnIdentifier("Home", "Search")
             
             break
         case 1:
             print("Play\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("PlayVC")
+            self.openViewControllerBasedOnIdentifier("PlayVC", "Play")
             
             break
         default:
@@ -41,8 +41,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         }
     }
     
-    func openViewControllerBasedOnIdentifier(_ strIdentifier:String){
-        let destViewController : UIViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier)
+    func openViewControllerBasedOnIdentifier(_ strIdentifier:String, _ nameStoryBoard:String){
+        let destViewController : UIViewController = UIStoryboard(name: nameStoryBoard, bundle: Bundle.main).instantiateViewController(withIdentifier: strIdentifier)
         
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
@@ -110,7 +110,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         sender.isEnabled = false
         sender.tag = 10
         
-        let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        let menuVC : MenuViewController = UIStoryboard(name: "Menu", bundle: Bundle.main).instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+       
         menuVC.btnMenu = sender
         menuVC.delegate = self
         self.view.addSubview(menuVC.view)
