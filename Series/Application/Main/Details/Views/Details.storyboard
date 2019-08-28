@@ -34,48 +34,22 @@
                                     <segment title="Actores"/>
                                 </segments>
                                 <color key="tintColor" name="Principal"/>
-                                <connections>
-                                    <action selector="switchView:" destination="ppe-38-VLh" eventType="valueChanged" id="eGO-4U-d1X"/>
-                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Pl-WW1">
                                 <rect key="frame" x="20" y="143" width="275" height="400"/>
-                                <connections>
-                                    <segue destination="B1e-Lk-iwy" kind="embed" id="g6c-vO-RML"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyO-Cq-3iW">
-                                <rect key="frame" x="20" y="143" width="275" height="400"/>
-                                <connections>
-                                    <segue destination="ZJN-gC-bJh" kind="embed" id="sBj-VJ-F2V"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRC-q4-d5p">
-                                <rect key="frame" x="20" y="143" width="275" height="400"/>
-                                <connections>
-                                    <segue destination="peB-0X-B8v" kind="embed" id="ZUC-gQ-vfv"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7CK-Bj-lp8" firstAttribute="leading" secondItem="pU5-hv-suR" secondAttribute="leading" constant="25" id="0xJ-4C-raP"/>
-                            <constraint firstItem="WRC-q4-d5p" firstAttribute="leading" secondItem="pU5-hv-suR" secondAttribute="leading" constant="20" id="3S0-xf-nP6"/>
                             <constraint firstItem="7CK-Bj-lp8" firstAttribute="top" secondItem="pU5-hv-suR" secondAttribute="top" constant="25" id="4Vp-ra-mb2"/>
-                            <constraint firstItem="pU5-hv-suR" firstAttribute="trailing" secondItem="WRC-q4-d5p" secondAttribute="trailing" constant="25" id="ICc-Gy-MgA"/>
-                            <constraint firstAttribute="bottom" secondItem="WRC-q4-d5p" secondAttribute="bottom" constant="25" id="RXx-Iw-MRc"/>
                             <constraint firstItem="pk6-B3-ODN" firstAttribute="centerX" secondItem="Jxv-oP-Da3" secondAttribute="centerX" id="VfA-Xh-obT"/>
-                            <constraint firstItem="pU5-hv-suR" firstAttribute="trailing" secondItem="GyO-Cq-3iW" secondAttribute="trailing" constant="25" id="a5Z-Ig-bwL"/>
-                            <constraint firstItem="WRC-q4-d5p" firstAttribute="top" secondItem="pk6-B3-ODN" secondAttribute="bottom" constant="25" id="a5n-Uv-uqc"/>
-                            <constraint firstItem="GyO-Cq-3iW" firstAttribute="leading" secondItem="pU5-hv-suR" secondAttribute="leading" constant="20" id="bqT-pp-K8w"/>
                             <constraint firstItem="pU5-hv-suR" firstAttribute="trailing" secondItem="7CK-Bj-lp8" secondAttribute="trailing" constant="25" id="cif-Ar-ggL"/>
                             <constraint firstItem="bpj-Pl-WW1" firstAttribute="leading" secondItem="pU5-hv-suR" secondAttribute="leading" constant="20" id="gva-dA-nub"/>
-                            <constraint firstAttribute="bottom" secondItem="GyO-Cq-3iW" secondAttribute="bottom" constant="25" id="iGV-e8-aFY"/>
                             <constraint firstAttribute="bottom" secondItem="bpj-Pl-WW1" secondAttribute="bottom" constant="25" id="l8x-95-poy"/>
                             <constraint firstItem="bpj-Pl-WW1" firstAttribute="top" secondItem="pk6-B3-ODN" secondAttribute="bottom" constant="25" id="qmx-GM-tYD"/>
                             <constraint firstItem="pk6-B3-ODN" firstAttribute="top" secondItem="7CK-Bj-lp8" secondAttribute="bottom" constant="25" id="rms-xn-gbU"/>
                             <constraint firstItem="pU5-hv-suR" firstAttribute="trailing" secondItem="bpj-Pl-WW1" secondAttribute="trailing" constant="25" id="wZy-7F-sal"/>
-                            <constraint firstItem="GyO-Cq-3iW" firstAttribute="top" secondItem="pk6-B3-ODN" secondAttribute="bottom" constant="25" id="wyI-Hz-2Ia"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pU5-hv-suR"/>
                     </view>
@@ -96,39 +70,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="actorsView" destination="WRC-q4-d5p" id="F0s-nH-j5K"/>
                         <outlet property="detailsView" destination="bpj-Pl-WW1" id="pmZ-KH-vMX"/>
-                        <outlet property="seasonsView" destination="GyO-Cq-3iW" id="wKM-6y-Oft"/>
+                        <outlet property="segmetedControl" destination="pk6-B3-ODN" id="ukO-4H-2Ju"/>
                         <outlet property="serieTitle" destination="7CK-Bj-lp8" id="LSW-LS-Pp9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlm-Jw-QSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1096" y="767"/>
-        </scene>
-        <!--sinopsis-->
-        <scene sceneID="Gbc-jr-RiB">
-            <objects>
-                <viewControllerPlaceholder storyboardName="sinopsis" id="B1e-Lk-iwy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VlR-aY-bIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2307.1875" y="261.97183098591552"/>
-        </scene>
-        <!--Temporadas-->
-        <scene sceneID="wdJ-e8-vRH">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Temporadas" id="ZJN-gC-bJh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ViI-OM-Nde" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2440" y="871"/>
-        </scene>
-        <!--Actors-->
-        <scene sceneID="MRl-cq-ofL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Actors" id="peB-0X-B8v" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EJt-xb-3my" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2307.971014492754" y="1381.4732142857142"/>
         </scene>
     </scenes>
     <resources>

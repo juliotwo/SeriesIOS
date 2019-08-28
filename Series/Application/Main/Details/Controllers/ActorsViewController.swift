@@ -27,7 +27,14 @@ class ActorsViewController: UIViewController {
     
     public var estimateWidth = 160.0
     var cellMarginCell = 16.0
-    public var viewModel:ActorsViewModel?
+    public var viewModel:ActorsViewModel?{
+        didSet{
+            setUpView()
+        }
+    }
+    func setUpView(){
+        viewModel?.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
