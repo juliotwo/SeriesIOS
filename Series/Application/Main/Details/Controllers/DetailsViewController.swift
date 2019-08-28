@@ -22,7 +22,21 @@ class DetailsViewController: UIViewController {
     public var serie: DetailsSerieViewModel?
     public var actors: ActorsViewModel?
     public let viewModel = DetailsViewModel()
-   
+//    lazy var summaruViewController : SummaryViewController = {
+//        let storyboard = UIStoryboard(name: "DetailsContainers", bundle: Bundle.main)
+//        var viewController = storyboard.instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
+//        self.addChildViewControllers(childViewController: viewController)
+//        return viewController
+//        
+//    }()
+//    
+//    lazy var sessionViewController : SessionViewController = {
+//        let storyboard = UIStoryboard(name: "DetailsContainers", bundle: Bundle.main)
+//        var viewController = storyboard.instantiateViewController(withIdentifier: "SessionViewController") as! SessionViewController
+//        self.addChildViewControllers(childViewController: viewController)
+//        return viewController
+//    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -63,6 +77,16 @@ class DetailsViewController: UIViewController {
         super.awakeFromNib()
     }
  
+//    private func addChildViewControllers(childViewController: UIViewController)
+//    {
+//
+//        // addChild(childViewController)
+//        detailsView.addSubview(childViewController.view)
+//        childViewController.view.frame = detailsView.bounds
+//        childViewController.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+//        childViewController.didMove(toParent: self)
+//    }
+    
     @IBAction func switchView(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             detailsView.alpha = 1
