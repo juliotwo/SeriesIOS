@@ -36,6 +36,7 @@
 		F35CBF162316E6840047ED16 /* DEtailsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF152316E6840047ED16 /* DEtailsContainerViewController.swift */; };
 		F35CBF182316E76B0047ED16 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF172316E76B0047ED16 /* SessionViewController.swift */; };
 		F35CBF1A2316E77C0047ED16 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF192316E77C0047ED16 /* SummaryViewController.swift */; };
+		F35CBF1D231735110047ED16 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1C231735110047ED16 /* Navigation.swift */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
 		F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */; };
 		F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEA22FA219A0027F196 /* SeriesServices.swift */; };
@@ -83,6 +84,7 @@
 		F35CBF152316E6840047ED16 /* DEtailsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEtailsContainerViewController.swift; sourceTree = "<group>"; };
 		F35CBF172316E76B0047ED16 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		F35CBF192316E77C0047ED16 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		F35CBF1C231735110047ED16 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRequest.swift; sourceTree = "<group>"; };
 		F36A5AEA22FA219A0027F196 /* SeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesServices.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		80D8320222D7B2DD0061646D /* Series */ = {
 			isa = PBXGroup;
 			children = (
+				F35CBF1B231734E90047ED16 /* Components */,
 				80D4ED3E22FCAAF7000FDAD1 /* Extension */,
 				F36A5AE522FA1D800027F196 /* Models */,
 				F36A5AE222FA14B70027F196 /* Services */,
@@ -335,6 +338,14 @@
 				F35CBF192316E77C0047ED16 /* SummaryViewController.swift */,
 			);
 			path = Details2.0;
+			sourceTree = "<group>";
+		};
+		F35CBF1B231734E90047ED16 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F35CBF1C231735110047ED16 /* Navigation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F36A5AE222FA14B70027F196 /* Services */ = {
@@ -524,6 +535,7 @@
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
+				F35CBF1D231735110047ED16 /* Navigation.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */,
 				80DCF54D22F3BA6400B8C299 /* LoginViewModel.swift in Sources */,

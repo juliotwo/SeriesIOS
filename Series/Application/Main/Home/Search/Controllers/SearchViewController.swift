@@ -39,25 +39,8 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        
-        let label1 = UILabel()
-        label1.text = "Medio"
-        label1.textColor = .white
-        label1.sizeToFit()
-        
-        let label2 = UILabel()
-        label2.text = "Melon"
-        label2.textColor = .white
-        label2.sizeToFit()
-        
-        let stackView = UIStackView(arrangedSubviews: [label1,label2])
-        stackView.axis = .horizontal
-        stackView.frame.size.width = label1.frame.width + label2.frame.width
-        stackView.frame.size.height = max(label1.frame.height, label2.frame.height)
-        navigationItem.titleView = stackView
-        navigationItem.backBarButtonItem =  UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
+      
+        navigationTitle(self)
         viewModel.delegate = self
         viewModel.getdata()
 
