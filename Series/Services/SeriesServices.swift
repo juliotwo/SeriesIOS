@@ -10,13 +10,14 @@ import UIKit
 import Alamofire
 typealias SeriesHandler = ( (_ success: Bool, _ error: Error?) -> Void)
 class SeriesServices: NSObject {
+   
    static func getSeriesRequest(byId name: String, completion: @escaping (ListaSeriesRequest?) -> Void) {
                 
-    guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+   // guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/search/series?name="+name
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + token 
+     //       "Authorization": "Bearer " + token 
         ]
         Alamofire.request(urlString, headers:headers).response { response in
             guard let data = response.data else { return }
@@ -30,29 +31,46 @@ class SeriesServices: NSObject {
             }
         }
     }
-    
+   
+   
     public static func getSearchSeries(byId value: String, completion: @escaping (ListaSeriesRequest?, Error?, Bool?) -> Void){
-
-        guard let token = UserDefaults.standard.string(forKey: "token") else { return }
+      
+     //   guard let token = UserDefaults.standard.string(forKey: "token") else { return }
         let urlString = "https://api.thetvdb.com/search/series?name=\(value.replacingOccurrences(of:" ", with: "%20"))"
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + token
-        ]
-        Alamofire.request(urlString, headers:headers).response { response in
+//        let headers: HTTPHeaders = [
+//            "Content-Type": "application/json",
+//    //        "Authorization": "Bearer " + token
+//        ]
+    
+        Alamofire.request(urlString, method: .get).response{ response in
+            
             guard let data = response.data else { return }
             do {
-        //        let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+                //let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 let decoder = JSONDecoder()
                 let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
-               
-               completion(serieRequest, response.error, true)
+                
+                completion(serieRequest, response.error, true)
             } catch let error {
                 print(error)
-               
+                
                 completion(nil, response.error, false)
             }
         }
+//        Alamofire.request(urlString).response { response in
+//            guard let data = response.data else { return }
+//            do {
+//               let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
+//                let decoder = JSONDecoder()
+//                let serieRequest = try decoder.decode(ListaSeriesRequest.self, from: data)
+//
+//               completion(serieRequest, response.error, true)
+//            } catch let error {
+//                print(error)
+//
+//                completion(nil, response.error, false)
+//            }
+//        }
     }
     public static func getDetailsSerie(byId value: Int, completion: @escaping (SerieDetail?, Error?, Bool?) -> Void){
         let val = String(value)

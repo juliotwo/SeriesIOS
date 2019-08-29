@@ -37,6 +37,7 @@
 		F35CBF182316E76B0047ED16 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF172316E76B0047ED16 /* SessionViewController.swift */; };
 		F35CBF1A2316E77C0047ED16 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF192316E77C0047ED16 /* SummaryViewController.swift */; };
 		F35CBF1D231735110047ED16 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1C231735110047ED16 /* Navigation.swift */; };
+		F35CBF1F231836320047ED16 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1E231836320047ED16 /* Interceptor.swift */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
 		F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */; };
 		F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEA22FA219A0027F196 /* SeriesServices.swift */; };
@@ -85,6 +86,7 @@
 		F35CBF172316E76B0047ED16 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		F35CBF192316E77C0047ED16 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		F35CBF1C231735110047ED16 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		F35CBF1E231836320047ED16 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F36A5AE822FA20AF0027F196 /* SeriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRequest.swift; sourceTree = "<group>"; };
 		F36A5AEA22FA219A0027F196 /* SeriesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesServices.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				F35CBF1C231735110047ED16 /* Navigation.swift */,
+				F35CBF1E231836320047ED16 /* Interceptor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */,
 				800D89512304864E00E5910B /* ActorsViewController.swift in Sources */,
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
+				F35CBF1F231836320047ED16 /* Interceptor.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
 				8086CE7F2303AD7500114644 /* TemporadasViewController.swift in Sources */,
 				F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */,

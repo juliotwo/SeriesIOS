@@ -36,14 +36,19 @@ class LoginService {
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 if let parseJson = json {
-                    let accessToken = parseJson["token"] as? String
+                    guard let accessToken = parseJson["token"] as? String else {
+                        return
+                    }
                     
                     let defaults = UserDefaults.standard
                     
                     defaults.set(accessToken, forKey: "token")
                     defaults.set(true, forKey: "session")
-                    print(accessToken!)
+                    print(accessToken)
+                    let sessionManager = Alamofire.SessionManager.default
+                    sessionManager.adapter = AccessTokenAdapter(accessToken)
                     handler?(true, nil)
+                    
                 }
                 
                 
