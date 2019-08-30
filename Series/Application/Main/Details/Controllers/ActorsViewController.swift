@@ -94,22 +94,3 @@ extension ActorsViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
-//func iPhoneScreenSizes(){
-//    let bounds = UIScreen.main.bounds
-//    let height = bounds.size.height
-//
-//    switch height {
-//    case 480.0:
-//        print("iPhone 3,4")
-//    case 568.0:
-//        print("iPhone 5")
-//    case 667.0:
-//        print("iPhone 6")
-//    case 736.0:
-//        print("iPhone 6+")
-//
-//    default:
-//        print("not an iPhone")
-//
-//    }
-//}

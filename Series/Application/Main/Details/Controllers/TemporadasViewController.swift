@@ -48,8 +48,6 @@ class TemporadasViewController: UIViewController  {
     @objc func refresh(_ refreshControl: UIRefreshControl) {
         guard let id = self.id else {return}
         viewModel.getdata(id: id, airedSeason: String(self.selectedSeason)){ (lista, error, succes) in
-            //print("Succes in refrsh")
-            //print(error)
             refreshControl.endRefreshing()
             self.collectionView.reloadData()
 
@@ -69,7 +67,6 @@ class TemporadasViewController: UIViewController  {
             for index in 1...tempInt {
                 items.append(String(index))
             }
-            print(items)
             collectionView.reloadData()
         
         }
@@ -84,9 +81,7 @@ class TemporadasViewController: UIViewController  {
 }
 
 extension TemporadasViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print(destinationIndexPath)
-    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let count = items.count
         
@@ -113,7 +108,7 @@ extension TemporadasViewController: UICollectionViewDataSource {
 extension TemporadasViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.getdata(id: self.id!, airedSeason: String(indexPath.row + 1)){ (lista, error, succes) in
-            print("Succes in view controller")
+            
         }
         self.selectedSeason = indexPath.row + 1
         collectionView.reloadData()
@@ -145,10 +140,10 @@ extension TemporadasViewController: UITableViewDataSource {
         cell.viewModel = viewModel?.item(at: indexPath)
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print(indexPath.row)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        print(indexPath.row)
+//    }
 
     
 }

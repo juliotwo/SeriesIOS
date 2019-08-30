@@ -27,11 +27,11 @@ class SinopsisViewController: UIViewController {
         // Initialization code
     }
     func setUpView() {
-        CategoriaLabel.text = serie.genre
-        PrimeraEmision.text = serie.firstAired
-        HorarioLabel.text = serie.airsTime
-        CalificacionLabel.text = String(serie.rarting)
-        SinopsisLabel.text = serie.overview
+        CategoriaLabel.text = serie.genre == "" ? "No hay datos" : serie.genre
+        PrimeraEmision.text = serie.firstAired  == "" ? "No hay datos" : serie.firstAired
+        HorarioLabel.text = serie.airsTime  == "" ? "No hay datos" : serie.airsTime
+        CalificacionLabel.text = String(serie.rarting)  == "0.0" ? "No hay datos" : String(serie.rarting)
+        SinopsisLabel.text = serie.overview  == "" ? "No hay datos" : serie.overview
         posterImage.image = UIImage()
         if serie.poster == "" {
             posterImage.image = UIImage(named: "EmptyState")

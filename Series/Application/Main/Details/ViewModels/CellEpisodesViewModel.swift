@@ -17,6 +17,7 @@ class CellEpisodesViewModel: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     var viewModel: EpisodeSerieViewModel!{
         didSet{
             setUpView()

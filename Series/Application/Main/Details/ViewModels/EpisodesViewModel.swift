@@ -21,7 +21,7 @@ class EpisodesViewModel{
     
     init(id:Int) {
         getdata(id: id, airedSeason: "1") { (lista, error, succes) in
-            print("Succes")
+            //print("Succes")
         }
     }
      public func getdata(id:Int, airedSeason: String, completion: @escaping (ListaEpisodesRequest?, Error?, Bool?) -> Void)
