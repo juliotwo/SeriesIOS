@@ -28,7 +28,7 @@ class SearchViewModel {
     }
     @objc public func getdata(){
 
-        SeriesServices.getSeriesRequest(byId: "Game") { (lista) in
+        SeriesServices.getSearchSeries(byId: "Game") { (lista, error, succes) in
             guard let lista = lista else {
                 return
             }

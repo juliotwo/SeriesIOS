@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="Gsy-lj-0KN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="uSj-WR-SeY">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="fOK-k2-g3n">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="fOK-k2-g3n">
                             <view key="customView" contentMode="scaleToFill" id="vbS-Ki-Jsi">
                                 <rect key="frame" x="302" y="5.5" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -57,7 +57,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="04s-lH-zTc" kind="modal" identifier="goToSearch" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Kjb-oU-fO0"/>
+                        <segue destination="04s-lH-zTc" kind="show" identifier="goToSearch" id="Kjb-oU-fO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIt-iL-cSq" sceneMemberID="firstResponder"/>

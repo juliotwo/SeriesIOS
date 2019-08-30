@@ -20,24 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func initialViewController() {
         
-        
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        
         var name = "Login"
-        let accesToken = UserDefaults.standard.value(forKey: "token")
-        if accesToken != nil{
-            
-        }
         let session = UserDefaults.standard.value(forKey: "session") as? Bool ?? false
         if session{
             name = "Search"
             let sessionManager = Alamofire.SessionManager.default
-            sessionManager.adapter = AccessTokenAdapter(accesToken! as! String)
+            let accessToken = UserDefaults.standard.value(forKey: "token") as? String ?? ""
+            let inter = AccessTokenAdapter(accessToken)
+            sessionManager.adapter = inter
+            sessionManager.retrier = inter
 
         }
         let viewController = UIStoryboard(name: name, bundle: Bundle.main).instantiateInitialViewController()
-
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }

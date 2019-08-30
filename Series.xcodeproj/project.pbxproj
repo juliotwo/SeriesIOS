@@ -32,10 +32,6 @@
 		F35CBF06230E01780047ED16 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF05230E01780047ED16 /* PlayVC.swift */; };
 		F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF07230E0B0F0047ED16 /* Menu.storyboard */; };
 		F35CBF11230E0E820047ED16 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF10230E0E820047ED16 /* Play.storyboard */; };
-		F35CBF142316E6450047ED16 /* DetailsContainers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF132316E6450047ED16 /* DetailsContainers.storyboard */; };
-		F35CBF162316E6840047ED16 /* DEtailsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF152316E6840047ED16 /* DEtailsContainerViewController.swift */; };
-		F35CBF182316E76B0047ED16 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF172316E76B0047ED16 /* SessionViewController.swift */; };
-		F35CBF1A2316E77C0047ED16 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF192316E77C0047ED16 /* SummaryViewController.swift */; };
 		F35CBF1D231735110047ED16 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1C231735110047ED16 /* Navigation.swift */; };
 		F35CBF1F231836320047ED16 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1E231836320047ED16 /* Interceptor.swift */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
@@ -81,10 +77,6 @@
 		F35CBF05230E01780047ED16 /* PlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
 		F35CBF07230E0B0F0047ED16 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		F35CBF10230E0E820047ED16 /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
-		F35CBF132316E6450047ED16 /* DetailsContainers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsContainers.storyboard; sourceTree = "<group>"; };
-		F35CBF152316E6840047ED16 /* DEtailsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEtailsContainerViewController.swift; sourceTree = "<group>"; };
-		F35CBF172316E76B0047ED16 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
-		F35CBF192316E77C0047ED16 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		F35CBF1C231735110047ED16 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		F35CBF1E231836320047ED16 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -168,7 +160,6 @@
 		8061B78222EFDA480059176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F35CBF122316E57F0047ED16 /* Details2.0 */,
 				8061B78522EFDAB40059176F /* Details */,
 				8061B78422EFDAA70059176F /* Home */,
 				8061B78322EFDA510059176F /* Login */,
@@ -331,17 +322,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F35CBF122316E57F0047ED16 /* Details2.0 */ = {
-			isa = PBXGroup;
-			children = (
-				F35CBF132316E6450047ED16 /* DetailsContainers.storyboard */,
-				F35CBF152316E6840047ED16 /* DEtailsContainerViewController.swift */,
-				F35CBF172316E76B0047ED16 /* SessionViewController.swift */,
-				F35CBF192316E77C0047ED16 /* SummaryViewController.swift */,
-			);
-			path = Details2.0;
-			sourceTree = "<group>";
-		};
 		F35CBF1B231734E90047ED16 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,7 +447,6 @@
 				F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */,
-				F35CBF142316E6450047ED16 /* DetailsContainers.storyboard in Resources */,
 				80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */,
 				80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */,
 				80E2E15322EFE5B500CC3858 /* Assets.xcassets in Resources */,
@@ -552,12 +531,9 @@
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
-				F35CBF182316E76B0047ED16 /* SessionViewController.swift in Sources */,
 				F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */,
 				F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */,
-				F35CBF162316E6840047ED16 /* DEtailsContainerViewController.swift in Sources */,
 				F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */,
-				F35CBF1A2316E77C0047ED16 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
