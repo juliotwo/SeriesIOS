@@ -17,16 +17,20 @@ class LoginService {
     public static func obtainToken(completion: @escaping (String?, Error?, Bool?) -> Void){
        
         
-        let body = [
+        let params:Parameters = [
             "apikey" : "PPDZ39EGKOEHNR3R",
             "userkey" : "JOEZYXMFGR0RDBXA",
             "username" : "tavromero2yu"
         ]
+        let url = "https://api.thetvdb.com/login"
         var request = URLRequest(url: URL(string: "https://api.thetvdb.com/login")!)
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        //request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
+        let headers = [
+            "Content-Type":"application/json"
+        ]
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        Alamofire.request(request).validate().response { response in
+        Alamofire.request(url,method: .post, parameters: params,encoding: JSONEncoding.default, headers: headers).response { response in
             guard let data = response.data else { return }
             do {
                 
