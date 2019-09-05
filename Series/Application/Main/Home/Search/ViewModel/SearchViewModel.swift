@@ -28,7 +28,7 @@ class SearchViewModel {
     }
     @objc public func getdata(){
 
-        SeriesServices.getSeriesRequest(byId: "Game") { (lista) in
+        SeriesServices.getSearchSeries(byId: "Game") { (lista, error, succes) in
             guard let lista = lista else {
                 return
             }
@@ -38,14 +38,17 @@ class SearchViewModel {
         
         
     }
-    @objc public func getdataByName(name:String){
+    public func getdataByName(name:String, completion: @escaping (ListaSeriesRequest?, Error?, Bool?) -> Void)
+    {
         
         SeriesServices.getSearchSeries(byId: name) { (lista, error, succes) in
+            completion(lista, error, succes)
             guard let lista = lista else {
                 return
             }
             self.items = lista.data
             self.delegate?.reloadData()
+            
         }
 
         

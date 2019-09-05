@@ -9,73 +9,102 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-//
-//    @IBOutlet weak var vistaDinamica: UIView!
-//    @IBOutlet var animationsButtons: [UIButton]!
-//    @IBOutlet weak var animationLayout: NSLayoutConstraint!
-    @IBOutlet weak var serieTitle: UILabel!
-    
+
+    @IBOutlet weak var serieTitle: UILabel!    
     @IBOutlet weak var detailsView: UIView!
-    @IBOutlet weak var seasonsView: UIView!
-    @IBOutlet weak var actorsView: UIView!
-    
+    @IBOutlet weak var segmetedControl: UISegmentedControl!
     public var id:Int?
     public var seriesName:String?
-    public let viewModel = DetailsViewModel()
+    
+   
     public var serie: DetailsSerieViewModel?
     public var actors: ActorsViewModel?
+    public let viewModel = DetailsViewModel()
+    lazy var sinopsisViewController : SinopsisViewController = {
+        let storyboard = UIStoryboard(name: "sinopsis", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "SinopsisViewController") as! SinopsisViewController
+        self.addChildViewControllers(childViewController: viewController)
+        viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+            
+                viewController.serie = serie
+        }
+        return viewController
+        
+    }()
+    
+    lazy var tempsViewController : TemporadasViewController = {
+        let storyboard = UIStoryboard(name: "Temporadas", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "TemporadasViewController") as! TemporadasViewController
+        self.addChildViewControllers(childViewController: viewController)
+        viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
+            viewController.temp = serie?.sessions
+            
+            if(Int(viewController.temp) != nil){
+                viewController.viewModel = EpisodesViewModel(id:self.id!)
+            }
+            viewController.id = self.id!
+            
+        }
+        return viewController
+    }()
+    lazy var actorsViewController : ActorsViewController = {
+        let storyboard = UIStoryboard(name: "Actors", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ActorsViewController") as! ActorsViewController
+        self.addChildViewControllers(childViewController: viewController)
+        viewController.viewModel = ActorsViewModel(id: self.id!)
+        return viewController
+        
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "TextLogo")
-        imageView.image = image
-        navigationItem.titleView = imageView
-
+      
+        navigationBackImage(self)
+        navigationTitle(self)
         serieTitle.text = seriesName
-        
        
-        
-        detailsView.alpha = 1
-        seasonsView.alpha = 0
-        actorsView.alpha = 0
-        
+        setupView()
     }
     
-    @objc func myLeftSideBarButtonItemTapped(_ sender:UIBarButtonItem!)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    private func setupView() {
+        setupSegmentControl()
+        updateView()
+    }
+    private func setupSegmentControl(){
+        segmetedControl.removeAllSegments()
+        segmetedControl.insertSegment(withTitle: "Sinopsis", at: 0, animated: false)
+        segmetedControl.insertSegment(withTitle: "Temporadas", at: 1, animated: false)
+        segmetedControl.insertSegment(withTitle: "Actores", at: 2, animated: false)
+        segmetedControl.addTarget(self, action: #selector(selectionDiidChanged(sender:)), for: .valueChanged)
+        segmetedControl.selectedSegmentIndex = 0
+    }
+    
+    @objc func selectionDiidChanged(sender: UISegmentedControl){
+        updateView()
+    }
+    func updateView(){
+        sinopsisViewController.view.isHidden = !(segmetedControl.selectedSegmentIndex == 0)
+        tempsViewController.view.isHidden = !(segmetedControl.selectedSegmentIndex == 1)
+        actorsViewController.view.isHidden = !(segmetedControl.selectedSegmentIndex == 2)
+        
+    }
+    private func addChildViewControllers(childViewController: UIViewController)
     {
-        print("myLeftSideBarButtonItemTapped")
+
+        // addChild(childViewController)
+        detailsView.addSubview(childViewController.view)
+        childViewController.view.frame = detailsView.bounds
+        childViewController.view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        childViewController.didMove(toParent: self)
     }
- 
-    @IBAction func switchView(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            detailsView.alpha = 1
-            seasonsView.alpha = 0
-            actorsView.alpha = 0
-        }
-        if sender.selectedSegmentIndex == 1 {
-            detailsView.alpha = 0
-            seasonsView.alpha = 1
-            actorsView.alpha = 0
-        }
-        if sender.selectedSegmentIndex == 2 {
-            detailsView.alpha = 0
-            seasonsView.alpha = 0
-            actorsView.alpha = 1
-        }
-    }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let pass = segue.destination as? SinopsisViewModel
-        {
-            viewModel.getDetailsSerie( id: self.id!) { (serie, error, succes) in
-                pass.serie = serie
-                self.serie = serie
-            }
-        }
-        
+  
         if let passActors = segue.destination as? ActorsViewController {
-            passActors.id = self.id
+            passActors.viewModel = ActorsViewModel(id: self.id!)
         }
     }
 }

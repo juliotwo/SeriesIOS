@@ -16,13 +16,13 @@ class ActorsViewModel{
     private var items: [ActorsRequest] = []
     
     var numberOfitems: Int {
-        print(items.count)
         return items.count
     }
     
     var delegate: ActorsViewModelDelegate?
     
-    init() {
+    init(id: Int) {
+        getData(id: id)
     }
     
     @objc public func getData(id: Int){
@@ -34,19 +34,11 @@ class ActorsViewModel{
             self.delegate?.reloadData()
         }
     }
-//    public func  getActors(id:Int, completion: @escaping (DetailsActorViewModel?, Error?, Bool?) -> Void){
-//
-//        SeriesServices.getActors(byId: id) { (actors, error, succes) in
-//            guard let actors = actors else {
-//                return
-//            }
-//            print(actors)
-//        }
-//    }
+
     
     
     func item(at indexPath: IndexPath) -> DetailsActorViewModel {
-        return DetailsActorViewModel(actors: items[indexPath.row])
+        return DetailsActorViewModel(actors: items[indexPath.item])
     }
 
 }

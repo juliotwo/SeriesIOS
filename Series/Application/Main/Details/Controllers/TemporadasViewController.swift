@@ -8,48 +8,152 @@
 
 import UIKit
 
-class TemporadasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class TemporadasViewController: UIViewController  {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    var selectedSeason: Int = 1
+    fileprivate(set) lazy var emptyStateView: UIView = {
+        guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView
+            else {
+                return UIView()
+        }
+        return view
+    }()
+    
+    var viewModel:EpisodesViewModel!{
+        didSet{
+            setUpView2()
+        }
+    }
+    var id: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel?.delegate = self
         // Do any additional setup after loading the view.
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.backgroundView = refreshControl
+        }
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
     
-    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        guard let id = self.id else {return}
+        viewModel.getdata(id: id, airedSeason: String(self.selectedSeason)){ (lista, error, succes) in
+            refreshControl.endRefreshing()
+            self.collectionView.reloadData()
+
+        }
+        
+    }
+    var items:[String] = []
     
+    var temp: String!{
+        didSet{
+            setUpView()
+        }
+    }
+    func setUpView(){
+        let tempInt:Int = Int(temp!) ?? 0
+        if(tempInt != 0){
+            for index in 1...tempInt {
+                items.append(String(index))
+            }
+            collectionView.reloadData()
+        
+        }
+        
+    }
+    func setUpView2(){
     
-    // MARK: - UICollectionViewDataSource protocol
+        viewModel.delegate = self
+    }
+
+
+}
+
+extension TemporadasViewController: UICollectionViewDataSource {
     
-    // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        let count = items.count
+        
+        return count
+        
     }
-    
-    // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        // get a reference to our storyboard cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
-        
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.items[indexPath.item]
-        //        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath as IndexPath) as? CellTempViewModel else{
+            return UICollectionViewCell()
+        }
+        if indexPath.row + 1 == selectedSeason{
+        cell.backgroundColor = .orange
+        }
+        else{
+            cell.backgroundColor = .white
+        }
+       cell.LabelCell.text = items[indexPath.row]
         
         return cell
     }
+
     
-    // MARK: - UICollectionViewDelegate protocol
-    
+}
+extension TemporadasViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
-        
+        viewModel.getdata(id: self.id!, airedSeason: String(indexPath.row + 1)){ (lista, error, succes) in
+            
+        }
+        self.selectedSeason = indexPath.row + 1
+        collectionView.reloadData()
     }
-
+    
+}
+extension TemporadasViewController:EpisodeshViewModelDelegate{
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
 
-class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var myLabel: UILabel!
+
+extension TemporadasViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count = viewModel?.numberOfitems
+        
+        
+        tableView.backgroundView = count == nil ? emptyStateView : nil
+        tableView.separatorStyle = count == nil ? .none : .singleLine
+        return count ?? 0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellEpisodes", for: indexPath) as? CellEpisodesViewModel else{
+            return UITableViewCell()
+        }
+        cell.viewModel = viewModel?.item(at: indexPath)
+        return cell
+    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        print(indexPath.row)
+//    }
+
+    
 }
+
+
+//
+//extension TemporadasViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        //        iPhoneScreenSizes()
+//        return CGSize(width: screenWidth * 0.23, height: screenHeight * 0.2)
+//    }
+//}
+

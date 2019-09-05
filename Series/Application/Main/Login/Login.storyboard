@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Title-->
         <scene sceneID="aiW-RG-Krq">
             <objects>
                 <viewController id="83s-YA-rKe" customClass="LoginViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,13 +46,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gsy-lj-0KN"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="uSj-WR-SeY">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="fOK-k2-g3n">
+                            <view key="customView" contentMode="scaleToFill" id="vbS-Ki-Jsi">
+                                <rect key="frame" x="302" y="5.5" width="92" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="04s-lH-zTc" kind="modal" identifier="goToSearch" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="Kjb-oU-fO0"/>
+                        <segue destination="04s-lH-zTc" kind="show" identifier="goToSearch" id="Kjb-oU-fO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIt-iL-cSq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="60"/>
+            <point key="canvasLocation" x="757.97101449275374" y="59.598214285714285"/>
         </scene>
         <!--Search-->
         <scene sceneID="5e3-dU-cVc">
@@ -60,7 +70,7 @@
                 <viewControllerPlaceholder storyboardName="Search" id="04s-lH-zTc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYZ-IC-Kcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="57"/>
+            <point key="canvasLocation" x="1363.0434782608697" y="56.919642857142854"/>
         </scene>
     </scenes>
     <resources>

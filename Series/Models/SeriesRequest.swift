@@ -61,6 +61,7 @@ struct SerieRequest: Codable {
     }
 }
 
+
 struct ActorsRequest: Codable {
     var name: String?
     var image: String?
@@ -70,20 +71,23 @@ struct ActorsRequest: Codable {
         case image = "image"
     }
 }
-//{
-//    "data": {
-//        "id": 121361,
-//        "seriesName": "Game of Thrones",
-//        "aliases": [],
-//        "banner": "graphical/121361-g22.jpg",
-//        "seriesId": "",
-//        "status": "Ended",
-//        "firstAired": "2011-04-17",
-//        "network": "HBO",
-//        "networkId": "",
-//        "runtime": "55",
-//        "genre": [
-//        "Adventure",
-//        "Drama",
-//        "Fantasy"
-//        ],
+struct ListaEpisodesRequest: Codable {
+    let data: [EpisodesRequest]
+    
+    enum CodigKeyh: String, CodingKey{
+        case data = "data"
+    }
+}
+struct EpisodesRequest: Codable {
+    var airedEpisodeNumber: Int?
+    var overview: String?
+    var filename: String?
+    var episodeName: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case airedEpisodeNumber = "airedEpisodeNumber"
+        case overview = "overview"
+        case filename = "filename"
+        case episodeName = "episodeName"
+    }
+}
