@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="AsO-CT-Wy4">
+            <objects>
+                <viewController restorationIdentifier="RegisterViewController" storyboardIdentifier="RegisterViewController" id="Ksg-7I-IPi" customClass="RegisterViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onB-vO-Q8i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-M7-GgN">
+                                <rect key="frame" x="20" y="25" width="280" height="426"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVw-ak-h4f">
+                                        <rect key="frame" x="10" y="25" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-ab-z0A">
+                                        <rect key="frame" x="10" y="80" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-GU-es4">
+                                        <rect key="frame" x="10" y="181" width="260" height="100"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="stP-bn-UiA"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="589400504.35982394">
+                                            <!--2019-09-05 18:21:44 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha nacimiento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNw-HG-mk1">
+                                        <rect key="frame" x="10" y="135" width="260" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3I-qN-4NE">
+                                        <rect key="frame" x="10" y="306" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwI-BM-iNh">
+                                        <rect key="frame" x="10" y="361" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="TextColor"/>
+                                <constraints>
+                                    <constraint firstItem="WFX-GU-es4" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="6IK-nK-1Xr"/>
+                                    <constraint firstItem="O3I-qN-4NE" firstAttribute="top" secondItem="WFX-GU-es4" secondAttribute="bottom" constant="25" id="CGk-Qf-aJr"/>
+                                    <constraint firstAttribute="trailing" secondItem="TVw-ak-h4f" secondAttribute="trailing" constant="10" id="Knm-J8-adQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="WFX-GU-es4" secondAttribute="trailing" constant="10" id="Kxy-xr-7NW"/>
+                                    <constraint firstItem="FPE-ab-z0A" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="ULU-Hh-Xae"/>
+                                    <constraint firstItem="WFX-GU-es4" firstAttribute="top" secondItem="lNw-HG-mk1" secondAttribute="bottom" constant="25" id="ZE9-9b-shE"/>
+                                    <constraint firstAttribute="trailing" secondItem="lNw-HG-mk1" secondAttribute="trailing" constant="10" id="aEA-wD-8eJ"/>
+                                    <constraint firstItem="lNw-HG-mk1" firstAttribute="top" secondItem="FPE-ab-z0A" secondAttribute="bottom" constant="25" id="b5a-mS-ndo"/>
+                                    <constraint firstItem="lNw-HG-mk1" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="iyl-Vr-g8V"/>
+                                    <constraint firstItem="OwI-BM-iNh" firstAttribute="top" secondItem="O3I-qN-4NE" secondAttribute="bottom" constant="25" id="lXA-fU-Do1"/>
+                                    <constraint firstItem="TVw-ak-h4f" firstAttribute="top" secondItem="5Of-M7-GgN" secondAttribute="top" constant="25" id="nSP-XT-kZe"/>
+                                    <constraint firstItem="O3I-qN-4NE" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="pqZ-po-x6K"/>
+                                    <constraint firstAttribute="trailing" secondItem="O3I-qN-4NE" secondAttribute="trailing" constant="10" id="qPt-fn-TAI"/>
+                                    <constraint firstItem="OwI-BM-iNh" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="ql3-KT-TAO"/>
+                                    <constraint firstItem="FPE-ab-z0A" firstAttribute="top" secondItem="TVw-ak-h4f" secondAttribute="bottom" constant="25" id="sNK-Hd-xXV"/>
+                                    <constraint firstItem="TVw-ak-h4f" firstAttribute="leading" secondItem="5Of-M7-GgN" secondAttribute="leading" constant="10" id="wua-vu-R1h"/>
+                                    <constraint firstAttribute="trailing" secondItem="OwI-BM-iNh" secondAttribute="trailing" constant="10" id="yMZ-yX-rF3"/>
+                                    <constraint firstAttribute="trailing" secondItem="FPE-ab-z0A" secondAttribute="trailing" constant="10" id="zJP-YQ-kW0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="001-LX-MdN">
+                                <rect key="frame" x="129" y="476" width="62" height="30"/>
+                                <state key="normal" title="Registrar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Principal"/>
+                        <constraints>
+                            <constraint firstItem="5Of-M7-GgN" firstAttribute="top" secondItem="XIC-Ra-h1X" secondAttribute="top" constant="5" id="37l-ME-Nh1"/>
+                            <constraint firstItem="001-LX-MdN" firstAttribute="top" secondItem="5Of-M7-GgN" secondAttribute="bottom" constant="25" id="PYj-Of-dh8"/>
+                            <constraint firstItem="5Of-M7-GgN" firstAttribute="height" secondItem="onB-vO-Q8i" secondAttribute="height" multiplier="0.75" id="Sc3-lR-vdw"/>
+                            <constraint firstItem="XIC-Ra-h1X" firstAttribute="trailing" secondItem="5Of-M7-GgN" secondAttribute="trailing" constant="20" id="WAo-Xn-Ca8"/>
+                            <constraint firstItem="5Of-M7-GgN" firstAttribute="leading" secondItem="XIC-Ra-h1X" secondAttribute="leading" constant="20" id="lGd-bn-v1m"/>
+                            <constraint firstItem="001-LX-MdN" firstAttribute="centerX" secondItem="onB-vO-Q8i" secondAttribute="centerX" id="nMn-i8-Mh8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XIC-Ra-h1X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKj-KJ-ldw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171.01449275362319" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Principal">
+            <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.14100000262260437" green="0.16899999976158142" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
