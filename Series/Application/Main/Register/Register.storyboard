@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ksg-7I-IPi">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="AsO-CT-Wy4">
+            <objects>
+                <viewController restorationIdentifier="RegisterViewController" storyboardIdentifier="RegisterViewController" id="Ksg-7I-IPi" customClass="RegisterViewController" customModule="Series" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onB-vO-Q8i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="001-LX-MdN">
+                                <rect key="frame" x="129" y="481" width="62" height="30"/>
+                                <state key="normal" title="Registrar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-wS-Cpx">
+                                <rect key="frame" x="20" y="30" width="280" height="426"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVw-ak-h4f">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-ab-z0A">
+                                        <rect key="frame" x="0.0" y="75" width="280" height="50.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-GU-es4">
+                                        <rect key="frame" x="0.0" y="150.5" width="280" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="589400504.35982394">
+                                            <!--2019-09-05 18:21:44 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha nacimiento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNw-HG-mk1">
+                                        <rect key="frame" x="0.0" y="225.5" width="280" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O3I-qN-4NE">
+                                        <rect key="frame" x="0.0" y="300.5" width="280" height="50.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OwI-BM-iNh">
+                                        <rect key="frame" x="0.0" y="376" width="280" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="TextColor"/>
+                                <color key="tintColor" name="TextColor"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Principal"/>
+                        <constraints>
+                            <constraint firstItem="001-LX-MdN" firstAttribute="top" secondItem="FGd-wS-Cpx" secondAttribute="bottom" constant="25" id="2Hp-cm-F0V"/>
+                            <constraint firstItem="FGd-wS-Cpx" firstAttribute="leading" secondItem="XIC-Ra-h1X" secondAttribute="leading" constant="20" id="8n5-M0-ktw"/>
+                            <constraint firstItem="001-LX-MdN" firstAttribute="centerX" secondItem="onB-vO-Q8i" secondAttribute="centerX" id="nMn-i8-Mh8"/>
+                            <constraint firstItem="FGd-wS-Cpx" firstAttribute="top" secondItem="XIC-Ra-h1X" secondAttribute="top" constant="10" id="qhL-Gx-BWH"/>
+                            <constraint firstAttribute="trailing" secondItem="FGd-wS-Cpx" secondAttribute="trailing" constant="20" id="tKY-h7-WJw"/>
+                            <constraint firstItem="FGd-wS-Cpx" firstAttribute="height" secondItem="onB-vO-Q8i" secondAttribute="height" multiplier="0.75" id="uN2-6C-P0N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XIC-Ra-h1X"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataPicker" destination="WFX-GU-es4" id="54K-O6-gig"/>
+                        <outlet property="password" destination="OwI-BM-iNh" id="6db-kr-TWX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKj-KJ-ldw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172.5" y="32.74647887323944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Principal">
+            <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.14100000262260437" green="0.16899999976158142" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
