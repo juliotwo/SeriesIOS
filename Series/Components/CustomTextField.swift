@@ -8,7 +8,19 @@
 
 import Foundation
 import UIKit
+func addLeftIconTo(textFild: UITextField, andICon img: UIImage) {
+    let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
 
+    leftImageView.contentMode = .scaleAspectFit
+    leftImageView.image = img
+    // Note: In order for your image to use the tint color, you have to select the image in the Assets.xcassets and change the "Render As" property to "Template Image".
+    leftImageView.tintColor = UIColor.white
+    
+    textFild.leftView = leftImageView
+    textFild.leftViewMode = .always
+  
+    
+}
 
 class SAAuthTextField: UITextField {
     

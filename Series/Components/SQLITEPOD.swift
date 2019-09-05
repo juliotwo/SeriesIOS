@@ -91,7 +91,7 @@ class Database {
         do{
             let all = Array(try database.prepare(usersTable))
             
-            print(all.first?.decoder())
+           print(all)
             
         }
         catch{

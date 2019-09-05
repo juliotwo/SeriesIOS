@@ -10,10 +10,14 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var dataPicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dataPicker.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
+        guard let passwordImage = UIImage(named: "passwordIcon") else { return }
+        addLeftIconTo(textFild: password, andICon: passwordImage)
     }
     
 

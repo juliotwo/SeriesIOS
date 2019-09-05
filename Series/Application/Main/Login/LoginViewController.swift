@@ -25,12 +25,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func addLeftIconTo(textFild: UITextField, andICon img: UIImage) {
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
-        leftImageView.image = img
-        textFild.leftView = leftImageView
-        textFild.leftViewMode = .always
-    }
+
     @IBAction func AccessButton(_ sender: Any) {
         
         let disableMyButton = sender as? UIButton
