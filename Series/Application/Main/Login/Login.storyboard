@@ -34,15 +34,51 @@
                                     <action selector="AccessButton:" destination="83s-YA-rKe" eventType="touchUpInside" id="fRk-YY-OF9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2H-Zf-zLu">
+                                <rect key="frame" x="20" y="461" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EWl-xa-DCh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m3-gl-kTs">
+                                <rect key="frame" x="120" y="802" width="174" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Registrarse">
+                                    <color key="titleColor" name="TextColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSb-qg-2Q0">
+                                <rect key="frame" x="20" y="531" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jz0-iL-2Xg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" name="Principal"/>
                         <constraints>
+                            <constraint firstItem="8m3-gl-kTs" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="120" id="7hR-G6-n2A"/>
+                            <constraint firstItem="RSb-qg-2Q0" firstAttribute="top" secondItem="x2H-Zf-zLu" secondAttribute="bottom" constant="20" id="CSL-nt-7pZ"/>
+                            <constraint firstItem="RSb-qg-2Q0" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="20" id="Dd1-1n-1gR"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="8m3-gl-kTs" secondAttribute="trailing" constant="120" id="Etw-5e-l7b"/>
                             <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="8Sp-Le-RLd" secondAttribute="trailing" constant="120" id="FSS-4G-vzd"/>
                             <constraint firstItem="Xgj-eL-ZAC" firstAttribute="top" secondItem="Fw6-gs-jfl" secondAttribute="top" constant="50" id="Mt2-4p-fcq"/>
+                            <constraint firstItem="8m3-gl-kTs" firstAttribute="top" secondItem="8Sp-Le-RLd" secondAttribute="bottom" constant="140" id="Tk7-OA-q5P"/>
+                            <constraint firstItem="x2H-Zf-zLu" firstAttribute="top" secondItem="Xgj-eL-ZAC" secondAttribute="bottom" constant="10" id="aiH-Ce-zQr"/>
                             <constraint firstItem="Gsy-lj-0KN" firstAttribute="bottom" secondItem="8Sp-Le-RLd" secondAttribute="bottom" constant="200" id="ecU-3j-3DD"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="RSb-qg-2Q0" secondAttribute="trailing" constant="20" id="fq8-HB-bDb"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="x2H-Zf-zLu" secondAttribute="trailing" constant="20" id="hQM-U9-vT1"/>
                             <constraint firstItem="Xgj-eL-ZAC" firstAttribute="leading" secondItem="Fw6-gs-jfl" secondAttribute="leading" constant="55" id="iul-bS-RQl"/>
+                            <constraint firstItem="x2H-Zf-zLu" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="20" id="lgA-FF-XAc"/>
                             <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="Xgj-eL-ZAC" secondAttribute="trailing" constant="55" id="mO2-i0-D8h"/>
+                            <constraint firstItem="8Sp-Le-RLd" firstAttribute="top" secondItem="RSb-qg-2Q0" secondAttribute="bottom" constant="34" id="rNg-2l-riP"/>
                             <constraint firstItem="8Sp-Le-RLd" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="120" id="u8g-k8-NXF"/>
+                            <constraint firstItem="Gsy-lj-0KN" firstAttribute="bottom" secondItem="8m3-gl-kTs" secondAttribute="bottom" constant="30" id="zg8-P9-XTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gsy-lj-0KN"/>
                     </view>
@@ -57,6 +93,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="password" destination="RSb-qg-2Q0" id="pLW-Mo-xon"/>
+                        <outlet property="userName" destination="x2H-Zf-zLu" id="KbV-Ms-WqJ"/>
                         <segue destination="04s-lH-zTc" kind="show" identifier="goToSearch" id="Kjb-oU-fO0"/>
                     </connections>
                 </viewController>
@@ -77,6 +115,9 @@
         <image name="Logo" width="1201" height="401"/>
         <namedColor name="Principal">
             <color red="1" green="0.50196078431372548" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.14100000262260437" green="0.16899999976158142" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
