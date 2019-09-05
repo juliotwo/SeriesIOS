@@ -10,17 +10,32 @@ import Foundation
 import SQLite
 import UIKit
 
+struct ListaUsuarios {
+    let data: [EpisodesRequest]
+  
+}
+class Usuarios {
+    var id: Int?
+    var name: String?
+    var email: String?
+   
+
+    
+}
 class Database {
        var database: Connection!
     let usersTable = Table("users")
+    
     let id = Expression<Int>("id")
     let name = Expression<String>("name")
     let email = Expression<String>("email")
     init() {
-        
+        connectionDatabse()
+        createTable()
     }
     func connectionDatabse() {
         do {
+
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let fileUrl = documentDirectory.appendingPathComponent("database").appendingPathExtension("sqlite3")
             let database = try Connection(fileUrl.path)
@@ -33,7 +48,7 @@ class Database {
     func createTable() {
         print("CREATE TABLE")
         
-        let createTable = self.usersTable.create { (table) in
+        let createTable = self.usersTable.create(ifNotExists: true) { (table) in
             table.column(self.id, primaryKey: true)
             table.column(self.name)
             table.column(self.email, unique: true)
@@ -74,8 +89,11 @@ class Database {
     }
     func selectUsers()  {
         do{
-        let all = Array(try database.prepare(usersTable))
-            print(all)}
+            let all = Array(try database.prepare(usersTable))
+            
+            print(all.first?.decoder())
+            
+        }
         catch{
             print(error)
         }

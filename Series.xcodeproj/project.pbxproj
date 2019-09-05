@@ -26,7 +26,7 @@
 		F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A91231C7F5E002CD2AE /* Sqlite.swift */; };
 		F3186A94231CB751002CD2AE /* SQLITEPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A93231CB751002CD2AE /* SQLITEPOD.swift */; };
 		F3186A97231D7F0C002CD2AE /* Sql.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3186A96231D7F0C002CD2AE /* Sql.storyboard */; };
-		F3186A99231D8119002CD2AE /* SqlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A98231D8119002CD2AE /* SqlViewController.swift */; };
+		F3186A99231D8119002CD2AE /* SqlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A98231D8119002CD2AE /* SqlVC.swift */; };
 		F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888C2303898E00DC24EB /* DetailsViewModel.swift */; };
 		F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888D2303898E00DC24EB /* SinopsisViewController.swift */; };
 		F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBEFE230E01240047ED16 /* BaseViewController.swift */; };
@@ -74,7 +74,7 @@
 		F3186A91231C7F5E002CD2AE /* Sqlite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sqlite.swift; sourceTree = "<group>"; };
 		F3186A93231CB751002CD2AE /* SQLITEPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLITEPOD.swift; sourceTree = "<group>"; };
 		F3186A96231D7F0C002CD2AE /* Sql.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sql.storyboard; sourceTree = "<group>"; };
-		F3186A98231D8119002CD2AE /* SqlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlViewController.swift; sourceTree = "<group>"; };
+		F3186A98231D8119002CD2AE /* SqlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlVC.swift; sourceTree = "<group>"; };
 		F346888C2303898E00DC24EB /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F346888D2303898E00DC24EB /* SinopsisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopsisViewController.swift; sourceTree = "<group>"; };
 		F35CBEFE230E01240047ED16 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F3186A96231D7F0C002CD2AE /* Sql.storyboard */,
-				F3186A98231D8119002CD2AE /* SqlViewController.swift */,
+				F3186A98231D8119002CD2AE /* SqlVC.swift */,
 			);
 			path = Sqlite;
 			sourceTree = "<group>";
@@ -533,7 +533,7 @@
 				80BAC92D22F0DE35005D8F0D /* SearchViewController.swift in Sources */,
 				F35CBF1F231836320047ED16 /* Interceptor.swift in Sources */,
 				80D8320422D7B2DD0061646D /* AppDelegate.swift in Sources */,
-				F3186A99231D8119002CD2AE /* SqlViewController.swift in Sources */,
+				F3186A99231D8119002CD2AE /* SqlVC.swift in Sources */,
 				8086CE7F2303AD7500114644 /* TemporadasViewController.swift in Sources */,
 				F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */,
 				F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */,

@@ -8,15 +8,21 @@
 
 import UIKit
 
-class SqlViewController: UIViewController {
-
+class SqlVC: UIViewController {
+    let database = Database()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func insert(_ sender: Any) {
+        database.insertUser(view: self)
+    }
+    
+    @IBAction func obtener(_ sender: Any) {
+        database.selectUsers()
+    }
     /*
     // MARK: - Navigation
 
