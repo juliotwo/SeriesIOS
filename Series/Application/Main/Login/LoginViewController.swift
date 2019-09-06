@@ -17,10 +17,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         guard let userNameImage = UIImage(named: "emailIcon") else { return }
-        addLeftIconTo(textFild: userName, andICon: userNameImage)
+        addLeftIconTo(textField: userName, andICon: userNameImage)
         
         guard let passwordImage = UIImage(named: "passwordIcon") else { return }
-        addLeftIconTo(textFild: password, andICon: passwordImage)
+        addLeftIconTo(textField: password, andICon: passwordImage)
        
         // Do any additional setup after loading the view.
     }

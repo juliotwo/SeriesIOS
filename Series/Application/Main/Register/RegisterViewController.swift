@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
         dataPicker.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         guard let passwordImage = UIImage(named: "passwordIcon") else { return }
-        addLeftIconTo(textFild: password, andICon: passwordImage)
+        addLeftIconTo(textField: password, andICon: passwordImage)
     }
     
 
