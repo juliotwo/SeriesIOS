@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uSj-WR-SeY"/>
                     <connections>
+                        <outlet property="Access" destination="8Sp-Le-RLd" id="1RO-5y-Mwn"/>
                         <outlet property="password" destination="RSb-qg-2Q0" id="pLW-Mo-xon"/>
                         <outlet property="userName" destination="x2H-Zf-zLu" id="KbV-Ms-WqJ"/>
                         <segue destination="04s-lH-zTc" kind="show" identifier="goToSearch" id="Kjb-oU-fO0"/>

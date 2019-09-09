@@ -45,11 +45,11 @@ class Database {
             table.column(self.name)
             table.column(self.password)
             table.column(self.lastname)
-            table.column(self.email, unique: true)
+            table.column(self.email, unique: true, check: email.like("%@%"))
         }
         
         do {
-             try self.database.run(self.usersTable.drop())
+             //try self.database.run(self.usersTable.drop())
             try self.database.run(createTable)
 //            try self.database.run(self.usersTable.addColumn(Expression<String?>(self.lastname)))
 //            try self.database.run(self.usersTable.addColumn(Expression<String?>(self.password)))
@@ -84,15 +84,77 @@ class Database {
         
         view.present(alert, animated: true, completion: nil)
     }
-    func selectUsers()  {
-        do{
-            let all = Array(try database.prepare(usersTable))
+    func registerUser(name:String, lastname:String, email:String, password:String) {
+            print("INSERT TAPPED")
+            print(name)
+            print(email)
             
-           print(all)
+            let insertUser = self.usersTable.insert(self.name <- name, self.email <- email, self.lastname <- lastname, self.password <- password)
             
-        }
-        catch{
+            do {
+                try self.database.run(insertUser)
+                print("INSERTED USER")
+            } catch {
+                print(error)
+            }
+    }
+    func ShowAllUsers()  {
+        print("LIST TAPPED")
+        
+        do {
+            let users = try self.database.prepare(self.usersTable)
+            for user in users {
+                print("userId: \(user[self.id]), name: \(user[self.name]), email: \(user[self.email]),  password: \(user[self.password])")
+            }
+        } catch {
             print(error)
         }
+    }
+    func SelectUser(emailUser: String, passwordUser: String, view: UIViewController) -> Bool {
+        let query = usersTable.select(email, password).filter(email == emailUser).order(email.desc)
+        var userSelec:String? = nil
+        var passwordSelect: String? = nil
+        do{
+        for user in try self.database.prepare(query) {
+            print("email: \(user[email])")
+            userSelec = String(user[email])
+            passwordSelect = String(user[password])
+            
+            if userSelec != nil && passwordUser == passwordSelect{
+                return true
+                
+            }
+            
+            }
+           
+        }catch{
+            print(error)
+            return false
+        }
+        print("NO hay datos")
+       showAlert(for: "Correo y/o Contraseña incorrectos", view: view)
+        return false
+        
+    }
+    func deleteUser(view: UIViewController) {
+        print("DELETE TAPPED")
+        let alert = UIAlertController(title: "Update User", message: nil, preferredStyle: .alert)
+        alert.addTextField { (tf) in tf.placeholder = "User ID" }
+        let action = UIAlertAction(title: "Submit", style: .default) { (_) in
+            guard let userIdString = alert.textFields?.first?.text,
+                let userId = Int(userIdString)
+                else { return }
+            print(userIdString)
+            
+            let user = self.usersTable.filter(self.id == userId)
+            let deleteUser = user.delete()
+            do {
+                try self.database.run(deleteUser)
+            } catch {
+                print(error)
+            }
+        }
+        alert.addAction(action)
+        view.present(alert, animated: true, completion: nil)
     }
 }

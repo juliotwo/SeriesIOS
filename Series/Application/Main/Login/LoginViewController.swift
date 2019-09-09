@@ -12,7 +12,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var Access: UIButton!
     
+    let baseDatos = Database()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,22 +24,55 @@ class LoginViewController: UIViewController {
         guard let passwordImage = UIImage(named: "passwordIcon") else { return }
         addLeftIconTo(textField: password, andICon: passwordImage)
        
+       Access.isEnabled = false
+        Access.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
+        userName.addTarget(self, action: #selector(didChanged), for: UIControl.Event.editingChanged)
+        password.addTarget(self, action: #selector(didChanged), for: UIControl.Event.editingChanged)
     }
     
+    @objc func didChanged (){
+       validate()
+    
+    }
+    func validate() {
+        do {
+            _ = try userName.validatedText(validationType: .email)
+            _ = try password.validatedText(validationType: .password)
+            Access.isEnabled = true
+            Access.backgroundColor = UIColor.white
+        } catch {
+            print((error as! ValidationError).message )
+            Access.isEnabled = true
+        }
+    }
 
+    
     @IBAction func AccessButton(_ sender: Any) {
         
-        let disableMyButton = sender as? UIButton
-        disableMyButton?.isEnabled = false
-        LoginService.obtainToken { (token, error, succes) in
-            guard let succes = succes else {
-                return
-            }
-            if succes{
-                self.performSegue(withIdentifier: "goToSearch", sender: self)
-            }
+        //let disableMyButton = sender as? UIButto
+        //disableMyButton?.isEnabled = false
+        let exist = baseDatos.SelectUser(emailUser: userName.text ?? "julio" ,passwordUser: password.text ?? "55", view: self)
+        if exist
+        {
+            
+                    LoginService.obtainToken { (token, error, succes) in
+                        guard let succes = succes else {
+                            return
+                        }
+                        if succes{
+                            self.performSegue(withIdentifier: "goToSearch", sender: self)
+                        }
+                    }
         }
+//        LoginService.obtainToken { (token, error, succes) in
+//            guard let succes = succes else {
+//                return
+//            }
+//            if succes{
+//                self.performSegue(withIdentifier: "goToSearch", sender: self)
+//            }
+//        }
     }
     
 }

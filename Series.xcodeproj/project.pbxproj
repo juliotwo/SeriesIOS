@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,9 @@
 		F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BF6A94230CA431006D41C2 /* sinopsis.storyboard */; };
 		F3BF6A97230CA51A006D41C2 /* Temporadas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BF6A96230CA51A006D41C2 /* Temporadas.storyboard */; };
 		F3BF6A99230CA636006D41C2 /* Actors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BF6A98230CA636006D41C2 /* Actors.storyboard */; };
+		F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2B23230C2C009376D9 /* Validation.swift */; };
+		F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2D232315DF009376D9 /* UITextField.swift */; };
+		F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2F2326B7B1009376D9 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		F3BF6A94230CA431006D41C2 /* sinopsis.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sinopsis.storyboard; sourceTree = "<group>"; };
 		F3BF6A96230CA51A006D41C2 /* Temporadas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Temporadas.storyboard; sourceTree = "<group>"; };
 		F3BF6A98230CA636006D41C2 /* Actors.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actors.storyboard; sourceTree = "<group>"; };
+		F3D11F2B23230C2C009376D9 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		F3D11F2D232315DF009376D9 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		F3D11F2F2326B7B1009376D9 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		FD46587F7485440D2AE19A57 /* Pods_Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -217,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				80D4ED3F22FCAB26000FDAD1 /* ImageViewExtension.swift */,
+				F3D11F2D232315DF009376D9 /* UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -367,6 +374,8 @@
 				F3186A9A23217807002CD2AE /* CustomButton.swift */,
 				F3186AA123217BD1002CD2AE /* Constants.swift */,
 				F3186AA323217D01002CD2AE /* CustomTextField.swift */,
+				F3D11F2B23230C2C009376D9 /* Validation.swift */,
+				F3D11F2F2326B7B1009376D9 /* Alerts.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -565,7 +574,9 @@
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
 				F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
+				F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */,
 				F35CBF1D231735110047ED16 /* Navigation.swift in Sources */,
+				F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */,
 				8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */,
@@ -576,6 +587,7 @@
 				800D89532304AEAD00E5910B /* CellViewModelCollectionViewCell.swift in Sources */,
 				F35CBF01230E01240047ED16 /* MenuViewController.swift in Sources */,
 				F3186AA023217892002CD2AE /* RegisterViewController.swift in Sources */,
+				F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */,
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,

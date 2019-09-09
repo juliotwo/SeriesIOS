@@ -21,7 +21,7 @@ class SqlVC: UIViewController {
     }
     
     @IBAction func obtener(_ sender: Any) {
-        database.selectUsers()
+        database.ShowAllUsers()
     }
     /*
     // MARK: - Navigation
