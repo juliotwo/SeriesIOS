@@ -23,7 +23,7 @@
                                 <rect key="frame" x="55" y="10" width="210" height="183"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sp-Le-RLd">
-                                <rect key="frame" x="125" y="357" width="70" height="47"/>
+                                <rect key="frame" x="104" y="357" width="112" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                 <color key="tintColor" name="Principal"/>
@@ -53,7 +53,7 @@
                                     <segue destination="I55-58-Nhm" kind="show" id="T0v-wt-nq4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSb-qg-2Q0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSb-qg-2Q0" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="20" y="273" width="280" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Jz0-iL-2Xg"/>
@@ -70,6 +70,7 @@
                             <constraint firstItem="RSb-qg-2Q0" firstAttribute="leading" secondItem="Gsy-lj-0KN" secondAttribute="leading" constant="20" id="Dd1-1n-1gR"/>
                             <constraint firstItem="Gsy-lj-0KN" firstAttribute="trailing" secondItem="8m3-gl-kTs" secondAttribute="trailing" constant="120" id="Etw-5e-l7b"/>
                             <constraint firstItem="8m3-gl-kTs" firstAttribute="top" secondItem="8Sp-Le-RLd" secondAttribute="bottom" constant="40" id="Tk7-OA-q5P"/>
+                            <constraint firstItem="8Sp-Le-RLd" firstAttribute="width" secondItem="Fw6-gs-jfl" secondAttribute="width" multiplier="0.35" id="VcT-MW-J6S"/>
                             <constraint firstItem="x2H-Zf-zLu" firstAttribute="top" secondItem="Xgj-eL-ZAC" secondAttribute="bottom" constant="10" id="aiH-Ce-zQr"/>
                             <constraint firstItem="8Sp-Le-RLd" firstAttribute="centerX" secondItem="Fw6-gs-jfl" secondAttribute="centerX" id="ap6-4N-8vC"/>
                             <constraint firstItem="Gsy-lj-0KN" firstAttribute="bottom" secondItem="8m3-gl-kTs" secondAttribute="bottom" constant="30" id="bHr-C7-col"/>

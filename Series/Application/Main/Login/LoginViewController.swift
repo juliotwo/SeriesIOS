@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import PasswordTextField
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var password: PasswordTextField!
     @IBOutlet weak var Access: UIButton!
+    
     
     let baseDatos = Database()
     override func viewDidLoad() {
@@ -23,12 +24,16 @@ class LoginViewController: UIViewController {
         
         guard let passwordImage = UIImage(named: "passwordIcon") else { return }
         addLeftIconTo(textField: password, andICon: passwordImage)
-       
        Access.isEnabled = false
         Access.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
         userName.addTarget(self, action: #selector(didChanged), for: UIControl.Event.editingChanged)
         password.addTarget(self, action: #selector(didChanged), for: UIControl.Event.editingChanged)
+//        var mobileNumer = "+91987654321"
+//        let intLetters = mobileNumer.prefix(3)
+//        let endLetters = mobileNumer.suffix(2)
+//        
+//        let newString = intLetters + "*******" + endLetters   //"+91*******21"
     }
     
     @objc func didChanged (){

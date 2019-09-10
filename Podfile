@@ -6,4 +6,7 @@ target 'Series' do
   use_frameworks!
 	pod 'Alamofire'
   pod 'SQLite.swift'
+  pod 'PasswordTextField'
+  pod 'CreditCardForm'
+  pod 'Stripe'
 end
