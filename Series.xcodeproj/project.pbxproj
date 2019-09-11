@@ -59,6 +59,8 @@
 		F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2F2326B7B1009376D9 /* Alerts.swift */; };
 		F3D11F332326F8F4009376D9 /* AddCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D11F322326F8F4009376D9 /* AddCard.storyboard */; };
 		F3D11F352326F908009376D9 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F342326F908009376D9 /* AddCardViewController.swift */; };
+		F3D11F38232837A1009376D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F37232837A1009376D9 /* ProfileViewController.swift */; };
+		F3D11F3A23283B63009376D9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D11F3923283B63009376D9 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +119,8 @@
 		F3D11F2F2326B7B1009376D9 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		F3D11F322326F8F4009376D9 /* AddCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCard.storyboard; sourceTree = "<group>"; };
 		F3D11F342326F908009376D9 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		F3D11F37232837A1009376D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F3D11F3923283B63009376D9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		FD46587F7485440D2AE19A57 /* Pods_Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,7 +190,7 @@
 		8061B78222EFDA480059176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F3D11F3623283766009376D9 /* New Group */,
+				F3D11F3623283766009376D9 /* Profile */,
 				F3D11F312326F8D1009376D9 /* AddCreditCard */,
 				F3186A9C23217849002CD2AE /* Register */,
 				F3186A95231D7ECD002CD2AE /* Sqlite */,
@@ -434,11 +438,13 @@
 			path = AddCreditCard;
 			sourceTree = "<group>";
 		};
-		F3D11F3623283766009376D9 /* New Group */ = {
+		F3D11F3623283766009376D9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F3D11F3923283B63009376D9 /* Profile.storyboard */,
+				F3D11F37232837A1009376D9 /* ProfileViewController.swift */,
 			);
-			path = "New Group";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		FC22823F6161315CABB383EB /* Pods */ = {
@@ -520,6 +526,7 @@
 				F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */,
+				F3D11F3A23283B63009376D9 /* Profile.storyboard in Resources */,
 				80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */,
 				80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */,
 				F3186A9E23217869002CD2AE /* Register.storyboard in Resources */,
@@ -624,6 +631,7 @@
 				F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */,
 				F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */,
 				F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */,
+				F3D11F38232837A1009376D9 /* ProfileViewController.swift in Sources */,
 				F3186A9B23217807002CD2AE /* CustomButton.swift in Sources */,
 				F3186A94231CB751002CD2AE /* SQLITEPOD.swift in Sources */,
 			);
