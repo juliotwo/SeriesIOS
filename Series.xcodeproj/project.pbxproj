@@ -23,6 +23,7 @@
 		80D8320E22D7B2DE0061646D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D8320C22D7B2DE0061646D /* LaunchScreen.storyboard */; };
 		80E2E15322EFE5B500CC3858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E2E15222EFE5B500CC3858 /* Assets.xcassets */; };
 		80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E2E15422EFF80200CC3858 /* Search.storyboard */; };
+		F310824F232961FE00DF76E2 /* Inactivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310824E232961FE00DF76E2 /* Inactivity.swift */; };
 		F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A91231C7F5E002CD2AE /* Sqlite.swift */; };
 		F3186A94231CB751002CD2AE /* SQLITEPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A93231CB751002CD2AE /* SQLITEPOD.swift */; };
 		F3186A97231D7F0C002CD2AE /* Sql.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3186A96231D7F0C002CD2AE /* Sql.storyboard */; };
@@ -36,10 +37,7 @@
 		F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888D2303898E00DC24EB /* SinopsisViewController.swift */; };
 		F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBEFE230E01240047ED16 /* BaseViewController.swift */; };
 		F35CBF01230E01240047ED16 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBEFF230E01240047ED16 /* MenuViewController.swift */; };
-		F35CBF04230E01650047ED16 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF03230E01650047ED16 /* HomeVC.swift */; };
-		F35CBF06230E01780047ED16 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF05230E01780047ED16 /* PlayVC.swift */; };
 		F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF07230E0B0F0047ED16 /* Menu.storyboard */; };
-		F35CBF11230E0E820047ED16 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF10230E0E820047ED16 /* Play.storyboard */; };
 		F35CBF1D231735110047ED16 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1C231735110047ED16 /* Navigation.swift */; };
 		F35CBF1F231836320047ED16 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBF1E231836320047ED16 /* Interceptor.swift */; };
 		F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AE322FA14DC0027F196 /* LoginService.swift */; };
@@ -83,6 +81,7 @@
 		80D8320F22D7B2DE0061646D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80E2E15222EFE5B500CC3858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E2E15422EFF80200CC3858 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		F310824E232961FE00DF76E2 /* Inactivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inactivity.swift; sourceTree = "<group>"; };
 		F3186A91231C7F5E002CD2AE /* Sqlite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sqlite.swift; sourceTree = "<group>"; };
 		F3186A93231CB751002CD2AE /* SQLITEPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLITEPOD.swift; sourceTree = "<group>"; };
 		F3186A96231D7F0C002CD2AE /* Sql.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sql.storyboard; sourceTree = "<group>"; };
@@ -96,10 +95,7 @@
 		F346888D2303898E00DC24EB /* SinopsisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopsisViewController.swift; sourceTree = "<group>"; };
 		F35CBEFE230E01240047ED16 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F35CBEFF230E01240047ED16 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		F35CBF03230E01650047ED16 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		F35CBF05230E01780047ED16 /* PlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
 		F35CBF07230E0B0F0047ED16 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		F35CBF10230E0E820047ED16 /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
 		F35CBF1C231735110047ED16 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		F35CBF1E231836320047ED16 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		F36A5AE322FA14DC0027F196 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -326,7 +322,6 @@
 			children = (
 				80BAC93022F0F177005D8F0D /* EmptyState.xib */,
 				80E2E15422EFF80200CC3858 /* Search.storyboard */,
-				F35CBF10230E0E820047ED16 /* Play.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,8 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				F35CBEFE230E01240047ED16 /* BaseViewController.swift */,
-				F35CBF03230E01650047ED16 /* HomeVC.swift */,
-				F35CBF05230E01780047ED16 /* PlayVC.swift */,
 				F35CBEFF230E01240047ED16 /* MenuViewController.swift */,
 			);
 			path = Controller;
@@ -386,6 +379,7 @@
 				F3186AA323217D01002CD2AE /* CustomTextField.swift */,
 				F3D11F2B23230C2C009376D9 /* Validation.swift */,
 				F3D11F2F2326B7B1009376D9 /* Alerts.swift */,
+				F310824E232961FE00DF76E2 /* Inactivity.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -522,7 +516,6 @@
 				8061B77F22EFD9890059176F /* Colors.xcassets in Resources */,
 				F3BF6A99230CA636006D41C2 /* Actors.storyboard in Resources */,
 				F3BF6A97230CA51A006D41C2 /* Temporadas.storyboard in Resources */,
-				F35CBF11230E0E820047ED16 /* Play.storyboard in Resources */,
 				F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */,
@@ -612,13 +605,12 @@
 				F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */,
+				F310824F232961FE00DF76E2 /* Inactivity.swift in Sources */,
 				F35CBF1D231735110047ED16 /* Navigation.swift in Sources */,
 				F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */,
 				8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */,
-				F35CBF04230E01650047ED16 /* HomeVC.swift in Sources */,
-				F35CBF06230E01780047ED16 /* PlayVC.swift in Sources */,
 				F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */,
 				F3186AA423217D01002CD2AE /* CustomTextField.swift in Sources */,
 				800D89532304AEAD00E5910B /* CellViewModelCollectionViewCell.swift in Sources */,

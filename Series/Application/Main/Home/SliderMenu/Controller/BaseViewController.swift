@@ -37,23 +37,25 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             
             break
         case 2:
-            self.openViewControllerBasedOnIdentifierController("ProfileViewController")
+            self.openViewControllerBasedOnIdentifierController(ProfileViewController(nibName: "Profile", bundle: nil))
             
             break
         default:
             print("default\n", terminator: "")
         }
     }
-    func openViewControllerBasedOnIdentifierController(_ strIdentifier:String){
-        let destViewController : UIViewController = UIViewController(nibName: strIdentifier, bundle: .main)
+    func openViewControllerBasedOnIdentifierController(_ controller:ProfileViewController){
         
-        destViewController.restorationIdentifier = strIdentifier
+        let destViewController : UIViewController = ProfileViewController()
+        
+        destViewController.restorationIdentifier = controller.nibName
         let topViewController : UIViewController = self.navigationController!.topViewController!
         
         if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
             // print("Same VC")
         } else {
             self.navigationController!.pushViewController(destViewController, animated: true)
+            
         }
     }
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String, _ nameStoryBoard:String){
