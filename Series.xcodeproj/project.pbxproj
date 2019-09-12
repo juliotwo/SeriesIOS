@@ -24,6 +24,8 @@
 		80E2E15322EFE5B500CC3858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E2E15222EFE5B500CC3858 /* Assets.xcassets */; };
 		80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E2E15422EFF80200CC3858 /* Search.storyboard */; };
 		F310824F232961FE00DF76E2 /* Inactivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310824E232961FE00DF76E2 /* Inactivity.swift */; };
+		F310825123296CDC00DF76E2 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310825023296CDC00DF76E2 /* NotificationName.swift */; };
+		F310825323296FE400DF76E2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F310825223296FE400DF76E2 /* main.swift */; };
 		F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A91231C7F5E002CD2AE /* Sqlite.swift */; };
 		F3186A94231CB751002CD2AE /* SQLITEPOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186A93231CB751002CD2AE /* SQLITEPOD.swift */; };
 		F3186A97231D7F0C002CD2AE /* Sql.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3186A96231D7F0C002CD2AE /* Sql.storyboard */; };
@@ -82,6 +84,8 @@
 		80E2E15222EFE5B500CC3858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E2E15422EFF80200CC3858 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		F310824E232961FE00DF76E2 /* Inactivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inactivity.swift; sourceTree = "<group>"; };
+		F310825023296CDC00DF76E2 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		F310825223296FE400DF76E2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F3186A91231C7F5E002CD2AE /* Sqlite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sqlite.swift; sourceTree = "<group>"; };
 		F3186A93231CB751002CD2AE /* SQLITEPOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLITEPOD.swift; sourceTree = "<group>"; };
 		F3186A96231D7F0C002CD2AE /* Sql.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sql.storyboard; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				80D8320322D7B2DD0061646D /* AppDelegate.swift */,
 				80D8320F22D7B2DE0061646D /* Info.plist */,
 				80D8320C22D7B2DE0061646D /* LaunchScreen.storyboard */,
+				F310825223296FE400DF76E2 /* main.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			children = (
 				80D4ED3F22FCAB26000FDAD1 /* ImageViewExtension.swift */,
 				F3D11F2D232315DF009376D9 /* UITextField.swift */,
+				F310825023296CDC00DF76E2 /* NotificationName.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -484,6 +490,11 @@
 				TargetAttributes = {
 					80D831FF22D7B2DD0061646D = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -602,6 +613,7 @@
 				F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */,
 				F3186AA223217BD1002CD2AE /* Constants.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,
+				F310825323296FE400DF76E2 /* main.swift in Sources */,
 				F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */,
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */,
@@ -623,6 +635,7 @@
 				F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */,
 				F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */,
 				F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */,
+				F310825123296CDC00DF76E2 /* NotificationName.swift in Sources */,
 				F3D11F38232837A1009376D9 /* ProfileViewController.swift in Sources */,
 				F3186A9B23217807002CD2AE /* CustomButton.swift in Sources */,
 				F3186A94231CB751002CD2AE /* SQLITEPOD.swift in Sources */,
