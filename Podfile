@@ -7,6 +7,4 @@ target 'Series' do
 	pod 'Alamofire'
   pod 'SQLite.swift'
   pod 'PasswordTextField'
-  pod 'CreditCardForm'
-  pod 'Stripe'
 end

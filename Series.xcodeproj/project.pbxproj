@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -57,8 +57,6 @@
 		F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2B23230C2C009376D9 /* Validation.swift */; };
 		F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2D232315DF009376D9 /* UITextField.swift */; };
 		F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2F2326B7B1009376D9 /* Alerts.swift */; };
-		F3D11F332326F8F4009376D9 /* AddCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D11F322326F8F4009376D9 /* AddCard.storyboard */; };
-		F3D11F352326F908009376D9 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F342326F908009376D9 /* AddCardViewController.swift */; };
 		F3D11F38232837A1009376D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F37232837A1009376D9 /* ProfileViewController.swift */; };
 		F3D11F3A23283B63009376D9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D11F3923283B63009376D9 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
@@ -117,8 +115,6 @@
 		F3D11F2B23230C2C009376D9 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		F3D11F2D232315DF009376D9 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		F3D11F2F2326B7B1009376D9 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		F3D11F322326F8F4009376D9 /* AddCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCard.storyboard; sourceTree = "<group>"; };
-		F3D11F342326F908009376D9 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		F3D11F37232837A1009376D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F3D11F3923283B63009376D9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		FD46587F7485440D2AE19A57 /* Pods_Series.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				F3D11F3623283766009376D9 /* Profile */,
-				F3D11F312326F8D1009376D9 /* AddCreditCard */,
 				F3186A9C23217849002CD2AE /* Register */,
 				F3186A95231D7ECD002CD2AE /* Sqlite */,
 				8061B78522EFDAB40059176F /* Details */,
@@ -429,15 +424,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F3D11F312326F8D1009376D9 /* AddCreditCard */ = {
-			isa = PBXGroup;
-			children = (
-				F3D11F322326F8F4009376D9 /* AddCard.storyboard */,
-				F3D11F342326F908009376D9 /* AddCardViewController.swift */,
-			);
-			path = AddCreditCard;
-			sourceTree = "<group>";
-		};
 		F3D11F3623283766009376D9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,7 +508,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3186A97231D7F0C002CD2AE /* Sql.storyboard in Resources */,
-				F3D11F332326F8F4009376D9 /* AddCard.storyboard in Resources */,
 				80D8320E22D7B2DE0061646D /* LaunchScreen.storyboard in Resources */,
 				8061B77F22EFD9890059176F /* Colors.xcassets in Resources */,
 				F3BF6A99230CA636006D41C2 /* Actors.storyboard in Resources */,
@@ -570,24 +555,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Series/Pods-Series-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
-				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Series/Pods-Series-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Series/Pods-Series-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -609,7 +581,6 @@
 				F3186A99231D8119002CD2AE /* SqlVC.swift in Sources */,
 				8086CE7F2303AD7500114644 /* TemporadasViewController.swift in Sources */,
 				F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */,
-				F3D11F352326F908009376D9 /* AddCardViewController.swift in Sources */,
 				F3186A92231C7F5E002CD2AE /* Sqlite.swift in Sources */,
 				F3186AA223217BD1002CD2AE /* Constants.swift in Sources */,
 				F36A5AE422FA14DC0027F196 /* LoginService.swift in Sources */,

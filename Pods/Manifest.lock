@@ -1,34 +1,26 @@
 PODS:
   - Alamofire (4.9.0)
-  - CreditCardForm (0.1.8)
   - PasswordTextField (1.2.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
-  - Stripe (17.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - CreditCardForm
   - PasswordTextField
   - SQLite.swift
-  - Stripe
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - CreditCardForm
     - PasswordTextField
     - SQLite.swift
-    - Stripe
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  CreditCardForm: 7e67bc394545eda9e502652af0858552b4931728
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  Stripe: 109ee11766e03d75c4f8b2a9ead563779f8852bb
 
-PODFILE CHECKSUM: 3301e779f3c0a18fc90dfa2bc83d1f1dee9867bb
+PODFILE CHECKSUM: c10706a7802a6afa48f54818e4c130ee61b76548
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5
