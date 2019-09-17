@@ -7,4 +7,7 @@ target 'Series' do
 	pod 'Alamofire'
   pod 'SQLite.swift'
   pod 'PasswordTextField'
+  pod 'GoogleAnalytics'
+  pod 'Firebase/Analytics'
+  pod 'GoogleTagManager'
 end

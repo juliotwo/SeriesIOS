@@ -8,6 +8,7 @@
 
 import UIKit
 import PasswordTextField
+import Firebase
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
@@ -57,6 +58,7 @@ class LoginViewController: UIViewController {
         
         //let disableMyButton = sender as? UIButto
         //disableMyButton?.isEnabled = false
+        Analytics.logEvent(AnalyticsEventLogin, parameters: nil)
         let exist = baseDatos.SelectUser(emailUser: userName.text ?? "julio" ,passwordUser: password.text ?? "55", view: self)
         if exist
         {

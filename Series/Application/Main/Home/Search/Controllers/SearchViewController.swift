@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -55,6 +56,7 @@ class SearchViewController: BaseViewController {
     }
     
     @IBAction func search(_ sender: Any) {
+        Analytics.logEvent("Search", parameters: nil)
        searchSerie()
         
     }
