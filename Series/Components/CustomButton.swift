@@ -27,5 +27,8 @@ public class CustomButton: UIButton{
         backgroundColor     = .white
         titleLabel?.font    = UIFont(name: Fonts.avenirNextMedium, size: 20)
         layer.cornerRadius  = frame.size.height/2
+        widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        
+        
     }
 }

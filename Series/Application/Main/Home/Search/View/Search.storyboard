@@ -23,7 +23,7 @@
                                 <rect key="frame" x="25" y="20" width="239" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" smartInsertDeleteType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK2-0s-46h">
                                 <rect key="frame" x="269" y="17" width="46" height="30"/>
@@ -130,7 +130,6 @@
                         <outlet property="buttonCerrar" destination="Lfr-Rl-gJE" id="RIJ-vB-Idx"/>
                         <outlet property="tableView" destination="7WW-kc-nUM" id="hYA-q4-Aa2"/>
                         <outlet property="textValue" destination="UPe-wM-aVg" id="jAX-lJ-yqb"/>
-                        <segue destination="dwV-d1-5xU" kind="show" identifier="pushToPlay" id="YQw-hD-jAL"/>
                         <segue destination="OkG-o1-IOu" kind="show" identifier="GoToDetails" id="gyx-eK-4fH"/>
                     </connections>
                 </viewController>
@@ -164,22 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhI-Es-Ydo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="125.4872563718141"/>
-        </scene>
-        <!--MenuViewController-->
-        <scene sceneID="lon-gG-OHQ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MenuViewController" storyboardName="Menu" referencedIdentifier="MenuViewController" id="kZx-qu-USF" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VKG-AN-TDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1303" y="-615"/>
-        </scene>
-        <!--PlayVC-->
-        <scene sceneID="Qed-Mb-RLJ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PlayVC" storyboardName="Play" referencedIdentifier="PlayVC" id="dwV-d1-5xU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JKe-JK-fl0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2124" y="875"/>
         </scene>
     </scenes>
     <resources>

@@ -8,17 +8,20 @@
 
 import Foundation
 import UIKit
-func addLeftIconTo(textFild: UITextField, andICon img: UIImage) {
-    let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
-
-    leftImageView.contentMode = .scaleAspectFit
-    leftImageView.image = img
-    // Note: In order for your image to use the tint color, you have to select the image in the Assets.xcassets and change the "Render As" property to "Template Image".
-    leftImageView.tintColor = UIColor.white
-    
-    textFild.leftView = leftImageView
-    textFild.leftViewMode = .always
-  
+func addLeftIconTo(textField: UITextField, andICon image: UIImage) {
+    let imageView = UIImageView(image: image)
+    imageView.contentMode = .scaleAspectFit
+    let view = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
+    imageView.frame = CGRect(x: 13.0, y: 13.0, width: 24.0, height: 24.0)
+    //For Setting extra padding other than Icon.
+    let seperatorView = UIView(frame: CGRect(x: 50, y: 0, width: 10, height: 50))
+    //seperatorView.backgroundColor = UIColor(red: 80/255, green: 89/255, blue: 94/255, alpha: 1)
+    view.addSubview(seperatorView)
+    textField.leftViewMode = .always
+    view.addSubview(imageView)
+    //view.backgroundColor = .darkGray
+    textField.leftViewMode = UITextField.ViewMode.always
+    textField.leftView = view
     
 }
 

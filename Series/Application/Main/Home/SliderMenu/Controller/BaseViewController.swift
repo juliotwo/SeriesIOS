@@ -36,11 +36,28 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifier("SqlVC", "Sql")
             
             break
+        case 2:
+            self.openViewControllerBasedOnIdentifierController(ProfileViewController(nibName: "Profile", bundle: nil))
+            
+            break
         default:
             print("default\n", terminator: "")
         }
     }
-    
+    func openViewControllerBasedOnIdentifierController(_ controller:ProfileViewController){
+        
+        let destViewController : UIViewController = ProfileViewController()
+        
+        destViewController.restorationIdentifier = controller.nibName
+        let topViewController : UIViewController = self.navigationController!.topViewController!
+        
+        if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
+            // print("Same VC")
+        } else {
+            self.navigationController!.pushViewController(destViewController, animated: true)
+            
+        }
+    }
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String, _ nameStoryBoard:String){
         let destViewController : UIViewController = UIStoryboard(name: nameStoryBoard, bundle: Bundle.main).instantiateViewController(withIdentifier: strIdentifier)
         

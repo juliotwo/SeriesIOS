@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -34,6 +35,16 @@ class SearchViewController: BaseViewController {
         
     }
     var viewModel = SearchViewModel()
+    
+    
+    //Now we’ll create a restartTimer function that we’ll call every time we want to restart the clock:
+
+    //This timer calls a hideControls function after 10 seconds. Let’s create the hideControls function:
+
+
+    //Now call this resetTimer() in viewDidAppear:
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
@@ -45,6 +56,7 @@ class SearchViewController: BaseViewController {
     }
     
     @IBAction func search(_ sender: Any) {
+        Analytics.logEvent("Search", parameters: nil)
        searchSerie()
         
     }
@@ -107,3 +119,6 @@ extension SearchViewController: UITableViewDataSource {
     
     }
 
+extension SearchViewController {
+    
+}
