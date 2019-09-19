@@ -15,7 +15,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: PasswordTextField!
     @IBOutlet weak var Access: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+
     let baseDatos = Database()
     override func viewDidLoad() {
         super.viewDidLoad()

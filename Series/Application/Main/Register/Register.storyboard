@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="001-LX-MdN">
-                                <rect key="frame" x="129" y="481" width="62" height="30"/>
+                                <rect key="frame" x="129" y="501" width="62" height="30"/>
                                 <state key="normal" title="Registrar">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-wS-Cpx">
-                                <rect key="frame" x="20" y="30" width="280" height="426"/>
+                                <rect key="frame" x="20" y="50" width="280" height="426"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVw-ak-h4f">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="001-LX-MdN" firstAttribute="top" secondItem="FGd-wS-Cpx" secondAttribute="bottom" constant="25" id="2Hp-cm-F0V"/>
                             <constraint firstItem="FGd-wS-Cpx" firstAttribute="leading" secondItem="XIC-Ra-h1X" secondAttribute="leading" constant="20" id="8n5-M0-ktw"/>
                             <constraint firstItem="001-LX-MdN" firstAttribute="centerX" secondItem="onB-vO-Q8i" secondAttribute="centerX" id="nMn-i8-Mh8"/>
-                            <constraint firstItem="FGd-wS-Cpx" firstAttribute="top" secondItem="XIC-Ra-h1X" secondAttribute="top" constant="10" id="qhL-Gx-BWH"/>
+                            <constraint firstItem="FGd-wS-Cpx" firstAttribute="top" secondItem="XIC-Ra-h1X" secondAttribute="top" constant="30" id="qhL-Gx-BWH"/>
                             <constraint firstAttribute="trailing" secondItem="FGd-wS-Cpx" secondAttribute="trailing" constant="20" id="tKY-h7-WJw"/>
                             <constraint firstItem="FGd-wS-Cpx" firstAttribute="height" secondItem="onB-vO-Q8i" secondAttribute="height" multiplier="0.75" id="uN2-6C-P0N"/>
                         </constraints>

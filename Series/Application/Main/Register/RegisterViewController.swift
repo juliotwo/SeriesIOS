@@ -25,6 +25,8 @@ class RegisterViewController: UIViewController {
         
     }
     
+
+    
     @IBAction func Register(_ sender: Any) {
         validate()
     }

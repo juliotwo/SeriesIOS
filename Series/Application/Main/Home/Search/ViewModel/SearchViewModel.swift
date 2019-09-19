@@ -12,7 +12,7 @@ protocol SearchViewModelDelegate {
     func reloadData()
 }
 class SearchViewModel {
-    private var items: [SerieRequest] = []
+    var items: [SerieRequest] = []
     
 
     
@@ -23,6 +23,7 @@ class SearchViewModel {
     var delegate: SearchViewModelDelegate?
     
     init() {
+        
         getdata()
         NotificationCenter.default.addObserver(self, selector: #selector(getdata), name: Notification.Name("AddedNewData"), object: nil)
     }
