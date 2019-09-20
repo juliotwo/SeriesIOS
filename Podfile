@@ -11,6 +11,7 @@ target 'Series' do
   pod 'GoogleAnalytics'
   pod 'Firebase/Analytics'
   pod 'GoogleTagManager'
+  pod 'FlexLayout'
   
   target 'SeriesTests' do
     inherit! :complete
