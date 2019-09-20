@@ -31,6 +31,7 @@ PODS:
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
+  - FlexLayout (1.3.16)
   - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (6.1.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
@@ -80,6 +81,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Firebase/Analytics
+  - FlexLayout
   - GoogleAnalytics
   - GoogleTagManager
   - PasswordTextField
@@ -94,6 +96,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
+    - FlexLayout
     - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -114,6 +117,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 4c04ae09d0ab027c30179828c6bb47764df1bd13
   FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
   FirebaseInstanceID: 550df9be1f99f751d8fcde3ac342a1e21a0e6c42
+  FlexLayout: 2c9f7724c5218eb2f23c734dc4343141815a1681
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 86a82f0e1f20b8eedf8e20326530138fd71409de
   GoogleDataTransport: 8f9897b8e073687f24ca8d3c3a8013dec7d2d1cc
@@ -126,6 +130,6 @@ SPEC CHECKSUMS:
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 0d1525f8a28268ed15374b71167498ab53bb5f52
+PODFILE CHECKSUM: c999d91b14120e33c759f78bdc5cf1cfd3ca159c
 
 COCOAPODS: 1.6.1

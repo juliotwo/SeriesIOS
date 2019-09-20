@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,7 @@
 		F36A5AF022FB4FF20027F196 /* CellSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */; };
 		F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AF122FCF4050027F196 /* DetailsViewController.swift */; };
 		F38047AD232B00E6005E5140 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F38047AC232B00E6005E5140 /* GoogleService-Info.plist */; };
+		F38047D2233533EF005E5140 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38047D1233533EF005E5140 /* ProfileView.swift */; };
 		F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */; };
 		F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A90230B0AE1006D41C2 /* CellEpisodesViewModel.swift */; };
 		F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A92230B10DD006D41C2 /* EpisodesViewModel.swift */; };
@@ -127,6 +128,7 @@
 		F36A5AEF22FB4FF20027F196 /* CellSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSearchViewModel.swift; sourceTree = "<group>"; };
 		F36A5AF122FCF4050027F196 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F38047AC232B00E6005E5140 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F38047D1233533EF005E5140 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTempViewModel.swift; sourceTree = "<group>"; };
 		F3BF6A90230B0AE1006D41C2 /* CellEpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEpisodesViewModel.swift; sourceTree = "<group>"; };
 		F3BF6A92230B10DD006D41C2 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				F3D11F3923283B63009376D9 /* Profile.storyboard */,
 				F3D11F37232837A1009376D9 /* ProfileViewController.swift */,
+				F38047D1233533EF005E5140 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Series-SeriesTests/Pods-Series-SeriesTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
@@ -625,6 +629,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
@@ -733,6 +738,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Series/Pods-Series-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
@@ -743,6 +749,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
@@ -784,6 +791,7 @@
 				80D4ED4022FCAB26000FDAD1 /* ImageViewExtension.swift in Sources */,
 				F3D11F2C23230C2C009376D9 /* Validation.swift in Sources */,
 				F310824F232961FE00DF76E2 /* Inactivity.swift in Sources */,
+				F38047D2233533EF005E5140 /* ProfileView.swift in Sources */,
 				F35CBF1D231735110047ED16 /* Navigation.swift in Sources */,
 				F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */,
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
