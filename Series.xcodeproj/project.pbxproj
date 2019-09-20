@@ -52,6 +52,7 @@
 		F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5AF122FCF4050027F196 /* DetailsViewController.swift */; };
 		F38047AD232B00E6005E5140 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F38047AC232B00E6005E5140 /* GoogleService-Info.plist */; };
 		F38047D2233533EF005E5140 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38047D1233533EF005E5140 /* ProfileView.swift */; };
+		F38047D623355F87005E5140 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38047D523355F87005E5140 /* CustomLabel.swift */; };
 		F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */; };
 		F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A90230B0AE1006D41C2 /* CellEpisodesViewModel.swift */; };
 		F3BF6A93230B10DD006D41C2 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6A92230B10DD006D41C2 /* EpisodesViewModel.swift */; };
@@ -62,7 +63,6 @@
 		F3D11F2E232315DF009376D9 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2D232315DF009376D9 /* UITextField.swift */; };
 		F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F2F2326B7B1009376D9 /* Alerts.swift */; };
 		F3D11F38232837A1009376D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D11F37232837A1009376D9 /* ProfileViewController.swift */; };
-		F3D11F3A23283B63009376D9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D11F3923283B63009376D9 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +129,7 @@
 		F36A5AF122FCF4050027F196 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F38047AC232B00E6005E5140 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F38047D1233533EF005E5140 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F38047D523355F87005E5140 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		F3BF6A8E230A5DDA006D41C2 /* CellTempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTempViewModel.swift; sourceTree = "<group>"; };
 		F3BF6A90230B0AE1006D41C2 /* CellEpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEpisodesViewModel.swift; sourceTree = "<group>"; };
 		F3BF6A92230B10DD006D41C2 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
@@ -139,7 +140,6 @@
 		F3D11F2D232315DF009376D9 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		F3D11F2F2326B7B1009376D9 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		F3D11F37232837A1009376D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F3D11F3923283B63009376D9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +424,7 @@
 				F3D11F2B23230C2C009376D9 /* Validation.swift */,
 				F3D11F2F2326B7B1009376D9 /* Alerts.swift */,
 				F310824E232961FE00DF76E2 /* Inactivity.swift */,
+				F38047D523355F87005E5140 /* CustomLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -470,7 +471,6 @@
 		F3D11F3623283766009376D9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F3D11F3923283B63009376D9 /* Profile.storyboard */,
 				F3D11F37232837A1009376D9 /* ProfileViewController.swift */,
 				F38047D1233533EF005E5140 /* ProfileView.swift */,
 			);
@@ -596,7 +596,6 @@
 				F3BF6A95230CA431006D41C2 /* sinopsis.storyboard in Resources */,
 				8061B78722EFDCBB0059176F /* Login.storyboard in Resources */,
 				F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */,
-				F3D11F3A23283B63009376D9 /* Profile.storyboard in Resources */,
 				80BAC93122F0F177005D8F0D /* EmptyState.xib in Resources */,
 				80E2E15522EFF80200CC3858 /* Search.storyboard in Resources */,
 				F3186A9E23217869002CD2AE /* Register.storyboard in Resources */,
@@ -621,6 +620,7 @@
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -632,6 +632,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -741,6 +742,7 @@
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -752,6 +754,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -797,6 +800,7 @@
 				8061B78922EFDE490059176F /* LoginViewController.swift in Sources */,
 				F3BF6A8F230A5DDA006D41C2 /* CellTempViewModel.swift in Sources */,
 				8086CE812303F06100114644 /* ActorsViewModel.swift in Sources */,
+				F38047D623355F87005E5140 /* CustomLabel.swift in Sources */,
 				F36A5AED22FB3AC70027F196 /* SearchViewModel.swift in Sources */,
 				F3186AA423217D01002CD2AE /* CustomTextField.swift in Sources */,
 				800D89532304AEAD00E5910B /* CellViewModelCollectionViewCell.swift in Sources */,

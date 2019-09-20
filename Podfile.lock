@@ -74,6 +74,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - PasswordTextField (1.2.0)
+  - PinLayout (1.8.10)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - GoogleAnalytics
   - GoogleTagManager
   - PasswordTextField
+  - PinLayout
   - SQLite.swift
 
 SPEC REPOS:
@@ -107,6 +109,7 @@ SPEC REPOS:
     - GoogleUtilitiesLegacy
     - nanopb
     - PasswordTextField
+    - PinLayout
     - SQLite.swift
 
 SPEC CHECKSUMS:
@@ -128,8 +131,9 @@ SPEC CHECKSUMS:
   GoogleUtilitiesLegacy: 5501bedec1646bd284286eb5fc9453f7e23a12f4
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
+  PinLayout: 641bc9679f73d3da35e04bb5180547cf55fd92d7
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: c999d91b14120e33c759f78bdc5cf1cfd3ca159c
+PODFILE CHECKSUM: 7c477976beac22d0576bd93c4e5ed7e4ceca459a
 
 COCOAPODS: 1.6.1

@@ -10,15 +10,17 @@ import UIKit
 
 class ProfileViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        view = ProfileView()
-        
-      
-        
+    fileprivate var mainView: ProfileView {
+        return self.view as! ProfileView
     }
     
+
+   
+    
+    override func loadView() {
+         
+        view = ProfileView()
+    }
 
    
 }
