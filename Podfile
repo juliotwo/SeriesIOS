@@ -12,7 +12,7 @@ target 'Series' do
   pod 'Firebase/Analytics'
   pod 'GoogleTagManager'
   pod 'FlexLayout'
-  
+  pod 'PinLayout'
   target 'SeriesTests' do
     inherit! :complete
     end
