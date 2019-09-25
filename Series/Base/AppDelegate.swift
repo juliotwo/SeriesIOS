@@ -15,11 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        initialViewController()
-       
+        SplashScreen()
+        
         return true
     }
     func initialViewController() {
@@ -53,6 +52,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
     }
+    func SplashScreen() {
+        let viewController = UIStoryboard(name: "LaunchScreen", bundle: Bundle.main).instantiateInitialViewController()
+              window?.rootViewController = viewController
+              window?.makeKeyAndVisible()
+         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+         window?.makeKeyAndVisible()
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(dimisSpashScreen), userInfo: nil, repeats: false)
+        
+    }
+    
+    @objc func dimisSpashScreen(){
+        initialViewController()
+    }
     func applicationDidEnterBackground(_ application: UIApplication) {
      //
 
@@ -69,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 //    }
     
-    
+   
     func applicationWillResignActive(_ application: UIApplication) {
         
         self.window?.isHidden = true

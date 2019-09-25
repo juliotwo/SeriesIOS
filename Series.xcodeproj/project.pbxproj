@@ -39,6 +39,7 @@
 		F3186AA423217D01002CD2AE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3186AA323217D01002CD2AE /* CustomTextField.swift */; };
 		F346888E2303898E00DC24EB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888C2303898E00DC24EB /* DetailsViewModel.swift */; };
 		F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346888D2303898E00DC24EB /* SinopsisViewController.swift */; };
+		F353BA04233BE13300192BD3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353BA03233BE13300192BD3 /* LaunchViewController.swift */; };
 		F35CBF00230E01240047ED16 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBEFE230E01240047ED16 /* BaseViewController.swift */; };
 		F35CBF01230E01240047ED16 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35CBEFF230E01240047ED16 /* MenuViewController.swift */; };
 		F35CBF08230E0B0F0047ED16 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35CBF07230E0B0F0047ED16 /* Menu.storyboard */; };
@@ -116,6 +117,7 @@
 		F3186AA323217D01002CD2AE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F346888C2303898E00DC24EB /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F346888D2303898E00DC24EB /* SinopsisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopsisViewController.swift; sourceTree = "<group>"; };
+		F353BA03233BE13300192BD3 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F35CBEFE230E01240047ED16 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F35CBEFF230E01240047ED16 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F35CBF07230E0B0F0047ED16 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				80D8320C22D7B2DE0061646D /* LaunchScreen.storyboard */,
 				F310825223296FE400DF76E2 /* main.swift */,
 				F38047AC232B00E6005E5140 /* GoogleService-Info.plist */,
+				F353BA03233BE13300192BD3 /* LaunchViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				F3D11F302326B7B1009376D9 /* Alerts.swift in Sources */,
 				F36A5AEB22FA219A0027F196 /* SeriesServices.swift in Sources */,
 				F36A5AE922FA20AF0027F196 /* SeriesRequest.swift in Sources */,
+				F353BA04233BE13300192BD3 /* LaunchViewController.swift in Sources */,
 				F36A5AF222FCF4050027F196 /* DetailsViewController.swift in Sources */,
 				F3BF6A91230B0AE1006D41C2 /* CellEpisodesViewModel.swift in Sources */,
 				F346888F2303898E00DC24EB /* SinopsisViewController.swift in Sources */,
@@ -1016,7 +1020,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aplicacionesKano.Series;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1036,7 +1040,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aplicacionesKano.Series;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

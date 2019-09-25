@@ -76,8 +76,8 @@ class LoginViewController: UIViewController {
                             return
                         }
                         if succes{
-                          let destViewController : UIViewController = UIStoryboard(name: "Search", bundle: Bundle.main).instantiateViewController(withIdentifier: "Home")
-                            self.navigationController?.pushViewController(destViewController, animated: true)
+                          let ViewController : UIViewController = UIStoryboard(name: "Search", bundle: Bundle.main).instantiateViewController(withIdentifier: "Home")
+                            self.navigationController?.pushViewController(ViewController, animated: true)
                         }
                     }
         }
