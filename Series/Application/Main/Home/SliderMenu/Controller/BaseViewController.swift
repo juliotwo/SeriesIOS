@@ -40,6 +40,10 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifierController(ProfileViewController(nibName: "Profile", bundle: nil))
             
             break
+        case 3:
+            self.openViewControllerBasedOnIdentifier("CheckBoxViewController", "CheckBox")
+            
+            break
         default:
             print("default\n", terminator: "")
         }
